@@ -1,0 +1,26 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="vertical_adaptive_container" inset="0" gap="0" mode="distribute_equally">
+		
+			<!-- recommendations  -->
+			<container default_height="55" minimum_height="55" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" id="tftj" file="Tangfu/tangfu tuijian small2" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container> 
+		
+	</container>
+	</container>
+
+</panel>

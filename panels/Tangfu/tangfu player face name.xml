@@ -1,0 +1,67 @@
+
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+
+		
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-2,-1,-3,1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+				<!--名字-->	
+					<widget class="person_button" id="pnam"  alignment="top" colour="yellow1"  multiline="false" size="12">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="titl" />
+									<integer id="set_property" value="text" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+				
+			<!--位置形容-->
+				<widget class="player_description_text" spec="text,small"  size="10" id="Pdes" multiline="true" alignment="centre_x,centre_y" colour="baise">
+				<record id="object_property">
+					<integer id="get_property" value="Pdes" />
+				</record>
+			</widget>
+
+	
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				
+				<container/>
+				<container default_width="100" minimum_width="60">
+					<layout class="arrange_vertical_attachment" layout="-1" inset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					 <widget id="cKit" class="kit_icon" scale_picture="true" kit_zoom_level="2" priority="1" height="130" width="130">            
+					  <record id="object_property" get_property="Pers" set_property="objt"/>
+					</widget>
+				</container>	
+				<container/>
+				
+				
+				
+			</container>
+<widget class="horizontal_divider" height="1"  />		
+
+				
+				
+				
+				
+			
+
+				
+			
+			</container>
+
+	
+
+
+
+</panel>

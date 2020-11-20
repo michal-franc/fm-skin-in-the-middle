@@ -1,0 +1,997 @@
+<properties version="1.0">
+	
+	<!--  
+	 ============================================================
+	 Default Settings Modified By This Skin
+	 
+	 The definitions below will override the defaults contained
+	 in the parent skins, or in the various global and application
+	 settings files.
+	 
+	 ============================================================
+	 -->
+
+	<!-- global settings -->
+	<set_global name="ui.main_box_gap" >
+		<integer value="12"/>
+	</set_global>
+	<set_global name="ui.main_contrast_box_gap" >
+		<integer value="8"/>
+	</set_global>
+	<set_global name="ui.inner_box_gap" >
+		<integer value="28"/>
+	</set_global>
+	<set_global name="ui.main_content_margin" >
+		<integer value="12"/>
+	</set_global>
+	<set_global name="ui.button_row_gap" >
+		<integer value="0"/>
+	</set_global>
+	<set_global name="ui.split_button_row_gap" >
+		<integer value="-9"/>
+	</set_global>
+	<!-- resolution dependant global settings -->
+	<list id="resolution_settings">
+
+		<!-- gap used between main box appearance -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="18" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="24" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used between boxes that have a visible appearance -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="8" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="16" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used between a collection of inner_box -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="28" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="36" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="48" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used around main content area -->
+
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="18" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="24" />
+				</record>
+			</list>
+		</record>
+	</list>
+	
+	<!-- 杂项属性 -->
+	<real id="background_opacity" value="1.0" />
+	<integer id="dcht" value="30" comment="default control height"/>
+  	<real id="default_control_inset" value="0" />
+  	<real id="default_control_offset" value="0" />
+  	<real id="default_control_gap" value="4" />
+	<real id="default_table_column_spacing" value="4" />
+	<real id="default_table_row_spacing" value="0" />
+
+	<boolean id="disable_accent_colour" value="true" />
+	<boolean id="disable_dark_accent_colour" value="false" />
+	<boolean id="disable_primary_colour" value="false" />
+	<boolean id="disable_secondary_colour" value="false" />
+
+	<!-- Colour Scheme -->
+	<!-- The following colours define the base colours scheme for the skin. The colours are references by other colour names in fm colours.xml -->
+
+	<!-- Foreground colours - used for text, icon etc -->
+	<colour name="fg lighter" 																	value="rgb(255,255,255)"/>
+	<colour name="fg" 																					value="rgb(230,230,230)"/>
+	<colour name="fg darker" 																		value="rgb(205,205,205)"/>
+	<colour name="fg alpha" 																		value="rgba(244,244,244,0.8)"/>
+	<colour name="fg info" 																			value="rgb(138,194,255)"/>
+	<colour name="fg accent" 																		value="rgb(93,255,230)"/>
+	<colour name="fg tertiary" 																	value="rgb(254,255,77)"/>
+
+  <colour name="fg range1" 																		value="rgb(255,84,84)" />
+  <colour name="fg range2" 																		value="rgb(255,92,78)" />
+  <colour name="fg range3" 																		value="rgb(251,96,72)" />
+  <colour name="fg range4" 																		value="rgb(255,108,73)" />
+  <colour name="fg range5" 																		value="rgb(255,122,77)" />
+  <colour name="fg range6" 																		value="rgb(255,135,71)" />
+  <colour name="fg range7" 																		value="rgb(255,159,78)" />
+  <colour name="fg range8" 																		value="rgb(255,178,74)" />
+  <colour name="fg range9" 																		value="rgb(255,202,76)" />
+  <colour name="fg range10" 																	value="rgb(255,214,79)" />
+  <colour name="fg range11" 																	value="rgb(247,223,68)" />
+  <colour name="fg range12" 																	value="rgb(248,238,76)" />
+  <colour name="fg range13" 																	value="rgb(239,243,59)" />
+  <colour name="fg range14" 																	value="rgb(196,222,22)" />
+  <colour name="fg range15" 																	value="rgb(168,222,29)" />
+  <colour name="fg range16" 																	value="rgb(147,221,32)" />
+  <colour name="fg range17" 																	value="rgb(86,221,36)" />
+  <colour name="fg range18" 																	value="rgb(73,230,35)" />
+  <colour name="fg range19" 																	value="rgb(38,242,60)" />
+  <colour name="fg range20" 																	value="rgb(10,255,111)" />
+
+ 	<colour name="fg positive" 																	value="fg range20"/>
+	<colour name="fg alert" 																		value="fg range10"/>
+	<colour name="fg negative" 																	value="fg range1"/>
+
+  <colour name="fg red lighter" 															value="red 200" />
+	<colour name="fg red" 																			value="red 300" />
+	<colour name="fg red darker" 																value="red 400" />
+  <colour name="fg pink lighter" 															value="pink 200" />
+	<colour name="fg pink" 																			value="pink 300" />
+	<colour name="fg pink darker" 															value="pink 400" />
+  <colour name="fg purple lighter" 														value="purple 200" />
+	<colour name="fg purple" 																		value="purple 300" />
+	<colour name="fg purple darker" 														value="purple 400" />
+  <colour name="fg blue lighter" 															value="blue 200" />
+	<colour name="fg blue" 																			value="blue 300" />
+	<colour name="fg blue darker" 															value="blue 400" />
+  <colour name="fg cyan lighter" 															value="cyan 200" />
+	<colour name="fg cyan" 																			value="cyan 300" />
+	<colour name="fg cyan darker" 															value="cyan 400" />
+  <colour name="fg teal lighter" 															value="teal 200" />
+	<colour name="fg teal" 																			value="teal 300" />
+	<colour name="fg teal darker" 															value="teal 400" />
+  <colour name="fg green lighter" 														value="green 200" />
+	<colour name="fg green" 																		value="green 300" />
+	<colour name="fg green darker" 															value="green 400" />
+  <colour name="fg lime lighter" 															value="lime 200" />
+	<colour name="fg lime" 																			value="lime 300" />
+	<colour name="fg lime darker" 															value="lime 400" />
+  <colour name="fg yellow lighter" 														value="yellow 200" />
+	<colour name="fg yellow" 																		value="yellow 300" />
+	<colour name="fg yellow darker" 														value="yellow 400" />
+  <colour name="fg orange lighter" 														value="orange 200" />
+	<colour name="fg orange" 																		value="orange 300" />
+	<colour name="fg orange darker" 														value="orange 400" />
+  <colour name="fg grey lighter" 															value="grey 200" />
+	<colour name="fg grey" 																			value="grey 300" />
+	<colour name="fg grey darker" 															value="grey 400" />
+
+	<!-- Background colours - used for background, boxes etc -->
+	<colour name="bg lighter" 																	value="rgb(24,73,114)"/><!--tab战术页面等弹出的页面颜色-->
+	<colour name="bg" 																					value="rgb(57,68,79)"/>
+	<colour name="bg darker" 																		value="rgb(42,15,66)"/>
+	<colour name="bg alpha" 																		value="rgba(54,15,88,0.8)"/>
+	<colour name="bg info" 																			value="rgb(39,103,192)"/>
+	<colour name="bg positive" 																	value="rgb(16,165,68)"/>
+	<colour name="bg alert" 																		value="rgb(223,126,0)"/>
+	<colour name="bg accent" 																		value="rgb(20,141,154)"/>
+	<colour name="bg tertiary" 																	value="rgb(254,255,77)"/>
+	<colour name="bg negative" 																	value="rgb(182,40,40)"/>
+
+  <colour name="bg range1" 																		value="rgb(183,0,5)" />
+  <colour name="bg range2" 																		value="rgb(195,24,0)" />
+  <colour name="bg range3" 																		value="rgb(195,30,0)" />
+  <colour name="bg range4" 																		value="rgb(203,39,0)" />
+  <colour name="bg range5" 																		value="rgb(204,51,0)" />
+  <colour name="bg range6" 																		value="rgb(204,70,0)" />
+  <colour name="bg range7" 																		value="rgb(196,90,0)" />
+  <colour name="bg range8" 																		value="rgb(201,115,0)" />
+  <colour name="bg range9" 																		value="rgb(201,141,0)" />
+  <colour name="bg range10" 																	value="rgb(208,160,0)" />
+  <colour name="bg range11" 																	value="rgb(195,169,0)" />
+  <colour name="bg range12" 																	value="rgb(185,174,0)" />
+  <colour name="bg range13" 																	value="rgb(171,175,0)" />
+  <colour name="bg range14" 																	value="rgb(162,186,0)" />
+  <colour name="bg range15" 																	value="rgb(125,174,0)" />
+  <colour name="bg range16" 																	value="rgb(87,169,0)" />
+  <colour name="bg range17" 																	value="rgb(48,179,0)" />
+  <colour name="bg range18" 																	value="rgb(35,184,0)" />
+  <colour name="bg range19" 																	value="rgb(0,184,20)" />
+  <colour name="bg range20" 																	value="rgb(0,168,63)" />
+
+  <colour name="bg red lighter" 															value="red 600" />
+	<colour name="bg red" 																			value="red 700" />
+	<colour name="bg red darker" 																value="red 800" />
+  <colour name="bg pink lighter" 															value="pink 600" />
+	<colour name="bg pink" 																			value="pink 700" />
+	<colour name="bg pink darker" 															value="pink 800" />
+  <colour name="bg purple lighter" 														value="purple 600" />
+	<colour name="bg purple" 																		value="purple 700" />
+	<colour name="bg purple darker" 														value="purple 800" />
+  <colour name="bg blue lighter" 															value="blue 600" />
+	<colour name="bg blue" 																			value="blue 700" />
+	<colour name="bg blue darker" 															value="blue 800" />
+  <colour name="bg cyan lighter" 															value="cyan 600" />
+	<colour name="bg cyan" 																			value="cyan 700" />
+	<colour name="bg cyan darker" 															value="cyan 800" />
+  <colour name="bg teal lighter" 															value="teal 600" />
+	<colour name="bg teal" 																			value="teal 700" />
+	<colour name="bg teal darker" 															value="teal 900" />
+  <colour name="bg green lighter" 														value="green 600" />
+	<colour name="bg green" 																		value="green 800" />
+	<colour name="bg green darker" 															value="green 900" />
+  <colour name="bg lime lighter" 															value="lime 600" />
+	<colour name="bg lime" 																			value="lime 700" />
+	<colour name="bg lime darker" 															value="lime 800" />
+  <colour name="bg yellow lighter" 														value="yellow 600" />
+	<colour name="bg yellow" 																		value="yellow 700" />
+	<colour name="bg yellow darker" 														value="yellow 800" />
+  <colour name="bg orange lighter" 														value="orange 600" />
+	<colour name="bg orange" 																		value="orange 700" />
+	<colour name="bg orange darker" 														value="orange 800" />
+  <colour name="bg grey lighter" 															value="grey 600" />
+	<colour name="bg grey" 																			value="grey 700" />
+	<colour name="bg grey darker" 															value="grey 900" />
+
+	<!-- Card colours - used for places where the colours are inverted in the default skin. Inbox, Report cards, etc -->
+	<colour name="card fg lighter" 															value="rgb(250,250,250)"/>
+	<colour name="card fg" 																			value="rgb(240,240,240)"/><!--inbox右边主内容标题文字-->
+	<colour name="card fg darker" 															value="rgb(200,200,200"/>
+	<colour name="card bg lighter" 															value="rgb(43,51,59)"/>
+	<colour name="card bg" 																			value="rgb(43,51,59)"/><!--球探报告右侧背景-->
+	<colour name="card bg darker" 															value="rgb(43,51,59)"/>
+
+  <colour name="shadow" 																			value="rgb(0,0,0)" />
+
+
+	<!-- The following colours are just here temporarily to make sure nothing gets broken in other non-FM projects. We need to determine which of these belong in sitoolkit and which should live in fm colours.xml  -->
+	<colour name="accent" 									value="rgba(1,2,3,0)"/>
+	<colour name="dark accent" 								value="rgba(4,5,6,0)"/>
+	<colour name="primary" 									value="rgba(7,8,9,0)"/>
+	<colour name="secondary" 								value="rgba(10,11,12,0)"/>
+
+	<!-- Default accent colours used when no object colours are available -->
+	<colour name="default accent" 							value="rgb(0,191,255)" />
+	<colour name="default dark accent" 						value="rgb(180,180,180)" />
+	<colour name="default primary" 							value="rgb(86,39,118)" />
+	<colour name="default secondary" 						value="rgb(0,191,255)" />
+	<colour name="match accent" 							value="rgb(0,191,255)" />
+	
+	<!-- Base text colours -->
+	<colour name="text" 									value="rgb(255,255,255)"/>
+	<colour name="faded text" 								value="rgb(255,255,255)"/><!--褪色文本颜色-表格标题 数据上面小标题 -->
+	<colour name="alt text" 								value="rgb(255,255,255)"/><!--替换文本颜色-->
+	<colour name="faded alt text" 							value="rgb(220,220,220)"/>
+	<colour name="darkened text" 							value="rgba(255,255,255,100)"/>
+	<colour name="selection" 								value="rgb(255,165,0)"/><!--国家页面暗色颜色-->
+	<colour name="disabled" 								value="rgb(150,150,150)"/><!--不可选择文本颜色-->
+	<colour name="disabled light" 							value="rgba(255,255,255,0.5)"/>
+	<colour name="transparent" 								value="rgba(0,0,0,0.0)" />
+	<colour name="faded white" 								value="rgba(255,255,255,0.5)"/>
+	<colour name="faded black" 								value="rgba(0,0,0,0.5)"/>
+	<colour name="dark text" 								value="rgb(255,255,255)"/>
+	<colour name="hint" 									value="rgb(200,200,200)"/>
+	<colour name="title" 									value="rgb(255,255,255)" />
+	<colour name="standard_button_text" 					value="rgb(200,200,200)"/>
+	<colour name="searchbox text" 							value="rgb(200,200,200)"/>
+	<colour name="continue text" 							value="rgb(255,255,255)" />
+	<colour name="continue text match" 						value="rgb(255,255,255)" />
+	<colour name="sidebar text" 							value="white"/>
+	<colour name="news ticker" 								value="rgb(255,213,29)" />
+	<colour name="menu selected"                          value="rgb(180,180,180)"/>
+	<colour name="tree selected"                             value="rgb(255,165,0)" />
+	<colour name="tree hilight"                               value="rgb(255,255,255)"/>
+
+	<!-- Base icon colours -->
+	<colour name="normal_icon" 																			value="fg"/>
+	<colour name="button_icon" 																			value="fg"/> 
+	<colour name="match_icon" 																			value="fg"/> 
+	<colour name="ui_header_icons" 																		value="fg"/>
+
+	<!--警报 -->
+	<colour name="attention"								value="fg alert"/>
+	<colour name="warning" 									value="fg alert"/>
+	<colour name="neutral" 									value="fg info"/>
+	<colour name="positive" 								value="fg positive"/>
+	<colour name="positive dark" 							value="rgb(0,110,58)"/>
+	<!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="positive bg" 								value="bg positive"/>
+	<!-- Used for panel recolouring, so text should stand out -->
+	<colour name="positive light" 							value="green 300"/>
+	<colour name="negative" 								value="fg negative"/>
+	<colour name="negative dark" 							value="rgb(171,30,30)"/>
+	<!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="negative bg" 								value="bg negative"/>
+	<!-- Used for panel recolouring, so text should stand out -->
+	<colour name="negative light" 							value="red 200"/>
+
+	<!-- 按钮颜色 -->
+	<colour name="standard_button" 							value="rgb(200,200,200)"/><!--标准的按钮 一般按钮 对话结束按钮-->
+	<colour name="match_button" 							value="rgb(80,80,80)"/>
+	<colour name="solid_button" 							value="rgb(32,178,170)"/><!--固定按钮 ?? （收件箱右下角按钮）-->
+	<colour name="toggle_button" 							value="yellow1"/><!--转换键按钮-->
+	<colour name="primary_button" 							value="rgb(0,206,209)"/><!--初级基本主要键按钮?? (设置里面确定 全屏按钮)-->
+	<colour name="view_button" 								value="fg"/><!--态度方法看?键按钮??-->
+	<colour name="link_button" 								value="rgb(180,180,180)"/>
+	<colour name="link_button_inbox" 								value="rgb(200,200,200)"/><!--inbox连接按钮 ?? （收件箱右下角带框的按钮）-->
+	<colour name="conversation_statement_button" 			value="fg"/><!--对话说明按钮??-->
+	<colour name="conversation_statement_selected_button" 	value="fg cyan"/><!--对话说明已选择按钮??-->
+	<colour name="standard_label" 							value="rgb(255,255,255)"/><!--标准的标签-->
+	<colour name="text_button" 							value="rgb(200,200,200)"/>
+	<!-- 盒子颜色 -->
+	<colour name="background" 								value="rgb(42,45,50)"/>
+	<colour name="ui_background" 							value="rgb(42,45,50)"/>
+	<colour name="dialog_background" 						value="rgb(42,45,50)"/><!--对话背景-->
+	<colour name="dialog_box_background" 					value="rgb(42,45,50)"/>
+	<colour name="popup_box_background" 					value="rgb(42,45,50)"/>
+	<colour name="light_box_background" 					value="rgb(42,45,50)"/>
+	<colour name="box_background" 							value="rgb(42,45,50)"/>
+	<colour name="alpha_box_background" 					value="transparent"/>
+	<colour name="dark_box_background" 						value="rgb(42,45,50)"/>
+	<colour name="contrast_box_background" 					value="rgb(42,45,50)"/>
+	<colour name="alt_dark_box_background" 					value="rgb(26,34,38)"/>
+	<colour name="alt_box_background" 						value="rgb(20,21,26)"/>
+	<colour name="match_box_background" 					value="rgb(42,45,50)"/>
+	<colour name="match_background" 						value="rgb(42,45,50)"/>
+	<colour name="subtle_box_background" 					value="rgb(0,0,0)"/>
+	<colour name="hint_background" 							value="rgb(20,20,20)"/>
+	<colour name="calendar_cell_border" 					value="rgb(42,45,50)"/>
+	<colour name="edit_box_background" 						value="fg"/>
+	<colour name="pitch_box_background" 					value="rgb(0,100,0)"/><!--战术板球场颜色，战术调整选择背景-->
+	<colour name="style_background" 						value="teal 900"/>
+
+	<!-- 滚动条颜色 -->
+	<colour name="scrollbar" 								value="fg"/>
+	<colour name="inbox_scrollbar" 							value="bg"/>
+	<colour name="scrollbar_border" 						value="shadow"/>
+
+	<!-- Menu -->
+	<colour name="standard_menu" 							value="bg lighter"/>
+	<colour name="standard_menu_border" 					value="shadow"/>
+	<colour name="standard_menu_shadow" 					value="shadow"/>
+	<colour name="menu_highlight" 							value="fg accent"/>
+	<!-- Used for _over appearances and separator -->
+	<colour name="menu selected" 							value="fg"/>
+
+	<!-- 滑块-->
+	<colour name="slider_body" 								value="fg"/>
+	<colour name="slider_border" 							value="fg"/>
+	<colour name="slider_thumb" 							value="fg accent"/>
+	<colour name="slider_thumb_border" 						value="fg accent"/>
+ 
+	<!-- 开关 -->
+	<colour name="switch_background" 						value="fg"/>
+	<colour name="switch_border" 							value="fg"/>
+	<colour name="switch_on" 							value="rgb(50,205,50)"/>
+	<colour name="switch_off" 							value="rgb(255,99,71)"/>
+
+	<!-- 表行颜色 -->
+	<colour name="table_heading" 							value="bg"/>
+	<colour name="table_row_alternate" 						value="fg"/>
+	<colour name="table_row_over" 							value="fg"/>
+	<colour name="table_row_selected" 						value="rgb(0,191,255)"/>
+	<colour name="table_zhuli" 						            value="rgb(47,79,79)"/>
+	<colour name="squad_outside" 							value="rgba(20,20,20,100)"/><!--非大名单阵容颜色-->
+	<colour name="squad_substitute" 						value="rgb(47,79,79)"/><!--大名单替补阵容颜色-->
+	<colour name="object_explorer_normal" 					value="fg"/>
+	<colour name="object_explorer_selected" 				value="fg accent"/>
+	<colour name="cards_yellow" 							value="fg yellow"/>
+	<colour name="cards_red" 								value="fg red"/>
+	<colour name="league_champion" 							value="rgb(255,255,0)"/><!--联赛积分榜冠军-->
+	<colour name="league_promotion" 						value="rgb(123,104,238)"/><!--联赛升级-->
+	<colour name="league_top_playoff" 						value="rgb(124,252,0)"/><!--联赛升级附加赛-->
+	<colour name="league_bottom_playoff" 					value="rgb(255,140,0)"/><!--联赛降级附加赛-->
+	<colour name="league_relegation" 						value="rgb(255,69,0)"/><!--联赛降级-->
+	<colour name="league_main_continental" 					value="rgb(0,206,209)"/><!--联赛积分榜欧冠-->
+	<colour name="league_other_continental" 				value="rgb(0,250,154)"/><!--联赛积分榜欧联-->
+	
+	<!-- 属性颜色 -->
+	<colour name="low attribute" 							value="rgb(150,150,150)"/>
+	<colour name="normal attribute" 						value="rgb(200,200,200)"/>
+	<colour name="good attribute" 							value="rgb(121,196,113)" />
+	<colour name="excellent attribute" 						value="rgb(232,100,27)" />
+	<colour name="unknown attribute background" 			value="rgb(220,220,220)"/>
+	<colour name="low attribute background" 				value="rgb(180,180,180)"/>
+	<colour name="normal attribute background" 				value="rgb(63,188,239)"/>
+	<colour name="good attribute background" 				value="rgb(121,196,113)" />
+	<colour name="excellent attribute background" 			value="rgb(232,100,27)" />
+	<colour name="special attribute" 						value="fg blue" />
+	<colour name="attribute label" 							value="fg" />
+	<colour name="special attribute label" 					value="fg" />
+	<colour name="profile extra text" 						value="yellow1" />
+
+    <!-- 角色高亮属性颜色-->
+	<colour name="preferred attribute" 						value="rgb(0,199,204)" />
+	<colour name="required attribute" 						value="rgb(0,222,58)" />
+
+	<!--属性多边形 -->
+	<colour name="comparison_colour_greatest" 				value="rgb(yellow1)" /><!--球员比较更好的颜色-->
+	<colour name="attribute analyser line" 					value="yellow1"/><!--球员比较八卦图的线-->
+	<colour name="inaccurate attribute value" 				value="rgb(128,128,128)" /><!--不准确的值-->
+	<colour name="comparison_inaccurate_attributes_colour" 	value="rgb(105,105,105)" /><!--比较不准确的值-->
+
+	<colour name="promoted" 								value="bg positive" />
+	<colour name="relegated" 								value="bg negative" />
+
+	<colour name="forward set piece pitch" 					value="bg positive" />
+	<colour name="middle set piece pitch" 					value="bg alert" />
+	<colour name="back set piece pitch" 					value="bg negative" />
+
+	<!-- (额外的)统计数据的颜色。用于侦察，信心条 已修改-->
+	<colour name="low stat" 								value="rgb(255,69,0)" />
+	<colour name="medium stat" 								value="rgb(255,255,0)" />
+	<colour name="good stat" 								value="rgb(124,252,0)" />
+	<colour name="excellent stat" 							value="rgb(0,206,209)" />
+
+	<colour name="low stat colourblind" 					value="rgb(140,140,140)" />
+	<colour name="medium stat colourblind" 					value="rgb(104,104,156)" />
+	<colour name="good stat colourblind" 					value="rgb(68,68,196)" />
+	<colour name="excellent stat colourblind" 				value="rgb(0,0,240)" />
+
+	<!-- 状态 -->
+	<colour name="low condition" 							value="rgb(255,69,0)" />
+	<colour name="mid condition" 							value="rgb(255,215,0)" />
+	<colour name="high condition" 							value="rgb(64,224,208)" />
+	<colour name="low condition bar" 						value="rgb(255,69,0)" />
+	<colour name="mid condition bar" 						value="rgb(255,215,0)" />
+	<colour name="high condition bar" 						value="rgb(64,224,208)" />
+	<colour name="low condition match" 						value="rgb(255,69,0)" />
+	<colour name="mid condition match" 						value="rgb(255,215,0)" />
+	<colour name="high condition match" 					value="rgb(64,224,208)" />
+
+	<!-- 士气 -->
+	<colour name="morale1" 									value="rgb(255,0,0)" />
+	<colour name="morale2" 									value="rgb(255,15,0)" />
+	<colour name="morale3" 									value="rgb(255,30,0)" />
+	<colour name="morale4" 									value="rgb(255,50,0)" />
+	<colour name="morale5" 									value="rgb(255,70,0)" />
+	<colour name="morale6" 									value="rgb(255,90,0)" />
+	<colour name="morale7" 									value="rgb(255,110,0)" />
+	<colour name="morale8" 									value="rgb(255,130,0)" />
+	<colour name="morale9" 									value="rgb(255,150,0)" />
+	<colour name="morale10" 								value="rgb(255,165,0)" />
+	<colour name="morale11" 								value="rgb(243,175,0)" />
+	<colour name="morale12" 								value="rgb(221,187,0)" />
+	<colour name="morale13" 								value="rgb(196,198,0)" />
+	<colour name="morale14" 								value="rgb(168,208,0)" />
+	<colour name="morale15" 								value="rgb(138,217,0)" />
+	<colour name="morale16" 								value="rgb(106,226,0)" />
+	<colour name="morale17" 								value="rgb(76,234,0)" />
+	<colour name="morale18" 								value="rgb(47,242,0)" />
+	<colour name="morale19" 								value="rgb(25,248,0)" />
+	<colour name="morale20" 								value="rgb(0,255,0)" />
+	<colour name="morale default" 							value="fg" />
+	<colour name="morale arrow" 							value="bg" />
+
+	
+	<!-- 仅用于位置熟练度颜色 -->
+	<colour name="makeshift"								value="rgb(210,105,30)" />
+	<colour name="awkward" 									value="rgb(240,230,140)" />
+	<colour name="unconvincing" 							value="rgb(175,238,238)" />
+	<colour name="competent" 								value="rgb(72,209,204)" />
+	<colour name="accomplished" 							value="rgb(173,255,47)" />
+	<colour name="natural" 									value="rgb(0,255,0)" />
+
+	<!-- match rating colours -->
+	<colour name="match rating none" 						value="bg darker" />
+	<colour name="match rating zero to five" 				value="rgb(255,69,0)" />
+	<colour name="match rating five to six" 				value="rgb(255,140,0)" />
+	<colour name="match rating six to seven" 				value="rgb(128,128,0)" />
+	<colour name="match rating seven to eight" 				value="rgb(152,251,152)" />
+	<colour name="match rating eight to nine" 				value="rgb(127,255,0)" />
+	<colour name="match rating nine to ten" 				value="rgb(0,255,0)" />
+
+	<!-- match rating text colours -->
+	<colour name="match rating text none" 					value="faded black" />
+	<colour name="match rating text zero to five" 			value="faded black" />
+	<colour name="match rating text five to six" 			value="faded black" />
+	<colour name="match rating text six to seven" 			value="fg alpha" />
+	<colour name="match rating text seven to eight" 		value="faded black" />
+	<colour name="match rating text eight to nine" 			value="faded black" />
+	<colour name="match rating text nine to ten" 			value="faded black" />
+
+	<!-- training rating colours -->
+	<colour name="training rating none" 					value="fg" />
+	<colour name="training rating zero to five" 			value="rgb(255,69,0)" />
+	<colour name="training rating five to six" 				value="rgb(255,140,0)" />
+	<colour name="training rating six to seven" 			value="rgb(0,255,255)" />
+	<colour name="training rating seven to eight" 			value="rgb(152,251,152)" />
+	<colour name="training rating eight to nine" 			value="rgb(127,255,0)" />
+	<colour name="training rating nine to ten" 				value="rgb(0,255,0)" />
+
+	<!--战术场上的位置线和小部件的颜色-->
+	<colour name="goalkeeper_line" 							value="rgb(72,61,139)" />
+	<colour name="defender_line" 							value="rgb(70,130,180)" />
+	<colour name="defensive_midfielder_line" 				value="rgb(0,139,139)" />
+	<colour name="midfielder_line" 							value="rgb(46,139,87)" />
+	<colour name="attacking_midfielder_line" 				value="rgb(255,165,0)" />
+	<colour name="attacker_line" 							value="rgb(178,34,34)" />
+	<colour name="substitutes_line" 						value="rgb(90,90,100)"/>
+
+	<!-- 球员/对象 颜色 -->
+	<colour name="virtual player" 							value="fg alpha"/><!--拥有的球员-->
+	<colour name="loan out" 								value="rgb(0,250,154)"/><!--租借出的球员-->
+	<colour name="loan out background" 						value="bg blue"/>
+	<colour name="loan in" 									value="rgb(32,178,170)"/><!--租借进的球员-->
+	<colour name="co own in" 								value="fg lime lighter"/>
+	<!-- 在俱乐部共同拥有 -->
+	<colour name="co own out" 								value="fg lime"/>
+	<!-- 不是俱乐部共同拥有 -->
+	<colour name="trial in" 								value="fg green lighter"/><!--试训进的球员-->
+	<colour name="trial out" 								value="fg green"/>
+	<colour name="shortlisted" 								value="orange1"/>
+	<colour name="golden generation" 						value="yellow1"/>
+	<colour name="human controlled" 						value="rgb(0,255,255)" />
+	<!-- used to indicate that team is managed by a human player -->
+	<colour name="feeder club" 								value="purple1"/>
+	<!-- used to indicate that team is a feeder club for the current human player -->
+
+	<!-- 状态按钮颜色 -->
+	<colour name="status_advisory" 							value="rgb(103,190,129)"/>
+	<colour name="status_advisory_high" 					value="rgb(68,150,94)"/>
+	<colour name="status_advisory_low" 						value="rgb(163,218,180)"/>
+	<colour name="status_cannot_play" 						value="rgb(209,67,67)"/>
+	<colour name="status_cannot_play_high" 					value="rgb(167,18,18)"/>
+	<colour name="status_cannot_play_low" 					value="rgb(213,100,100)"/>
+	<colour name="status_homegrown_club" 					value="rgb(90,160,209)"/>
+	<colour name="status_homegrown_nation" 					value="rgb(4,119,169)"/>
+	<colour name="status_restricted" 						value="rgb(114,122,134)"/>
+	<colour name="status_shouldnt_play"						value="rgb(220,136,64)"/>
+	<colour name="status_shouldnt_play_high" 				value="rgb(203,95,30)"/>
+	<colour name="status_shouldnt_play_low" 				value="rgb(212,182,60)"/>
+	<colour name="status_warning" 							value="rgb(241,234,37)"/>
+	<colour name="status_promoted" 							value="green 700"/>
+	<colour name="status_relegated" 						value="red 700"/>
+	<colour name="status_continental comp 1" 				value="yellow 500"/>
+	<colour name="status_continental comp 2" 				value="amber 500"/>
+	<colour name="status_continental comp 3" 				value="orange 500"/>
+
+	<!-- Team fixtures panel colours -固定装置面板颜色-->
+	<colour name="potential fixture" 						value="fg"/>
+	<!-- row on table showing a possible future fixture date -->
+	<colour name="draw date" 								value="fg orange"/>
+	<!-- row on table showing the draw date of a stage -->
+	<colour name="selected for friendly" 					value="bg accent"/>
+	<!-- row on table showing a selected friendly date -->
+	<colour name="unavailable friendly date" 				value="rgba(40,40,40,0.4)"/>
+	<!-- row on table showing an unavailable friendly date -->
+	<colour name="available friendly date" 					value="fg green"/>
+	<!-- row on table showing an available friendly date -->
+	<colour name="fixture continental row" 					value="fg blue"/>
+	<colour name="fixture cup row" 							value="fg blue lighter"/>
+	<colour name="fixture friendly row" 					value="fg purple"/>
+
+	<!-- 固定的颜色-->
+	<colour name="result score" 							value="rgb(255,255,255)"/>
+	<colour name="result aggregate" 						value="yellow1" />
+	<colour name="position" 								value="rgb(220,220,220)"/>
+	<!-- team league position -->
+	<colour name="loser" 									value="rgb(150,150,150)"/>
+	<!-- colour for losing team -->
+	<colour name="competition" 								value="rgb(255,255,255)"/>
+	<!-- colour for 3-letter competition name -->
+	<colour name="nation" 									value="yellow1"/>
+	<!-- colour for 3-letter nation name -->
+	<colour name="fixture score separator" 					value="fg"/>
+	<!-- colour for : or - score separator -->
+	<colour name="fixture outcome" 							value="fg range20"/>
+	<!-- colour for pen/extra time indicator -->
+	<colour name="fixture tv" 								value="fg"/>
+	<!-- 'tv' label for TV matches -->
+	<colour name="fixture tv extra info" 					value="fg"/>
+	<!-- 'tv' label for TV matches with extra info -->
+	<colour name="league position" 							value="fg" />
+	<colour name="league points deducted" 					value="fg range1" />
+	<!-- points deducted label on league tables -->
+	<colour name="goal scorers" 							value="rgb(255,255,255)" />
+	<!-- goal scorer names and attendance on fixtures panel -->
+
+	<!-- Results -->
+	<colour name="result_background" 						value="rgb(30,144,255)"/><!-- 比分背景 -->
+	<!-- Background for result on fixtures and results panel -->
+	<colour name="aggregate_result_background" 				value="bg green"/>
+	<!-- Background for aggregate result on fixtures and results panel -->
+	<colour name="result_time_background" 					value="bg blue darker"/>
+
+	<!-- Game status colours -->
+	<colour name="user playing" 							value="fg positive"/>
+	<!-- user is playing the game -->
+	<colour name="user waiting" 							value="fg alert"/>
+	<!-- user is waiting -->
+
+	<colour name="user attention colour 1" 					value="bg yellow" />
+	<colour name="user attention colour 2" 					value="bg orange" />
+	
+	<!-- Match text colours -->
+	<colour name="match incident" 							value="rgb(255,255,255)"/>
+	<colour name="match goal" 								value="rgb(255,255,255)"/>
+	<colour name="match own goal" 							value="rgb(255,255,255)"/>
+	<colour name="match penalty" 							value="rgb(255,255,255)"/>
+	<colour name="match missed penalty" 					value="rgb(255,255,255)"/>
+	<colour name="match yellow card" 						value="yellow 300"/>
+	<colour name="match red card" 							value="red1"/>
+	<colour name="match injury" 							value="rgb(255,140,0)"/>
+	<colour name="match man of match" 						value="rgb(255,255,255)"/>
+	<colour name="match substitute" 						value="rgb(255,255,255)"/>
+	<colour name="match goal update" 						value="rgb(255,255,255)"/>
+	<!-- colour of scoring team on goal updates -->
+
+	<!-- Match caption 比赛说明-->
+	<colour name="match caption background" 				value="bg accent"/>
+	<!-- used for line dividers throughout the game -->
+	<colour name="match caption border" 					value="fg tertiary"/>
+	<!-- used for line dividers throughout the game -->
+	
+	<!-- 杂项 -->
+	<colour name="hilight_first_teamers" 					value="green 400" />
+	<!-- used for highlighting first team players in a match report -->
+	<colour name="divider" 									value="rgb(255,255,255)"/>
+	<colour name="hilight" 									value="bg accent"/>
+	<!-- Used for text highlighting in edit boxes -->
+	<colour name="global_focus_colour" 						value="rgb(1,1,1)"/>
+	<colour name="crop_colour" 								value="rgb(251,205,1)" />
+	<colour name="default foreground" 						value="rgb(200,200,200)"/>
+	<!-- 默认屏幕前景色 -->
+	<colour name="default background" 						value="rgb(160,160,160)"/>
+	<!-- 默认屏幕背景色 -->
+	<colour name="default outline" 							value="rgb(240,240,240)"/>
+	<!-- 默认屏幕轮廓颜色 -->
+	<colour name="graph team 1" 							value="rgb(200,0,0)"/>
+	<!-- team 1 colour on graph -->
+	<colour name="graph team 2" 							value="rgb(0,200,0)"/>
+	<!-- team 2 colour on graph -->
+	<colour name="neutral commentary foreground" 			value="rgb(255,255,255)"/>
+	<!-- foreground colour for neutral commentary -->
+	<colour name="neutral commentary background" 			value="rgb(21,22,23)"/>
+	<!-- background colour for neutral commentary -->
+	<colour name="match stats" 								value="yellow1"/>
+	<!-- 匹配统计信息颜色 -->
+	<colour name="squad number" 							value="fg"/>
+	<!-- team stats squad number colour -->
+	<colour name="notification text" 						value="fg" />
+	<!-- Text colour for display of number of unread news items -->
+	<colour name="urgent news" 								value="fg" />
+	<!-- Text colour for display of news items requiring urgent attention -->
+	<colour name="draft next team" 							value="rgb(0,130,198)"/>
+	<!-- Background colour for next team to pick in draft panel -->
+	<colour name="draft user team" 							value="rgba(40,40,160,0.3)"/>
+	<!-- Background colour for next team to pick in draft panel -->
+	<colour name="prozone" 									value="rgb(157,32,56)" />
+	<!-- Prozone Background -->
+	<colour name="transfer offer comment" 					value="fg" />
+	<!-- Comment box on transfer offer screen colour -->
+
+	<!-- 线性进度条 -->
+	<colour name="progress_empty" 							value="rgb(255,69,0)"/>
+	<colour name="progress_full" 							value="rgb(0,200,0)"/>
+
+	<colour name="bar value" 								value="rgb(0,250,154)"/>
+	<!-- 百分比填充颜色  inbox战术熟练度-->
+	<colour name="bar filler" 								value="blue1"/>
+	<!-- 百分比填充颜色2-->
+
+	<!--For the Team meeting- the overall colour changes-->
+	<colour name="normal bar filler" 						value="rgb(20,20,20)"/>
+	<!--水平百分比分割时的标准条形图颜色 球员对比属性条未填充颜色-->
+	<colour name="positive bar filler" 						value="rgb(0,200,0)"/>
+	<!-- 百分比填充颜色 -->
+	<colour name="negative bar filler" 						value="rgb(255,69,0)"/>
+	<!--负值填充颜色-->
+
+	<colour name="positive bar increased filler" 			value="rgb(142,255,178)"/>
+	<!-- percentage bar filler colour -->
+	<colour name="positive bar decreased filler" 			value="rgb(50,87,77)"/>
+	<!-- percentage bar filler colour -->
+	<colour name="negative bar increased filler" 			value="rgb(215,84,84)"/>
+	<!--Negative bar filler colour-->
+	<colour name="negative bar decreased filler" 			value="rgb(86,31,32)"/>
+	<!--Negative bar filler colour-->
+
+	<colour name="player comparison left" 					value="rgb(255,165,0)" />
+	<!-- 球员比较左边数值填充颜色 -->
+	<colour name="player comparison right" 					value="rgb(0,255,255)" />
+	<!-- 球员比较右边数值填充颜色 -->
+
+	<colour name="comp person 1" 							value="rgb(0,100,0)" /><!--球员比较左边背景板-->
+	<colour name="comp person 2" 							value="rgb(0,139,139)" /><!--球员比较右边背景板-->
+	<colour name="comp person bar 1" 						value="rgb(0,235,0)"/><!--球员比较八卦左边数值-->
+	<colour name="comp person bar 2" 						value="rgb(0,235,235)"/><!--球员比较八卦右边数值-->
+
+
+	<colour name="profile bar value" 						value="rgb(93,130,175)" />
+	<!-- percentage bar fill colour -->
+	<colour name="profile bar filler" 						value="yellow1" />
+	<!-- percentage bar filler colour -->
+	
+	<!-- picking colours - 尚未实施 -->
+	<colour name="player picked" 							value="rgb(160,82,45)" />
+	<!-- picking button colour 选择按钮 -->
+	<colour name="picking player unavailable" 				value="red1" />
+	<!-- player unavailable -->
+	<colour name="picking player available" 				value="teal 900" />
+	<!-- player available - only used on the tactics pitch-->
+  <colour name="picking player first team" 					value="blue1" /> <!--  senior player available for no senior team- only used on the tactics pitch-->
+	<!-- Picking Button - Starting首发-->
+	<colour name="picking_starting_button" 					value="rgb(45,135,52)"/>
+	<colour name="picking_starting_button_border" 			value="rgb(17,76,35)"/><!--描边-->
+
+	<!-- Picking Button - Sub替补-->
+	<colour name="picking_sub_button" 						value="rgb(104,121,129)"/>
+	<colour name="picking_sub_button_border" 				value="rgb(61,66,70)"/>
+
+	<!-- Picking Button - Empty空的-->
+	<colour name="empty_picking_button" 					value="bg darker"/>
+	<colour name="empty_picking_button_border" 				value="bg darker"/>
+
+	<colour name="competition schedule fixture" 			value="bg orange"/>
+	<colour name="competition schedule draw date" 			value="bg blue"/>
+	<colour name="competition schedule squad selection" 	value="bg green"/>
+	<!-- squad selection date-->
+	<!-- 日历 -->
+	<colour name="calendar fixture" 						value="light blue 800"/><!-- 一线队比赛 -->
+	<colour name="calendar reserve fixture" 				value="rgb(90,110,130)" /><!-- 青年队比赛 -->
+	<colour name="calendar preseason" 						value="rgb(98,98,98)" />
+	<colour name="calendar schedule date" 					value="rgb(98,98,98)"/>
+	<colour name="calendar transfer window" 				value="bg red"/>
+	
+	<!-- 消息盒子颜色设置 headline是内容简述 category是发件人时间 -->
+	<colour name="unread headline" 							value="rgb(255,255,255)"/>
+	<colour name="read headline" 							value="rgb(150,150,150)"/>
+	<colour name="selected headline" 						value="yellow1"/>
+	<colour name="must respond headline" 					value="rgb(255,69,0)"/>
+	<colour name="unread category" 							value="rgb(255,255,255)"/>
+	<colour name="read category" 							value="rgb(150,150,150)"/>
+	<colour name="selected category" 						value="yellow1"/>
+	<colour name="inbox_sidebar_background" 				value=""/>
+	<!-- Box background colour - red_replacement  ↑ ↑边栏颜色 ↑ ↑-->
+	<colour name="inbox_content_background" 				value="rgb(45,60,80)"/>
+	<!-- Box background colour - red_replacement  ↑ ↑右边底部颜色 ↑ ↑ -->
+	<colour name="inbox_button_box_background" 				value=""/>
+	<!-- Box background colour - red_replacement  ↑ ↑按钮颜色 ↑ ↑-->
+	<colour name="inbox_attachment_background" 				value="rgb(27,35,48)"/>
+	<!-- Box background colour - red_replacement  ↑ ↑右边内容背景颜色 ↑ ↑-->
+	<colour name="inbox_icons" 								value="card fg"/>
+	<colour name="inbox_text" 								value="yellow1"/>
+	<colour name="link_button_inbox" 						value="card fg"/>
+	<colour name="inbox_must_respond" 						value="yellow1"/>
+	<colour name="inbox_optional" 							value="bg alert"/>
+	<colour name="inbox_selected" 							value="rgb(27,35,48,)"/>
+	
+	<!-- 场地 Colours -->
+	<colour name="condition_perfect" 						value="rgb(67,150,65)"/>
+	<colour name="condition_muddy" 							value="rgb(84,110,59)"/>
+	<colour name="condition_damp" 							value="rgb(47,104,37)"/>
+	<colour name="condition_dry" 							value="rgb(121,143,60)"/>
+	<colour name="condition_water_logged" 					value="rgb(40,96,51)"/>
+	<colour name="condition_muddy" 							value="rgb(89,99,55)"/>
+	<colour name="condition_frozen" 						value="rgb(74,103,74)"/>
+	<colour name="condition_snowy" 							value="rgb(156,203,162)"/>
+	<colour name="condition_hard" 							value="rgb(84,113,70)"/>
+
+	<!-- 状态包 -->
+	<colour name="stat_pack_records_won" 					value="rgb(115,143,93)"/>
+	<colour name="stat_pack_records_drew" 					value="rgb(69,70,72)"/>
+	<colour name="stat_pack_records_lost" 					value="rgb(157,120,121)"/>
+	
+	<!--获奖者收件箱颜色-->
+	<colour name="award winner" 							value="rgb(255,220,150)"/>
+	
+	<!-- Feed 社交新闻-->
+	<colour name="news item" 								value="rgb(0,117,121)"/>
+	<colour name="social media" 							value="rgb(11,97,162)"/>
+	<colour name="feed box" 								value="rgb(42,52,60)"/><!-- Feed 社交新闻背景-->
+	<colour name="social media linked box" 					value="rgb(27,35,48)"/>
+	<colour name="feed background" 							value="bg darker"/>
+	<colour name="follow list background" 					value="rgb(42,52,60)"/>
+	<colour name="hashtag" 									value="blue 800"/>
+	<colour name="newspaper text" 							value="rgb(100,100,100)"/>
+	<colour name="radio profile" 							value="rgb(0,166,255)"/>
+	<colour name="bookmaker" 								value="rgb(232,175,0)"/>
+	
+	<!-- 进程 按继续之后出现画面-->
+	<colour name="world_news_background" 					value="teal 700"/>
+	<!-- World news background colour - red_replacement -->
+	<colour name="processing_box_background" 				value="rgb(48,58,68)"/>
+	<!-- Processing box background colour - red_replacement -->
+	<colour name="processing_box_border" 					value="rgb(80,80,80)"/>
+	<!-- Processing box border - blue_replacement -->
+	<colour name="processing_box_shadow" 					value="shadow"/>
+	<!-- Processing box shadow colour - green_replacement -->
+	<colour name="processing_box_content_background" 		value="rgb(48,58,54)"/>
+	<!-- 进程中间最大部分颜色 - red_replacement -->
+	<colour name="processing_box_content_border" 			value="rgb(80,80,80)"/>
+	<!-- 进程日历分割线 - red_replacement -->
+	<!--下方为进程里面文字颜色-->
+	<colour name="processing_date" 							value="rgb(240,240,240)"/>
+	<colour name="processing_month" 						value="rgb(200,200,200)"/>
+	<colour name="processing_headline" 						value="card fg"/>
+	<colour name="processing_goalscorers" 					value="card fg lighter"/>
+	<colour name="processing_comp" 							value="card fg lighter"/>
+	
+	<!--满意度？社交？ -->
+	<colour name="dynamics team leader" 					value="yellow1"/>
+	<colour name="dynamics leading player" 					value="grey1" />
+	<colour name="dynamics influential player" 				value="orange1" />
+	<colour name="dynamics squad player" 					value="blue1" />
+	
+	<!-- 新闻发布会语气Press conference tones -->
+	<colour name="tone none" 								value="rgb(225,255,255)"/>
+	<colour name="tone assertive" 							value="rgb(0,191,255)"/>
+	<colour name="tone passionate" 							value="rgb(128,0,128)"/>
+	<colour name="tone cautious" 							value="rgb(218,165,32)"/>
+	<colour name="tone calm" 								value="rgb(0,128,128)"/>
+	
+	<!-- Tactics -->
+	<!-- General tactics colours一般战术颜色 -->
+	<colour name="tactic_slot" 								value="teal 700"/>
+	<colour name="pitch hide" 								value="rgb(59,216,131)"/>
+	<colour name="pitch hide secondary" 					value="rgb(0,67,31)"/>
+
+	<colour name="tactic intensity low"     				value="rgb(255,99,71)" />
+	<colour name="tactic intensity medium"  				value="rgb(32,178,170)" />
+	<colour name="tactic intensity high"    				value="rgb(83,209,103)" />
+
+	<!-- team/player instructions dialog key colours 团队/球员说明对话框关键颜色-->
+	<colour name="selected instruction" 					value="rgb(72,209,204)"/>
+	<colour name="unselected instruction" 					value="rgb(112,128,144)"/>
+	<colour name="conflicting instruction" 					value="pink"/><!-- 冲突的-->
+	<colour name="conflicting with role instruction" 		value="baise"/>
+	<colour name="preselected instruction" 					value="rgb(32,178,170)"/><!-- 预选的-->
+
+	<!-- Player Instructions 说明-->
+	<colour name="positional instructions" 					value="rgb(94,162,255)"/>
+	<colour name="personalised instructions" 				value="rgb(99,245,163)"/>
+	<colour name="personalised instructions pitch" 			value="rgb(99,245,163)"/>
+
+	<!-- Alert colours for player instructions panel 说明面板的警告颜色-->
+	<colour name="player starting" 							value="rgb(60,179,113)" />
+	<colour name="instructions not used" 					value="rgb(100,100,100)" />
+	<colour name="player not starting" 						value="rgb(255,165,0)" />
+
+	<!-- Duty colours 职责 进攻策应防守-->
+	<colour name="duty attack"      						value="rgb(135,255,90)"/>
+	<colour name="duty support"     						value="rgb(132,235,255)"/>
+	<colour name="duty defend"      						value="rgb(255,152,146)"/>
+	
+	
+	<!--工作情况 (formerly confidence)-->
+	<colour name="performance board tag" 					value="rgb(255,165,0)" /><!--董事会图标颜色-->
+	<colour name="performance fans tag" 					value="yellow1" /><!--球迷图标颜色-->
+	<colour name="performance A plus grade" 				value="rgb(0,255,0)" />
+	<colour name="performance A grade" 						value="rgb(0,250,154)" />
+	<colour name="performance A minus grade" 				value="rgb(152,251,152)" />
+	<colour name="performance B plus grade" 				value="rgb(30,144,255)" />
+	<colour name="performance B grade" 						value="rgb(0,191,255)" />
+	<colour name="performance B minus grade" 				value="rgb(95,158,160)" />
+	<colour name="performance C plus grade" 				value="rgb(0,158,158)" />
+	<colour name="performance C grade" 						value="rgb(72,209,204)" />
+	<colour name="performance C minus grade" 				value="rgb(32,178,170)" />
+	<colour name="performance D grade" 						value="rgb(218,165,32)" />
+	<colour name="performance E grade" 						value="rgb(255,165,0)" />
+	<colour name="performance F grade" 						value="rgb(255,99,71)" />
+	<colour name="performance G grade" 						value="rgb(255,0,0)" />
+ 	<colour name="performance waiting grade" 				value="rgb(180,180,180)" />
+	<colour name="performance highlight positive" 			value="rgb(127,255,0)" />
+	<colour name="performance highlight negative" 			value="rgb(255,69,0)" />
+	
+	<!-- 八卦图颜色 -->
+	<colour name="ring1" 							value="rgb(249,246,0)"/>
+	<colour name="ring2" 							value="rgb(201,242,7)"/>
+	<colour name="ring3" 							value="rgb(81,233,24)"/>
+	<colour name="ring4" 							value="rgb(0,222,58)"/>
+	<colour name="ring5" 							value="rgb(0,211,139)"/>
+	<colour name="ring6" 							value="rgb(0,199,204)"/>
+	<colour name="ring7" 							value="rgb(0,154,210)"/>
+	<colour name="ring8" 							value="rgb(232,133,111)"/>
+	<colour name="ring9" 							value="rgb(232,77,74)"/>
+	<colour name="ring10" 							value="rgb(255,5,0)"/>
+	<colour name="ringline" 							value="rgb(61,16,123)"/>
+	
+	<!--唐夫特殊颜色-->
+		<!--属性值相关颜色-->
+		<colour name="shuxingxia" 							value="rgb(220,220,220)"/>
+		<colour name="baise" 							value="rgb(255,255,255)"/>
+		<colour name="zhenrong gaoliang" 							value="rgb(0,222,58)"/>
+		<colour name="titlesearchdown" 							value="rgb(150,150,150)"/>
+		<colour name="matchtitle1" 							value="rgb(70,130,180)"/>
+		<colour name="heise" 							value="rgb(0,0,0)"/>
+		<colour name="baopengdi" 							value="rgb(1,153,200)"/>		
+		<colour name="xingse" 							value="rgb(244,188,0)"/>
+		<colour name="xingkong" 							value="rgb(31,44,60)"/>
+		<colour name="footse" 							value="rgb(245,189,0)"/>
+		<colour name="bjd" 							value="rgb(60,60,60)"/>
+</properties>

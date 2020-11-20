@@ -1,0 +1,22 @@
+<panel height="60" width="140">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container class="main_box" appearance="buttons/custom/interface/date/paper">
+    <layout class="arrange_horizontal_attachment" layout="-1, 30" gap="0" inset="15"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" gap="-2" offset="18"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <widget class="text" id="dtam" auto_size="none" size="9" alignment="centre_x,bottom" style="bold, shadowed" colour="white" height="16"/>
+      <widget class="text" id="dytm" auto_size="none" size="8" alignment="centre_x,top" style="embossed" colour="gray" height="16"/>
+    </container>
+
+    <!-- Drop down Arrow -->
+    <widget class="picture" id="popu" cant_be_toggled="true" file="icons/16px/down" image_alignment="left"/>
+  </container>
+
+  <widget class="button" id="actn" appearance="buttons/custom/interface/date/button" click_event="opcl" height="30" width="140"/>
+
+</panel>

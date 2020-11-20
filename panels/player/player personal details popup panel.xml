@@ -1,0 +1,156 @@
+<!-- A panel showing various bits of information about a player -->
+<panel height="140">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+
+
+		
+			<!--第一行-->
+			<container class="plain_box"  >
+				<layout class="arrange_horizontal_attachment" layout="-4,-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				
+				<!--左边信息-->
+				<container>
+				   <layout class="arrange_vertical_attachment" layout="-3,1,-1,1,-1,1,-1,1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<!--国家-->
+					 <container>
+                            <layout class="arrange_horizontal_attachment" layout="-1" offset="7" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							
+                            <widget class="object_portrait_picture" id="npiB" image_alignment="left,centre_y" scale_picture="true" width="40" height="40" wants_mouse_events="true" embed_in_frame="true">
+							  <layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+							<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+							</widget>
+							
+						
+							
+                        </container>
+<widget class="horizontal_divider" height="1" colour="secondary" />	
+
+					 
+                    <widget class="player_extra_details_text" id="plex" priority="1"  size="11" colour="secondary" alignment="centre_x,centre_y">
+                        <record id="object_property">
+                            <integer id="get_property" value="PExD" />
+                        </record>
+                    </widget>
+					
+<widget class="horizontal_divider" height="1"  colour="secondary"/>
+
+				
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="7" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--年龄-->	
+					<widget class="dob_label" id="dobl" display_format="2" colour="secondary"   size="11" alignment="centre_x,centre_y" >
+						<record id="object_property">
+							<integer id="get_property" value="Pdob" />
+						</record>					
+					</widget>
+					
+					  <!--出生年月-->
+                    <widget class="editable_client_object_property_panel" id="dobc" colour="secondary" alignment="centre_x,centre_y" size="11">
+                        <record id="object_property">
+                            <integer id="get_property" value="Pdob" />
+                        </record>
+                        <record id="widget_properties" display_format="0" />
+                    </widget>
+				</container>	
+					
+
+
+<widget class="horizontal_divider" height="1" colour="secondary" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="7" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					
+							 
+					  <!--身高-->				
+					<widget class="height_label" id="heig" size="11"  style="" alignment="centre_x,centre_y" colour="secondary" >
+					<record id="object_property">
+						<integer id="get_property" value="Phei" />
+					</record>
+                    </widget>
+				
+					 <!--体重-->
+					  <widget class="weight_label" id="weig" size="11"  alignment="centre_x,centre_y" colour="secondary" >
+                        <record id="object_property">
+                            <integer id="get_property" value="Pwei" />
+                        </record>
+                    </widget>
+				</container>
+
+					
+<widget class="horizontal_divider" height="1" colour="secondary" />	
+	
+					
+			   <!-- 性格 -->
+					<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="7" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			      <widget class="label"   alignment="centre_x,centre_y" size="11" colour="secondary" >
+					<translation id="text" translation_id="247713" type="use" value="Personality" />
+				  </widget>								
+				<widget class="personality_label" id="PPst"  size="11"  alignment="centre_x,centre_y" colour="secondary" >
+						<record id="object_property" get_property="PPst" />
+					</widget>
+			</container>  
+			
+<widget class="horizontal_divider" height="1" colour="secondary" />	
+					
+		
+			
+					
+					
+					
+				</container>
+				
+
+				
+		
+				<!--中间头像-->			
+				<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre_x,centre_y"  >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="2"/>		
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>						
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+				<!-- Player Status  -->
+				<widget class="player_status_all_button" appearance="buttons/custom/status" id="Pnfa" alignment="bottom" gap="1" maximised="true">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+						<record id="object_property">
+							<integer id="get_property" value="PnaS"/>
+						</record>
+				</widget>	
+					
+				</container>
+	
+						
+
+				
+
+						
+				<!--右边信息-->
+			<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<container class="player_positions_indicator_panel" id="ypip" file="player/player positions indicator small1">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+
+</container>
+		 
+	
+
+
+</panel>

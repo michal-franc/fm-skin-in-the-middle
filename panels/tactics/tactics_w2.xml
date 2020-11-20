@@ -1,0 +1,61 @@
+<panel >
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<animation class="fade_on_hide_animation" duration="0.1" end_mode="stop"/>
+	<!-- This animation isn't a normal position animation as it gets triggered in code with specfic values-->
+	<animation class="position_animation" tween="ease_in_out" duration="0.2"/>
+
+	<container>
+		<!-- Number -->
+		<container class="bordered_box" id="numc" appearance="boxes/custom/match/lineup pitch icon/top/paper" height="36">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="10"/>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<container/> <!-- spacer -->
+			<widget class="label" id="bsnm" size="12" alignment="centre" auto_size="vertical" style="bold"/>
+		</container>
+
+		<!-- Player picture -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="left,bottom">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="7"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+
+		<!-- captain icon-->
+		<widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" hidden="true" width="16" height="16">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+		</widget>
+
+		<!-- Icons (Injury, star player etc)-->
+		<container id="icoC" height="16" width="16" class="bordered_box" appearance="boxes/custom/solid/rounded/paper">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+
+			<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+			<widget class="picture" id="PTgs" file="icons/16px/goal" red_replacement="text"/>
+			<widget class="picture" id="PTas" file="icons/16px/assist" red_replacement="text"/>
+			<widget class="picture" id="PTrt" file="icons/16px/key player" />
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+		</container>
+	</container>
+
+	<!-- Name -->
+	<container class="bordered_box" id="nmcn" appearance="boxes/custom/match/lineup pitch icon/bottom/paper" height="20" width="80">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="label" id="name" size="8" alignment="centre" auto_size="vertical" multiline="false" style="semi_bold"/>
+	</container>
+</panel>

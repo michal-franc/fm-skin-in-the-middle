@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" inset="0" offset="0" gap="-5" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="horizontal_adaptive_container" layout="-1" height="90" inset="0" offset="0" gap="0">
+	    
+		<container >
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	  	
+	
+	  
+      <!-- Position label-->
+      <widget class="text" id="posT" auto_size="vertical" colour="title" font="fonts/capitals_bold" alignment="centre"  />
+      <!-- Position strength label -->
+      <widget class="icon_button" id="posS" icon="icons/16px/circle" appearance=""  auto_size="horizontal" height="22" font="fonts/capitals_bold" icon_alignment="centre" alignment="centre" />
+      
+	  	<widget class="position_label" id="apos" colour="white" auto_size="all" alignment="centre,can_scale" display_format="0" font="fonts/capitals_bold" size="8">
+			<record id="object_property">
+				<integer id="get_property" value="PAps" />
+			</record>
+		</widget>
+	  
+	  <!-- Side preference string -->
+      <widget class="label" id="Psid" colour="white"  height="16" alignment="centre,can_scale" />
+	  
+	  		<!--<container class="horizontal_adaptive_container" layout="-1" height="25" inset="0" offset="0" gap="0">
+		<widget class="popup_table_button" id="hipo" appearance="buttons/flut/normal/button" colour="white" red_replacement="title" item_file="tactics/positions indicator highlight menu" fixed="true" select_event="high" alignment="centre" auto_size="horizontal">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="153" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				<translation id="text" translation_id="383368" type="use" value="Highlight[COMMENT: FR 10661; player overview positions panel; label for popup button displaying position highlighting options]" />
+			</widget>
+			</container>-->
+
+      <!--<widget class="picture" file="dividers/standard/horizontal/line" height="1" />-->
+    </container>
+		
+		</container>
+		
+		<!-- Pitch -->
+		<widget class="pitch_with_player_positions" id="ppip" height="115" 
+			  vertical="false" 
+			  pitch_alignment="centre, can_scale" 
+			  pitch_draw_goals="false" 
+			  pitch_draw_markings="false" 
+			  show_position_strength="false" 
+			  hide_player_positions="true" 
+			  pitch_show_names="false" 
+			  pitch_show_names_as_hint="true" 
+			  pitch_draw_grass="false" 
+			  pitch_line_colour="disabled" 
+			  pitch_touchline_width_percentage="1" 
+			  pitch_perspective="0.10" 
+			  pitch_override_icon_size="2" 
+			  line_width="1.4">
+			<string id="pitch_kit_icon" value="pitch/icons/dots" />
+			     
+				 <!--<boolean id="pitch_disable_line_drawing" value="true"/>
+	  <record id="pitch_base_appearance">
+				<string id="condition_perfect" value="boxes/flut/flutpitch1"/>
+			  </record>  
+			  <integer id="pitch_pattern_opacity" value="0"/>
+			  <integer id="pitch_detail_opacity" value="255"/>-->  	  
+		</widget>
+		
+
+			
+		<container height="200">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="15" />
+
+			<!-- Info labels for when the data isn't available-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+
+				<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+				</widget>
+				<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<translation id="text" translation_id="385683" type="use" value="This player is being scouted by [%person#1] and a report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+				</widget>
+				<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+					<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" inset="4"/>
+				</widget>
+			</container>
+
+    <!-- Best roles for selected position -->
+    <widget class="table" id="Rcon" layout="80, -1, 100" auto_size_rows="false" row_height="20" row_spacing="0" column_spacing="10" mode="select_rows" select_event="sdst">
+      <translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+      
+      <record id="default_properties">
+        <translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+      </record>
+      
+      <widget class="position_role_duty_suitability_bar" id="roS1" row="0" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL1" row="0" col="1" />
+      <widget class="popup_button" id="dut1" row="0" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS2" row="1" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL2" row="1" col="1" />
+      <widget class="popup_button" id="dut2" row="1" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS3" row="2" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL3" row="2" col="1" />
+      <widget class="popup_button" id="dut3" row="2" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS4" row="3" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL4" row="3" col="1" />
+      <widget class="popup_button" id="dut4" row="3" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS5" row="4" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL5" row="4" col="1" />
+      <widget class="popup_button" id="dut5" row="4" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS6" row="5" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL6" row="5" col="1" />
+      <widget class="popup_button" id="dut6" row="5" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS7" row="6" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL7" row="6" col="1" />
+      <widget class="popup_button" id="dut7" row="6" col="2" appearance="buttons/subtle/normal/button" />
+
+      <widget class="position_role_duty_suitability_bar" id="roS8" row="7" col="0" />
+      <widget class="label" alignment="left,can_scale" id="roL8" row="7" col="1" />
+      <widget class="popup_button" id="dut8" row="7" col="2" appearance="buttons/subtle/normal/button" />
+    </widget>
+
+  </container>
+</container>
+</panel>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <container>
+		<layout class="arrange_vertical_attachment" layout="20, 2,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<!-- Set icon to only show: Tut, Lrn-->
+		<record id="widget_properties" type="7" />
+
+		<container height="20">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+      
+			<string id="skin_style" value="title link" />
+			<!-- Linked header -->
+			<widget class="link_button" section="Ptra" auto_size="all">
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+			</widget>
+		</container>
+		<!-- Spacer -->
+		<container height="2"/>
+		
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>	
+			
+			<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>	
+		
+			<container id="fROW">
+				<layout class="arrange_horizontal_attachment" layout="-1, 2,40" offset="0" gap="5"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<!-- Individual Training -->
+					<widget class="text" auto_size="vertical" font="text" colour="text">
+						<translation id="text" translation_id="394545" type="use" value="Position/Role[COMMENT: individual player training header text]" />
+					</widget>
+					<container height="2"/>
+					<widget class="individual_position_training_popup" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="none" height="28">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PTif" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />        
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />  	
+					<widget class="label" id="wppt" alignment="left,centre" auto_size="none" font="bold" colour="white"/>
+				</container>
+			</container>
+        
+			<container id="pROW">
+				<layout class="arrange_horizontal_attachment" layout="-1, 2,40" offset="0" gap="5"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>        
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" auto_size="vertical" font="text" colour="text">
+						<translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]" />
+					</widget>
+					<container height="2"/>
+					<widget class="individual_training_popup" is_attribute_training="true" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" auto_size="none" height="28">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PTaf" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />  	          	
+					<widget class="label" id="ifwl" alignment="left,centre" auto_size="none" font="bold" colour="white"/>
+				</container>
+			</container>     
+		</container>  
+
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>	
+
+
+			<container id="heffem">
+				<layout class="arrange_horizontal_attachment" layout="-1, 2,40" offset="0" gap="5"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>        
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" auto_size="vertical" font="text" colour="text">
+          <translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
+					</widget>
+					<container height="2"/>
+        <widget class="player_training_intensity_rest_popup_button" fixed="false" appearance="buttons/standard/normal/button" id="inPt" alignment="left,centre_y" auto_size="vertical" >
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PTiR" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />  	          
+					<widget class="label" id="ifwl" alignment="left,centre" auto_size="none" font="bold" colour="white"/>
+				</container>
+			</container>   
+			
+			
+			
+			<container id="heftrait">
+				<layout class="arrange_horizontal_attachment" layout="-1, 2,40" offset="0" gap="5"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>        
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" auto_size="vertical" font="text" colour="text">
+            <translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+          </widget>
+					<container height="2"/>
+        <widget class="preferred_move_popup_button" fixed="false" appearance="buttons/standard/normal/button" id="nPPM" alignment="left,centre_y" auto_size="vertical" >
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PmCo" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />  	          
+					<widget class="label" id="ifwl" alignment="left,centre" auto_size="none" font="bold" colour="white"/>
+				</container>
+			</container>   
+		</container>   	
+			
+			
+		</container>	  
+		
+		
+		
+	</container>
+</panel>

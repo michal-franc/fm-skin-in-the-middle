@@ -1,0 +1,12 @@
+<panel>
+  <container id="SUBP">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+	<widget class="player_scout_reports_panel" id="gprt" file="Tangfu/tangfu player reports tuijian" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+		<translation id="title" translation_id="248079" type="use" value="Report" />
+	</widget>  
+
+
+</panel>

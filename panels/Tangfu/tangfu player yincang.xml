@@ -1,0 +1,428 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="200,-1" offset="0" gap="0" default_height="350"  />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+	
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="vertical_adaptive_container" inset="0" gap="0" mode="distribute_equally">
+			
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+            
+			<!--黄色柱状图-->
+			<container default_height="80" minimum_height="80" priority="2">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="trca" scale_picture="true" transparency="1">
+					<translation id="hint"  type="txet" value="RCA" />
+						<list id="value_list">
+							<record min_value="1" max_value="20" file="icons/custom/hidden/positive/1"/>
+							<record min_value="21" max_value="40" file="icons/custom/hidden/positive/2"/>
+							<record min_value="41" max_value="60" file="icons/custom/hidden/positive/3"/>
+							<record min_value="61" max_value="80" file="icons/custom/hidden/positive/4"/>
+							<record min_value="81" max_value="100" file="icons/custom/hidden/positive/5"/>
+							<record min_value="101" max_value="120" file="icons/custom/hidden/positive/6"/>
+							<record min_value="121" max_value="140" file="icons/custom/hidden/positive/7"/>
+							<record min_value="141" max_value="160" file="icons/custom/hidden/positive/8"/>
+							<record min_value="161" max_value="180" file="icons/custom/hidden/positive/9"/>
+							<record min_value="181" max_value="200" file="icons/custom/hidden/positive/10"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="PRCA" />
+						</record>
+					</widget>
+			</container>
+			
+			<!--绿色柱状图-->
+			<container default_height="80" minimum_height="80" priority="2">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="tcab" scale_picture="true" transparency="1">
+					<translation id="hint" type="text" value="CA" />
+						<list id="value_list">
+							<record min_value="1" max_value="20" file="icons/custom/hidden/positive/11"/>
+							<record min_value="21" max_value="40" file="icons/custom/hidden/positive/12"/>
+							<record min_value="41" max_value="60" file="icons/custom/hidden/positive/13"/>
+							<record min_value="61" max_value="80" file="icons/custom/hidden/positive/14"/>
+							<record min_value="81" max_value="100" file="icons/custom/hidden/positive/15"/>
+							<record min_value="101" max_value="120" file="icons/custom/hidden/positive/16"/>
+							<record min_value="121" max_value="140" file="icons/custom/hidden/positive/17"/>
+							<record min_value="141" max_value="160" file="icons/custom/hidden/positive/18"/>
+							<record min_value="161" max_value="180" file="icons/custom/hidden/positive/19"/>
+							<record min_value="181" max_value="200" file="icons/custom/hidden/positive/20"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="PCAB" />
+						</record>
+					</widget>
+			</container>
+			
+			<!--蓝色柱状图-->
+			<container default_height="80" minimum_height="80" priority="2">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="tpab" scale_picture="true" transparency="1">
+					<translation id="hint"  type="text" value="PA" />
+						<list id="value_list">
+							<record min_value="1" max_value="20" file="icons/custom/hidden/positive/21"/>
+							<record min_value="21" max_value="40" file="icons/custom/hidden/positive/22"/>
+							<record min_value="41" max_value="60" file="icons/custom/hidden/positive/23"/>
+							<record min_value="61" max_value="80" file="icons/custom/hidden/positive/24"/>
+							<record min_value="81" max_value="100" file="icons/custom/hidden/positive/25"/>
+							<record min_value="101" max_value="120" file="icons/custom/hidden/positive/26"/>
+							<record min_value="121" max_value="140" file="icons/custom/hidden/positive/27"/>
+							<record min_value="141" max_value="160" file="icons/custom/hidden/positive/28"/>
+							<record min_value="161" max_value="180" file="icons/custom/hidden/positive/29"/>
+							<record min_value="181" max_value="200" file="icons/custom/hidden/positive/30"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="PPAB" />
+						</record>
+					</widget>
+			</container>
+			
+
+			
+			 <container>
+			</container>
+		</container>
+		
+		<container >
+		<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+            
+				<!-- RCA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,20" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>				
+					<widget class="label" size="15" alignment="centre_x,top" font="tfimp" colour="baise">
+						<record id="object_property">
+							<integer id="get_property" value="PRCA" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="9" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<translation id="text" translation_id="349063" type="use" value="实际能力"/>
+						<translation id="hint" translation_id="349114" type="use" value="The Current Ability level recommended based on player attributes set[COMMENT: player edit panel]" />
+					</widget>
+					
+				</container>
+
+				<!-- CA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,20" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					
+					<widget class="editable_client_object_property_panel" size="15" alignment="centre_x,top" font="tfimp" colour="baise">
+					<record id="object_property">
+						<integer id="get_property" value="PCAB" />
+					</record>
+					</widget>					
+					
+					<widget class="label" font="semibold" size="9" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<translation id="text" translation_id="252139" type="use" value="能力"/>
+						<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+					</widget>				
+				</container>
+
+				<!-- PA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,20" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					
+					<widget class="editable_client_object_property_panel" size="15" alignment="centre_x,top" font="tfimp" colour="baise">						
+						<record id="object_property">
+							<integer id="get_property" value="PPAB" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="9" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<translation id="text" translation_id="252141" type="use" value="潜力"/>
+						<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+					</widget>
+
+				</container>									
+
+		</container>
+		
+		</container>
+
+	<container class="vertical_adaptive_container" inset="0" gap="0" mode="distribute_equally">
+	
+		    <!-- 隐藏 -->
+			<container default_height="30" minimum_height="30" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- adaptability -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="Pada" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+					<translation id="hint" translation_id="227943" type="use" value="Adaptability" />
+						<record id="object_property">
+							<integer id="get_property" value="Pada" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="227943" type="use" value="Adaptability" />
+					</widget>
+
+				</container>
+
+				<!-- ambition -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="Pamb" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293412" type="use" value="Ambition" />
+						<record id="object_property">
+							<integer id="get_property" value="Pamb" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293412" type="use" value="Ambition" />
+					</widget>
+
+				</container>
+
+				<!-- loyalty -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="Ploy" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293414" type="use" value="Loyalty" />
+						<record id="object_property">
+							<integer id="get_property" value="Ploy" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293414" type="use" value="Loyalty" />
+					</widget>
+
+				</container>
+
+				<!-- pressure -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="Ppre" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293329" type="use" value="Pressure" />
+						<record id="object_property">
+							<integer id="get_property" value="Ppre" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293329" type="use" value="Pressure" />
+					</widget>
+
+				</container>
+				
+				<!-- consistency -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="editable_client_object_property_panel" id="PCON" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="361095" type="use" value="Cons[COMMENT: column heading; short for Consistency]" />
+						<record id="object_property">
+							<integer id="get_property" value="PCON" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="361095" type="use" value="Cons[COMMENT: column heading; short for Consistency]" />
+					</widget>
+				</container>
+
+				<!-- dirtiness -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="editable_client_object_property_panel" id="dirt" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="230007" type="use" value="Dirtiness" />
+						<record id="object_property">
+							<integer id="get_property" value="Pdir" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230007" type="use" value="Dirtiness" />
+					</widget>
+				</container>
+
+				<!-- important -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="editable_client_object_property_panel" id="impo" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="230008" type="use" value="Important Matches" />
+						<record id="object_property">
+							<integer id="get_property" value="Pimp" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" type="use" translation_id="230008" value="Important Matches" />
+					</widget>
+				</container>
+
+			</container>
+
+
+			<!-- 隐藏2 -->
+			<container default_height="30" minimum_height="30" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+				
+
+				<!-- injury -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="editable_client_object_property_panel" id="inju" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="230009" type="use" value="Injury Proneness" />
+						<record id="object_property">
+							<integer id="get_property" value="Pipr" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230009" type="use" value="Injury Proneness" />
+					</widget>
+				</container>
+
+
+
+				<!-- Versatility -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="editable_client_object_property_panel" id="vers" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="230011" type="use" value="Versatility" />
+						<record id="object_property">
+							<integer id="get_property" value="Pver" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230011" type="use" value="Versatility" />
+					</widget>
+				</container>
+				
+				<!-- professional -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="prof" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293415" type="use" value="Professionalism" /> 
+						<record id="object_property">
+							<integer id="get_property" value="Ppro" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293415" type="use" value="Professionalism" /> 
+					</widget>
+
+				</container>
+
+				<!-- sportmanship -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="sprt" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293416" type="use" value="Sportsmanship" />
+						<record id="object_property">
+							<integer id="get_property" value="Pspo" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293416" type="use" value="Sportsmanship" />
+					</widget>
+
+				</container>
+
+				<!-- temperament -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="temp" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+						<record id="object_property">
+							<integer id="get_property" value="Ptem" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+					</widget>
+
+				</container>
+
+				<!-- controversy -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="ctrv" size="11" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical">
+						<translation id="hint" translation_id="293413" type="use" value="Controversy" />
+						<record id="object_property">
+							<integer id="get_property" value="Pcvy" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="8"  colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293413" type="use" value="Controversy" />
+					</widget>
+
+				</container>
+				
+				<!-- 挂牌价-->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="30,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="editable_client_object_property_panel" id="Pnar" size="10" font="semibold" alignment="bottom,centre_y, can_scale" auto_size="vertical" colour="yellow1"  >
+						<translation id="hint"  type="use" value="Pnar" />
+						<record id="object_property">
+							<integer id="get_property" value="Pnar" />
+						</record>
+					</widget>
+
+					<widget class="label" row="0" column="0" font="semibold" alignment="centre_x,top, can_scale" size="8" colour="faded text" auto_size="vertical">
+					  <record id="object_property" name="true" get_property="Pnar"/>
+					</widget>
+
+				</container>
+
+			</container>
+
+
+
+
+
+
+		</container>
+
+
+
+</panel>

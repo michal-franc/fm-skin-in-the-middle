@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<panel draw_vertical_dividers="true">
+	<layout class="arrange_horizontal_attachment" layout="-4,-1" offset="0" gap="1"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- 用于所有属性表的表属性-->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 60, 33" row_height="25" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- 属性名称的样式 -->
+			<record index="0" id="name" left="8" top="0">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false"  size="11" colour="baise"/>
+			</record>
+			<!--属性训练变化的样式 -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- 属性值的样式 -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label"  alignment="right,centre_y" size="13"  style="semi_bold" multiline="false" />
+			</record>
+			<!-- 应该是核武编辑时候的样式-->
+			<record index="3" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" size="10" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+		<container >
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		    <!-- 非门将技术属性标题 -->
+			<widget class="table" id="pltt" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="12" font="tfsy_Normal"  colour="red1" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="229413" type="use" value="Technical"/>
+				</record>
+			</list> -->
+			</widget>
+
+			<!-- 门将的属性标题-->
+			<widget class="table" id="plgk" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="12" font="tfsy_Normal"  colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>-->
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!-- 精神属性标题-->
+			<widget class="table" id="plmt" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="12" font="tfsy_Normal"  colour="blue1" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230106" type="use" value="Mental"/>
+				</record>
+			</list>-->
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- 身体属性标题 -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<!--<list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="12" font="tfsy_Normal"  colour="green1" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="230003" type="use" value="Physical"/>
+						</record>
+					</list>-->
+				</widget>
+
+				<!-- 门将额外的技术属性标题 -->
+				<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+					<!--<list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="12" font="tfsy_Normal"  colour="accent" column_span="5">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>-->
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Separator 分离器-->
+				<widget class="picture" file="dividers/standard/horizontal/line" height="2" image_alignment="centre"/>
+
+				<!-- 个人习惯 -->
+				
+
+				<widget class="label" auto_size="vertical" font="title" colour="text">
+					<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+				</widget>
+
+				<container class="scrolling_box">
+					<widget class="preferred_moves_panel" file="player/player information preferred moves" id="pfmp" auto_size="vertical">
+						<record id="object_property" get_property="pfmp" set_property="pfmp" />
+					</widget>
+				</container>
+			</container>
+				
+				
+			</container>
+		</container>
+
+	
+<!-- More attribute stuff-->
+
+	<container class="player_personal_details_panel" id="atT2" file="Tangfu/tangfu player yincangS"/>
+</panel>
