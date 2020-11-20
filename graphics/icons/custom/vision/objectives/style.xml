@@ -1,0 +1,5 @@
+﻿<!-- image properties -->
+<properties>
+	<colour id="red_replacement" name="normal_icon"/>
+	<colour id="blue_replacement" name="bg"/>
+</properties>

@@ -1,0 +1,8 @@
+﻿<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="match scoreboard clock"/>
+	<colour id="green_replacement" name="black"/>
+	<colour id="blue_replacement" name="white"/>
+	
+</properties>

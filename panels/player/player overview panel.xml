@@ -74,7 +74,7 @@
 			<layout class="arrange_vertical_attachment" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 			<!-- 头像 -->
-			<container class="bordered_box" appearance="tangfu/paper" offset="0" inset="-5" gap="0" default_height="200" priority="0">
+			<container class="bordered_box" appearance="tangfu/paper" offset="0" inset="-5" gap="0" default_height="250" priority="0">
 				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 				<container class="client_object_viewer_selector_panel" id="cosA" file="Tangfu/tangfu player profile selector panel1" default_item="facepic1" save_session_state="true" save_default_state="true" priority="1" default_height="-1">

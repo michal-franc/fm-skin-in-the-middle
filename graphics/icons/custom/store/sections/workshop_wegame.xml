@@ -1,0 +1,6 @@
+﻿<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="steam_workshop_colour"/>
+	<colour id="blue_replacement" name="store_background"/>	
+</properties>

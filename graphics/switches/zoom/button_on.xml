@@ -1,0 +1,10 @@
+﻿<!-- image properties -->
+<properties>
+
+	<colour id="red_replacement" name="fg accent"/>
+	<colour id="blue_replacement" name="fg accent"/>
+
+	<record id="primary_icon_properties" red_replacement="fg accent" />
+	<record id="secondary_icon_properties" red_replacement="fg accent"/>
+	
+</properties>

@@ -1,0 +1,7 @@
+<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="black"/>
+	<colour id="blue_replacement" name="team_form_loss"/>
+	
+</properties>

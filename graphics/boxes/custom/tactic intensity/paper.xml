@@ -1,0 +1,16 @@
+﻿<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<record id="image_borders" left="12" right="1" top="1" bottom="1"/>
+
+	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
+	<!-- the image will only slice in the directions slicing values are provided for-->
+	<record id="image_slices" left="12" right="6"/>
+
+	<colour id="red_replacement" name="black"/>
+	<colour id="blue_replacement" name="tactical_familiarity_colour_1"/>
+	
+</properties>
