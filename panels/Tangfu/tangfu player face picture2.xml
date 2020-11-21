@@ -273,13 +273,13 @@
 						<!--左脚图片-->
 						<widget class="value_based_picture" id="Mlft" scale_picture="true" transparency="1">
 							<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
-							<list id="value_list">
-								<record min_value="1" max_value="4" file="icons/custom/foot/L1"/>
-								<record min_value="5" max_value="8" file="icons/custom/foot/L2"/>
-								<record min_value="9" max_value="12" file="icons/custom/foot/L3"/>
-								<record min_value="13" max_value="16" file="icons/custom/foot/L4"/>
-								<record min_value="17" max_value="20" file="icons/custom/foot/L5"/>
-							</list>
+						<list id="value_list">
+							<record min_value="1" max_value="4" file="icons/custom/footed1/left" red_replacement="red"/>
+							<record min_value="5" max_value="8" file="icons/custom/footed1/left" red_replacement="orange"/>
+							<record min_value="9" max_value="11" file="icons/custom/footed1/left" red_replacement="yellow"/>
+							<record min_value="12" max_value="17" file="icons/custom/footed1/left" red_replacement="green 500"/>
+							<record min_value="18" max_value="20" file="icons/custom/footed1/left" red_replacement="green"/>
+						</list>
 							<record id="object_property">
 								<integer id="get_property" value="PlfG" />
 							</record>
@@ -289,13 +289,9 @@
 							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
 							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 							<record id="object_property" get_property="objt" set_property="objt" />
-							<!-- 左脚文字 -->
-							<widget class="label" alignment="right, centre_y" size="10" colour="footse">
-								<translation id="text" translation_id="230000" type="use" value="Left Foot" />
-							</widget>
 							<container class="horizontal_adaptive_container" inset="0" gap="0" mode="dont_distribute">
 								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-								<widget class="footedness_label" id="PlfG" alignment="left, centre_y" spec="text,small" size="10" colour="footse" default_width="130" minimum_width="70">
+								<widget class="footedness_label" id="PlfG" alignment="centre_x, centre_y" spec="text,small" size="10" colour="footse" default_width="130" minimum_width="70">
 									<record id="object_property">
 										<integer id="get_property" value="PlfG" />
 									</record>
@@ -318,26 +314,22 @@
 						<widget class="value_based_picture" id="Mrft" scale_picture="true" transparency="1">
 							<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
 							<list id="value_list">
-								<record min_value="1" max_value="4" file="icons/custom/foot/R1"/>
-								<record min_value="5" max_value="8" file="icons/custom/foot/R2"/>
-								<record min_value="9" max_value="12" file="icons/custom/foot/R3"/>
-								<record min_value="13" max_value="16" file="icons/custom/foot/R4"/>
-								<record min_value="17" max_value="20" file="icons/custom/foot/R5"/>
+								<record min_value="1" max_value="4" file="icons/custom/footed1/right" red_replacement="red"/>
+								<record min_value="5" max_value="8" file="icons/custom/footed1/right" red_replacement="orange"/>
+								<record min_value="9" max_value="11" file="icons/custom/footed1/right" red_replacement="yellow"/>
+								<record min_value="12" max_value="17" file="icons/custom/footed1/right" red_replacement="green 500"/>
+								<record min_value="18" max_value="20" file="icons/custom/footed1/right" red_replacement="green"/>
 							</list>
 							<record id="object_property">
 								<integer id="get_property" value="PrfG" />
-							</record>
+							</record>V
 						</widget>
 						<!--右脚-->
 						<container >
 							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
 							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 							<record id="object_property" get_property="objt" set_property="objt" />
-							<!-- 右脚文字 -->
-							<widget class="label" alignment="right, centre_y" size="10" colour="footse">
-								<translation id="text" translation_id="230001" type="use" value="Right Foot" />
-							</widget>
-							<widget class="footedness_label" id="PrfG" alignment="left, centre_y" spec="text,small" size="10" colour="footse" default_width="130" minimum_width="70">
+							<widget class="footedness_label" id="PrfG" alignment="centre_x, centre_y" spec="text,small" size="10" colour="footse" default_width="130" minimum_width="70">
 								<record id="object_property">
 									<integer id="get_property" value="PrfG" />
 								</record>

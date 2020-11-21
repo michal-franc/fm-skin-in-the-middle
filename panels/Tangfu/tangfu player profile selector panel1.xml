@@ -4,9 +4,7 @@
     <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
   </container>
 
-  <widget class="player_personal_details_panel" id="facepic2" file="Tangfu/tangfu player face picture2" late_loading="true">
-    <translation id="title" type="use" value="11111" />
+  <widget class="player_personal_details_panel" id="facepic" file="Tangfu/tangfu player face picture2" late_loading="true">
+    <translation id="title" type="use" value="MainFace" />
   </widget>
-
-
 </panel>

@@ -10,7 +10,7 @@
 			<container default_height="200" minimum_height="200">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!-- 转会信息-->
+				<!-- TRANSFER STATUS -->
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
@@ -23,7 +23,7 @@
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!-- 八卦图 -->
+					<!-- COmparison vs Attribute Analysis -->
 					<container offset="0" inset="-5" gap="0" default_height="180" priority="1">
 						<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
@@ -41,8 +41,7 @@
 			<container default_height="350" minimum_height="250">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!--球员比较-->
-				<!--位置-->
+				<!--POSITIONS-->
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
@@ -59,7 +58,7 @@
 					</container>
 				</container>
 			</container>
-			<!--训练-->
+			<!--Training bottom left -->
 			<container class="bordered_box" appearance="tangfu/paper" default_height="150" minimum_height="100">
 				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
@@ -73,7 +72,7 @@
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" default_width="-6" priority="1" mode="distribute_equally">
 			<layout class="arrange_vertical_attachment" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-			<!-- 头像 -->
+			<!-- Main Panel with Player Picture -->
 			<container class="bordered_box" appearance="tangfu/paper" offset="0" inset="-5" gap="0" default_height="250" priority="0">
 				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
