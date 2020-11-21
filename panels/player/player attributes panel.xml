@@ -1,6 +1,5 @@
 <panel draw_vertical_dividers="true">
-	<attachment_group class="horizontal_arrange" horizontal_layout="-11,-3">
-		<global id="horizontal_gap" name="ui.inner_box_gap"/>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-99">
 	</attachment_group>
 	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
 	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
@@ -80,11 +79,5 @@
 	</container>
 	<!-- More attribute stuff-->
 	<container  id="tpp2" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" minimum_width="100" default_width="-4" priority="1">
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="-1" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="vertical" inset="-1" apply_to_children="true" />
-		<widget class="player_personal_details_panel" id="atT2" file="player/player additional attributes panel2" colour="baise">
-			<translation id="title" type="use" value="Info" />
-			<record id="object_propety" get_property="objt" set_property="objt"/>
-		</widget>
 	</container>
 </panel>
