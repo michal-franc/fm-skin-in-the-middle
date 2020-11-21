@@ -320,10 +320,10 @@
 		</container>
 		<!-- RIGHT PANEL -->
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" minimum_width="100" default_width="-4" priority="2" mode="distribute_equally">
-			<layout class="arrange_vertical_attachment" layout="-1,-2,-2,-2" offset="0" gap="0"/>
+			<layout class="arrange_vertical_attachment" layout="-2,-2,-2,-2" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 			<!--球探报告-->
-			<container class="bordered_box" appearance="tangfu/paper" default_height="200" minimum_height="200" priority="0">
+			<container class="bordered_box" appearance="tangfu/paper" default_height="390" minimum_height="390" priority="0">
 				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 				<container class="horizontal_adaptive_container" offset="0" inset="5" gap="1" mode="distribute_equally">
@@ -337,7 +337,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="200" minimum_height="200">
+			<container default_height="10" minimum_height="10">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!--两联0-->
@@ -368,7 +368,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="200" minimum_height="200">
+			<container default_height="10" minimum_height="10">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!--两联1-->
@@ -399,7 +399,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="200" minimum_height="200">
+			<container default_height="10" minimum_height="10">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!--两联2-->
