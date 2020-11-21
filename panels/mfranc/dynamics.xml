@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <!--very close relationship colour-->
+  <colour id="pVgC" name="green 900" />
+  <!--close relationship colour-->
+  <colour id="pgCl" name="green 700" />
+  <!--aquaintance relationship colour-->
+  <colour id="pACl" name="green 600" />
+  <!--contact relationship colour-->
+  <colour id="pCTr" name="blue 500" />
+  <!--rival relationship colour-->
+  <colour id="prVr" name="red 300" />
+  <!--adversary relationship colour-->
+  <colour id="pAdv" name="red 500" />
+  <!--distant relationship colour-->
+  <colour id="pCds" name="red 700" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="bordered_box" appearance="">
+    <layout class="arrange_vertical_attachment" layout="60,-1" offset="10" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!--Header box-->
+    <container class="inner_box">
+      <layout class="arrange_horizontal_attachment" layout="-21, -25, 35" offset="8" gap="25" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--relationship-->
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+        <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="6" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <widget class="picture" id="hrcP" height="48" width="48" file="icons/48px/relationship" image_alignment="centre" scale_picture="true"  keep_aspect_ratio="true" />
+
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+          <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+          <widget class="label" colour="text" auto_size="all" alignment="left,centre_y" font="label">
+            <translation id="text" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+          </widget>
+
+          <container height="24">
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+            <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <widget class="label" id="relL" auto_size="horizontal" alignment="left,centre_y,can_scale" font="value"/>
+
+            <widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" />
+          </container>
+        </container>
+      </container>
+      <!--Opinion-->
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+        <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+        <widget class="label" colour="faded text" id="opHd" auto_size="all" alignment="left,centre_y" font="label">
+          <translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+        </widget>
+
+        <widget class="label" id="opiL" auto_size="all" alignment="left,centre_y,can_scale" font="value" />
+
+      </container>
+
+
+
+    </container>
+
+    <!--body-->
+    
+      <!--Squad Hierarchy-->
+      <container id="plHr" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <container class="team_hierarchy_player_details_panel" id="pHrc" file="mfranc/dynamics details panel" />
+      </container>
+
+
+
+  </container>
+
+</panel>
