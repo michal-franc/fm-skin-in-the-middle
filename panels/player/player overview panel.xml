@@ -7,7 +7,7 @@
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" default_width="-4" priority="0" mode="distribute_equally">
 			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-			<container default_height="200" minimum_height="200">
+			<container default_height="173" minimum_height="173">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!-- TRANSFER STATUS -->
@@ -38,8 +38,8 @@
 					</container>
 				</container>
 			</container>
-			<container default_height="350" minimum_height="250">
-				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
+			<container default_height="240" minimum_height="240">
+				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!--POSITIONS-->
 				<container class="bordered_box" appearance="tangfu/paper">
@@ -59,7 +59,7 @@
 				</container>
 			</container>
 			<!--Training bottom left -->
-			<container class="bordered_box" appearance="tangfu/paper" default_height="150" minimum_height="100">
+			<container class="bordered_box" appearance="tangfu/paper" default_height="167" minimum_height="167">
 				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<widget class="player_training_stats_panel" id="pitf" file="Tangfu/player training small" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">

@@ -17,7 +17,7 @@
 			</widget>
 		</container>
 		<!-- Pros Cons panel -->
-		<container default_height="150" minimum_height="150" priority="1">
+		<container default_height="400" minimum_height="400" priority="1">
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 			<widget class="player_scout_reports_panel" id="psrp" file="Tangfu/tangfu player reports you1" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
