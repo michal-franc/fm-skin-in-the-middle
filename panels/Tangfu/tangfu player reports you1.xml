@@ -1,79 +1,116 @@
-<panel>
+<panel save_session_state="true">
+	<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
-  <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
-  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	
 
-  <container height="300">
-    <layout class="arrange_horizontal_attachment" layout="-1" offset="0"/>
-    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+	
+	<!-- 没有报告 -->
+	<container id="nsrc">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
 
-    <container id="main">
-      <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" gap="0" />
-      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<container id="nocs" height="60">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 
-      <!-- lhs: pros / cons-->
-      <container height="100">
-        <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="1"/>
-        <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+			<!--解释性文本-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 
-        <!-- pros / cons -->
-        <container height="250">
-          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
-          <layout class="arrange_horizontal_attachment" layout="-1,1, -1" offset="5" gap="1"/>
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+			<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
 
-          <!-- Pros icons -->
-          <container class="plain_box" appearance="" height="150">
-            <layout class="arrange_vertical_attachment" alignment="left, extend" layout="30,-1" offset="0" gap="3"/>
-            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
 
-            <container class="bordered_box" height="25" width="25" red_replacement="pro high">
-              <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
-              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+		<widget id="nocn" class="label" spec="text,large" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
 
-              <widget class="label" size="11" style="bold" colour="white" auto_size="all">
-                <translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
-              </widget>
-            </container>
+	<!-- 已经被侦察过了 -->
+	<container id="arbs">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-            <container class="scrolling_box">
-              <widget class="horizontal_arrange_container" alignment="middle" id="mpro" wrap="true" gap="2" inset="4" auto_size="vertical">
-                <integer id="size" value="35" />
-              </widget>
-            </container>
-          </container>
+		<!--解释性文本-->
+		<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+	</container>
 
-          <widget class="picture" file="dividers/standard/horizontal/line" height="4">
-            <layout class="stick_to_sides_attachment" alignment="top" inset="43"/>
-          </widget>
-          <!-- Cons icons -->
-          <container class="plain_box" appearance="" height="150">
-            <layout class="arrange_vertical_attachment" alignment="left, extend" layout="30,-1" offset="0" gap="3"/>
-            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	<!-- Already being scouted by pool -->
+	<container id="pool" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-            <container class="bordered_box" height="25" width="25" red_replacement="con high">
-              <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
-              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+		</widget>
+	</container>
+	
+	<container id="scou">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" inset="0" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+	
+		<!-- 如果我们有报告的话 -->
+		<!--优点/缺点 -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-10,-10" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
-              <widget class="label" size="11" style="bold" colour="white" auto_size="all">
-                <translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
-              </widget>
-            </container>
+			<!-- 优点 icons -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-            <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
-            <container class="scrolling_box">
-              <widget class="horizontal_arrange_container" alignment="middle" id="mcon" wrap="true" gap="2" inset="4" auto_size="vertical">
-                <integer id="size" value="35" />
-              </widget>
-            </container>
-          </container>
-        </container>
+				<!--title-->
+				<container class="bordered_box" height="25" appearance="boxes/bordered/standard/paperpros" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
+					<widget class="label" size="12"   alignment="centre" auto_size="vertical" colour="baise">
+						<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+					</widget>
+				</container>
 
-      </container>
+				<!-- 图标插入这里。“size”属性是每个图标的像素大小 -->
+						<container class="scrolling_box"  >
+							<container id="mprT" >
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="5" />
+								<integer id="size" value="30" />					
+			                    <integer id="sort_ascending" value="true" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+			</container>
 
-    </container>
-  </container>
-  <!--button to go to reports-->
+			<!-- 缺点 icons -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
+				<!--title-->
+				<container class="bordered_box" height="25" appearance="boxes/bordered/standard/papercons" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="label" size="12"  alignment="centre"  colour="baise">
+						<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
+					</widget>
+				</container>
+
+						<!--图标插入这里。“size”属性是每个图标的像素大小  -->
+						<container class="scrolling_box">
+							<container id="mcoT">
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+								<integer id="size" value="35" />
+								<integer id="sort_ascending" value="true" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+			</container>
+		</container>
+	</container>
 
 </panel>
