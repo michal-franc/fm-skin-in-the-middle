@@ -27,7 +27,7 @@
 			<global id="horizontal_gap" name="ui.main_box_gap" />
 		</attachment_group>
         <container>
-			<layout class="arrange_horizontal_attachment" layout="-1,-3,-1" offset="0" gap="0"/>
+			<layout class="arrange_horizontal_attachment" layout="-1,-4,-1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
             <container></container>
             <container class="main_box" id="sccn" force_title_borders="true">
