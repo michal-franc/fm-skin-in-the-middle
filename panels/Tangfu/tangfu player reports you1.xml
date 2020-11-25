@@ -81,7 +81,7 @@
 								<attachment_group class="vertical_arrange_autosize" horizontal_inset="5" />
 								<integer id="size" value="30" />					
 			                    <integer id="sort_ascending" value="true" />
-								<record id="default_properties" multiline="true" colour="text" />
+								<record id="default_properties" multiline="true" colour="text" size="10"/>
 							</container>
 						</container>
 			</container>
@@ -106,7 +106,7 @@
 								<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
 								<integer id="size" value="35" />
 								<integer id="sort_ascending" value="true" />
-								<record id="default_properties" multiline="true" colour="text" />
+								<record id="default_properties" multiline="true" colour="text" size="10"/>
 							</container>
 						</container>
 			</container>
