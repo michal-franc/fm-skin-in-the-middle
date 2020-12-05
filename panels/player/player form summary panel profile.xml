@@ -33,7 +33,7 @@
 					<widget class="graph" id="grap" draw_shadows="false" inset="5" show_instant_hint="false">
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-						<record id="default_series_properties" colour="yellow1" type="line" line_width="3" point_radius="5" point_colour="accent"/>
+						<record id="default_series_properties" colour="yellow1" type="line" line_width="2" point_radius="4" point_colour="accent"/>
 						<record id="x_axis" hidden="true" >
 							<string id="format" value="[%fraction#1-3.0]"/>
 							<translation id="title" translation_id="242774" type="use" value="Match" />
