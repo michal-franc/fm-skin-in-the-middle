@@ -7,7 +7,7 @@
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" default_width="-4" priority="0" mode="distribute_equally">
 			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-			<container default_height="173" minimum_height="173">
+			<container default_height="210" minimum_height="210">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!-- TRANSFER STATUS -->
@@ -29,17 +29,17 @@
 						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 						<container class="client_object_viewer_selector_panel" id="paAn1" file="Tangfu/tangfu player left2 selector panel" default_width="-1" priority="1">
 							<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
-							<integer id="default_for_unemployed_managers" value="paAn1"/>
-							<integer id="default_for_international_managers_other_team" value="paAn1"/>
-							<integer id="default_for_everyone_else" value="paAn1"/>
-							<integer id="default_for_versus_mode" value="paAn1"/>
+							<integer id="default_for_unemployed_managers" value="pscR"/>
+							<integer id="default_for_international_managers_other_team" value="pscR"/>
+							<integer id="default_for_everyone_else" value="pscR"/>
+							<integer id="default_for_versus_mode" value="pscR"/>
 							<record id="object_property" get_property="objt" set_property="objt"/>
 						</container>
 					</container>
 				</container>
 			</container>
 			<!-- games played in position-->
-			<container default_height="240" minimum_height="240">
+			<container default_height="270" minimum_height="270">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="bordered_box" appearance="tangfu/paper">
@@ -76,22 +76,20 @@
 					</container>
 				</container>
 			</container>
-			<!--Training bottom left -->
-			<container class="bordered_box" appearance="tangfu/paper" default_height="167" minimum_height="167">
-				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
-				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<widget class="player_training_stats_panel" id="pitf" file="Tangfu/player training small" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-					<translation id="title" translation_id="363655" type="use" value="Individual Training[COMMENT: training players panel, column heading for Individual Training Focus]" />
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget>
-			</container>
-			<container default_height="240" minimum_height="240">
+
+			<container default_height="205" minimum_height="205">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container>
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<container class="bordered_box" appearance="tangfu/paper">
+						<container class="bordered_box" appearance="tangfu/paper">
+							<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<widget class="player_training_stats_panel" id="pitf" file="Tangfu/player training small" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+								<translation id="title" translation_id="363655" type="use" value="Individual Training[COMMENT: training players panel, column heading for Individual Training Focus]" />
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
 					</container>
 				</container>
 				<!-- Carrer Stats -->
