@@ -1,0 +1,18 @@
+<properties version="1.0">
+    <!-- match rating colours -->
+    <colour name="match rating none" red="35" green="35" blue="35" />
+    <colour name="match rating zero to five" red="193" green="0" blue="0"/>
+    <colour name="match rating five to six" red="149" green="0" blue="0" />
+    <colour name="match rating six to seven" red="35" green="35" blue="35" />
+    <colour name="match rating seven to eight" red="80" green="168" blue="83" />
+    <colour name="match rating eight to nine" red="58" green="158" blue="61" />
+    <colour name="match rating nine to ten" red="42" green="134" blue="45"/>
+    <!-- match rating text colours -->
+    <colour name="match rating text none" value="white" />
+    <colour name="match rating text zero to five" value="white" />
+    <colour name="match rating text five to six" value="white" />
+    <colour name="match rating text six to seven" value="white" />
+    <colour name="match rating text seven to eight" value="white" />
+    <colour name="match rating text eight to nine" value="white" />
+    <colour name="match rating text nine to ten" value="white" />
+</properties>
