@@ -41,7 +41,18 @@
 			<container default_height="240" minimum_height="240" >
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<container>
+				<container class="bordered_box" appearance="tangfu/paper">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--左边-->
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="Phap" late_loading="true" minimum_width="150">
+						<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+						<integer id="default_for_unemployed_managers" value="Phap"/>
+						<integer id="default_for_international_managers_other_team" value="Phap"/>
+						<integer id="default_for_everyone_else" value="Phap"/>
+						<integer id="default_for_versus_mode" value="Phap"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
 				</container>
 				<container>
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
@@ -350,20 +361,6 @@
 			<container default_height="10" minimum_height="10">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!--两联0-->
-				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!--左边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="ppsp1" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="247571" type="use" value="Fitness" />
-						<integer id="default_for_unemployed_managers" value="ppsp1"/>
-						<integer id="default_for_international_managers_other_team" value="ppsp1"/>
-						<integer id="default_for_everyone_else" value="ppsp1"/>
-						<integer id="default_for_versus_mode" value="ppsp1"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
@@ -378,23 +375,9 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="165" minimum_height="1">
+			<container default_height="165" minimum_height="165">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!--两联2-->
-				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!--左边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="Phap" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
-						<integer id="default_for_unemployed_managers" value="Phap"/>
-						<integer id="default_for_international_managers_other_team" value="Phap"/>
-						<integer id="default_for_everyone_else" value="Phap"/>
-						<integer id="default_for_versus_mode" value="Phap"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
