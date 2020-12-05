@@ -38,23 +38,29 @@
 					</container>
 				</container>
 			</container>
-			<container default_height="240" minimum_height="240">
-				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
+			<container default_height="240" minimum_height="240" >
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!--POSITIONS-->
-				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+				<container>
+				</container>
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" minimum_height="300" priority="0" mode="distribute_equally">
-						<widget class="player_positions_indicator_panel" id="tfpo" file="Tangfu/tangfu player weizhi gaoliang">
-							<record id="object_property">
-								<list id="get_properties">
-									<!-- Hide this panel if player is in inactive league-->
-									<record id="object_property" get_property="objt" set_property="objt"/>
-									<record id="object_property" get_property="Pila" set_property="hidn"/>
-								</list>
-							</record>
-						</widget>
+					<!--POSITIONS-->
+					<container class="bordered_box" appearance="tangfu/paper">
+						<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" minimum_height="300" priority="0" mode="distribute_equally">
+							<widget class="player_positions_indicator_panel" id="tfpo" file="Tangfu/tangfu player weizhi gaoliang">
+								<record id="object_property">
+									<list id="get_properties">
+										<!-- Hide this panel if player is in inactive league-->
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<record id="object_property" get_property="Pila" set_property="hidn"/>
+									</list>
+								</record>
+							</widget>
+						</container>
 					</container>
 				</container>
 			</container>
@@ -66,6 +72,10 @@
 					<translation id="title" translation_id="363655" type="use" value="Individual Training[COMMENT: training players panel, column heading for Individual Training Focus]" />
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
+			</container>
+			<container default_height="200" minimum_height="200" >
+			</container>
+			<container default_height="200" minimum_height="200" >
 			</container>
 		</container>
 		<!-- MIDDLE PANEL -->
@@ -320,7 +330,7 @@
 		</container>
 		<!-- RIGHT PANEL -->
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" minimum_width="100" default_width="-4" priority="2" mode="distribute_equally">
-			<layout class="arrange_vertical_attachment" layout="-2,-2,-2,-2" offset="0" gap="0"/>
+			<layout class="arrange_vertical_attachment" layout="-2,-2,-2" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 			<!--球探报告-->
 			<container class="bordered_box" appearance="tangfu/paper" default_height="390" minimum_height="390" priority="0">
@@ -368,38 +378,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="10" minimum_height="10">
-				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
-				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-				<!--两联1-->
-				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!--左边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="ppsp" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="247571" type="use" value="Fitness" />
-						<integer id="default_for_unemployed_managers" value="ppsp"/>
-						<integer id="default_for_international_managers_other_team" value="ppsp"/>
-						<integer id="default_for_everyone_else" value="ppsp"/>
-						<integer id="default_for_versus_mode" value="ppsp"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
-				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!--右边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="pbop" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="247569" type="use" value="Bans"/>
-						<integer id="default_for_unemployed_managers" value="pbop"/>
-						<integer id="default_for_international_managers_other_team" value="pbop"/>
-						<integer id="default_for_everyone_else" value="pbop"/>
-						<integer id="default_for_versus_mode" value="pbop"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
-			</container>
-			<container default_height="10" minimum_height="10">
+			<container default_height="165" minimum_height="1">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<!--两联2-->

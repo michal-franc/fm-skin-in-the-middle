@@ -48,4 +48,8 @@
 	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
+    <widget class="player_history_injury_panel" id="phip" file="mfranc/player history injury" late_loading="true">
+        <translation id="title" translation_id="450787" type="use" value="Injury History" />
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
 </panel>
