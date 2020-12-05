@@ -62,17 +62,6 @@
 					<container>
 						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
 
-						<widget class="picture" file="icons/16px/recommended nation" auto_size="all" image_alignment="centre" red_replacement="faded text" />
-
-						<!-- average rating -->
-						<widget class="formatted_label" id="avrt" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" multiline="false">
-							<translation id="format" translation_id="394337" type="use" value="Av Rat: [%fraction#1-4.2][COMMENT: award panel; player stat, short version of Average Rating]" />
-						</widget>
-					</container>
-
-					<container>
-						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
-
 						<widget class="picture" file="icons/16px/goal" auto_size="all" image_alignment="centre" red_replacement="faded text" />
 
 						<container>
