@@ -1,32 +1,251 @@
-<panel>
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-	<boolean id="should_force_refresh" value="true"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<panel save_session_state="true">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <container >
+        <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <container height="18">
+            <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+            <string id="skin_style" value="title link" />
+            <!-- Linked header -->
+            <widget class="link_button" font="label" section="Pccr" auto_size="all">
+                <translation id="text" translation_id="248079" type="use" value="Report" />
+            </widget>
+        </container>
+        <!-- Spacer -->
+        <container id="norp" height="520">
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+            <!-- No scout report -->
+            <container id="nsrc" height="520">
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" apply_to_children="true" />
+                <!--explanatory text-->
+                <widget class="text" alignment="left" spec="text" font="text" colour="white" auto_size="vertical" size="10" gap="30">
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+                    <translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+                </widget>
+                <container height="50">
+                    <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="30" />
+                    <layout class="stick_to_sides_attachment" alignment="top" inset="0" offset="0" apply_to_children="true" />
+                    <widget class="button" id="sctP" click_event="sctc" alignment="top" auto_size="horizontal" height="30">
+                        <translation id="text" translation_id="243421" type="use" value="Scout Player" />
+                    </widget>
+                </container>
+            </container>
+            <!-- No Coach Report-->
+            <container id="ncrc" height="520">
+                <layout class="fit_children_attachment" alignment="top" offset="0" gap="2" />
+                <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+                <!--explanatory text-->
+                <widget class="text" alignment="top, left" spec="text" font="text" colour="faded text" auto_size="vertical" priority="1">
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" />
+                    <translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+                </widget>
+            </container>
+            <!-- No national report-->
+            <container id="nnrc" height="520">
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+                <!--explanatory text-->
+                <widget class="label" id="info" alignment="left,centre_y" spec="text,large" font="text" colour="white" size="10" auto_size="vertical" gap="30" />
+                <widget class="label" id="scit" auto_size="vertical" spec="text,large" font="text" colour="white" alignment="left,centre_y" size="10">
+                    <translation id="text" translation_id="327297" type="use" value="You can request a match report from your coaching staff using the 'National Team' action menu.[COMMENT: national report; how to get a match report]" />
+                </widget>
+                <container height="50">
+                    <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="30" />
+                    <layout class="stick_to_sides_attachment" alignment="top" inset="0" offset="0" apply_to_children="true" />
+                    <widget class="button" id="sctP" click_event="sctc" alignment="top" auto_size="horizontal" height="30">
+                        <translation id="text" translation_id="243421" type="use" value="Scout Player" />
+                    </widget>
+                </container>
+            </container>
+            <!-- Already being scouted -->
+            <container id="arbs" height="520">
+                <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+                <container height="120">
+                    <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" apply_to_children="true" />
+                    <!--explanatory text-->
+                    <widget class="text" id="arbt" alignment="left" spec="text" font="text" colour="white" auto_size="vertical" size="large" style="semi_bold">
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+                        <translation id="text" translation_id="385683" type="use" value="This player is being scouted by [%person#1] and a report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+                    </widget>
+                </container>
+            </container>
+        </container>
+        <container>
+            <layout class="arrange_vertical_attachment" alignment="top,extend" inset="0" gap="0" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+            <!-- CA AGE PA -->
+            <container height="42">
+                <layout class="arrange_horizontal_attachment" layout="-2,50,-2" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <!-- scout rating -->
+                <container class="player_scout_reports_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,3,-1" offset="7" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <!-- CA -->
+                    <widget class="label" alignment="centre_x, centre" colour="heffem" size="small" font="label">
+                        <translation id="text" translation_id="293291" type="use" value="Current Ability" />
+                    </widget>
+                    <container height="5" />
+                    <container class="horizontal_adaptive_container" inset="0" gap="0" mode="dont_distribute">
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                        <widget class="scout_stars_label" id="CAic" alignment="centre_x, top" click_event="ltms" default_width="130" minimum_width="70" />
+                    </container>
+                </container>
+                <widget class="player_scout_recommendation_widget" width="50" show_knowledge_bar="false">
+                    <record id="object_property" get_property="Psrk" set_property="objt" />
+                </widget>
+                <!-- scout rating -->
+                <container class="player_scout_reports_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,3,-1" offset="7" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <!-- PA -->
+                    <widget class="label" alignment="centre_x, centre" size="small" colour="heffem" font="label">
+                        <translation id="text" translation_id="293292" type="use" value="Potential Ability" />
+                    </widget>
+                    <container height="5" />
+                    <widget class="scout_stars_label" id="PAic" alignment="centre_x, top" click_event="ltms" />
+                </container>
+            </container>
+            <container height="40">
+                <layout class="arrange_horizontal_attachment" layout="-2,-2" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <container class="player_reports_overview_summary_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <widget class="text" font="title" colour="heffem" alignment="centre_x, centre" auto_size="vertical">
+                        <translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+                    </widget>
+                    <widget class="text" id="cosw" size="large" alignment="centre_x, centre" style="semi_bold" auto_size="vertical" multiline="false" />
+                </container>
+                <container class="player_reports_overview_summary_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <widget class="label" font="title" colour="heffem" alignment="centre_x, centre" auto_size="vertical">
+                        <translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]" />
+                    </widget>
+                    <widget class="text" id="ewaw" alignment="centre_x, centre" size="large" style="semi_bold" auto_size="vertical" multiline="false" />
+                </container>
+            </container>
+            <container height="40">
+                <layout class="arrange_horizontal_attachment" layout="-2,-2" offset="10" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <container class="player_reports_overview_summary_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <widget class="label" font="title" colour="heffem" alignment="centre_x, centre" auto_size="vertical">
+                        <translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]" />
+                    </widget>
+                    <widget class="text" id="triw" size="large" alignment="centre_x, centre" auto_size="vertical" multiline="false" />
+                </container>
+                <container class="player_reports_overview_summary_panel" file="none">
+                    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                    <widget class="text" font="title" colour="heffem" alignment="centre_x, centre" auto_size="vertical">
+                        <translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]" />
+                    </widget>
+                    <widget class="text" id="loiw" size="large" alignment="centre_x, centre" auto_size="vertical" multiline="false" />
+                </container>
+            </container>
+            <container height="2" />
+            <container height="25">
+                <layout class="arrange_horizontal_attachment" layout="-4,-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <container class="bordered_box" appearance="boxes/bordered/standard/paper85" id="SMbx">
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                    <widget class="text" id="SMtx" spec="text" alignment="centre_x,centre_y" font="label" size="10"  multiline="false" colour="white" />
+                </container>
+            </container>
+            <!-- If we have scout reports -->
+            <!-- pros / cons -->
+            <container height="3" />
+            <container class="horizontal_adaptive_container" width="-1" mode="distribute_equally">
+                <layout class="arrange_horizontal_attachment" offset="0" gap="2" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <!-- Pros icons -->
+                <container class="bordered_box" appearance="boxes/custom/subtle/no margin/paper" width="-8" minimum_width="150" priority="1">
+                    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <!--title-->
+                    <container class="bordered_box" appearance="boxes/bordered/standard/paper85" height="19" red_replacement="pro high">
+                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                        <widget class="label" size="10" style="bold" font="label" colour="heffem3" alignment="centre,centre_y">
+                            <translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+                        </widget>
+                    </container>
+                    <container height="5" />
+                    <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+                    <container class="scrolling_box">
+                        <container id="mprT" icon_size="15" row_height="20">
+                            <layout class="arrange_vertical_attachment" alignment="top" />
+                            <layout class="fit_children_attachment" alignment="vertical,fill" />
+                            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                            <integer id="row_height" value="20" />
+                        </container>
+                    </container>
+                </container>
+                <!-- Cons icons -->
+                <container class="bordered_box" appearance="boxes/custom/subtle/no margin/paper" width="-8" minimum_width="150" priority="1">
+                    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <!--title-->
+                    <container class="bordered_box" appearance="boxes/bordered/standard/paper85" height="19" red_replacement="con high">
+                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                        <widget class="label" size="10" style="bold" font="label" colour="heffem3" alignment="centre,centre_y">
+                            <translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+                        </widget>
+                    </container>
+                    <container height="5" />
+                    <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+                    <container class="scrolling_box">
+                        <container id="mcoT">
+                            <layout class="arrange_vertical_attachment" alignment="top" />
+                            <layout class="fit_children_attachment" alignment="vertical,fill" />
+                            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                            <integer id="size" value="15" />
 
-	<container class="vertical_adaptive_container" inset="0" gap="0">
-		<layout class="arrange_vertical_attachment" layout="-1,-5" alignment="top, extend" offset="0" gap="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
-
-		<!-- 标题  -->
-		<container default_height="15" minimum_height="10" priority="1">
-			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
-			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-			<string id="skin_style" value="title link" />
-			<!-- Linked header -->
-			<widget class="link_button" section="Pccr" auto_size="all">
-				<translation id="text" translation_id="248079" type="use" value="Pros and Cons" />
-			</widget>
-		</container>
-		<!-- Pros Cons panel -->
-		<container default_height="400" minimum_height="400" priority="1">
-			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-			<widget class="player_scout_reports_panel" id="psrp" file="Tangfu/tangfu player reports you1" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
-
-				<record id="object_property">
-					<integer id="get_property" value="objt" />
-					<integer id="set_property" value="objt" />
-				</record>
-			</widget>
-		</container>
-	</container>
+                        </container>
+                    </container>
+                </container>
+                <!-- Cons icons -->
+                <container class="bordered_box" appearance="boxes/custom/subtle/no margin/paper" width="-10" minimum_width="190" priority="10">
+                    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                    <!--title-->
+                    <container class="bordered_box" appearance="boxes/bordered/standard/paper85" height="19" red_replacement="heffem">
+                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                        <widget class="label" size="10" font="label" colour="heffem3" alignment="centre,centre_y">
+                            <translation id="text" translation_id="343330" type="use" value="Best Players" />
+                        </widget>
+                    </container>
+                    <container height="5" />
+                    <!-- Ability list table -->
+                    <widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="15,-6,-4" row_height="25" auto_hide_priority="2">
+                        <list id="column_properties">
+                            <record indx="0" alignment="left,centre_y" />
+                            <record indx="1" alignment="left,centre_y" />
+                            <record indx="2" alignment="left,centre_y" />
+                        </list>
+                        <list id="column_display_properties">
+                            <record indx="0" sort_disabled="true" left="2" />
+                            <record indx="1" sort_disabled="true" />
+                            <record indx="2" sort_disabled="true" />
+                        </list>
+                    </widget>
+                </container>
+            </container>
+        </container>
+    </container>
 </panel>
