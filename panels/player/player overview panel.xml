@@ -320,10 +320,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid1" late_loading="true" minimum_width="10">
 						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-						<integer id="default_for_unemployed_managers" value="PPtp_mid1"/>
-						<integer id="default_for_international_managers_other_team" value="PPtp_mid1"/>
-						<integer id="default_for_everyone_else" value="PPtp_mid1"/>
-						<integer id="default_for_versus_mode" value="PPtp_mid1"/>
+						<integer id="default_for_unemployed_managers" value="Pfor"/>
+						<integer id="default_for_international_managers_other_team" value="Pfor"/>
+						<integer id="default_for_everyone_else" value="Pfor"/>
+						<integer id="default_for_versus_mode" value="Pfor"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
@@ -333,10 +333,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid2" late_loading="true" minimum_width="150">
 						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-						<integer id="default_for_unemployed_managers" value="PPtp_mid2"/>
-						<integer id="default_for_international_managers_other_team" value="PPtp_mid2"/>
-						<integer id="default_for_everyone_else" value="PPtp_mid2"/>
-						<integer id="default_for_versus_mode" value="PPtp_mid2"/>
+						<integer id="default_for_unemployed_managers" value="Pgrg"/>
+						<integer id="default_for_international_managers_other_team" value="Pgrg"/>
+						<integer id="default_for_everyone_else" value="Pgrg"/>
+						<integer id="default_for_versus_mode" value="Pgrg"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
@@ -346,10 +346,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid4" late_loading="true" minimum_width="150">
 						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-						<integer id="default_for_unemployed_managers" value="PPtp_mid4"/>
-						<integer id="default_for_international_managers_other_team" value="PPtp_mid4"/>
-						<integer id="default_for_everyone_else" value="PPtp_mid4"/>
-						<integer id="default_for_versus_mode" value="PPtp_mid4"/>
+						<integer id="default_for_unemployed_managers" value="ppsp"/>
+						<integer id="default_for_international_managers_other_team" value="ppsp"/>
+						<integer id="default_for_everyone_else" value="ppsp"/>
+						<integer id="default_for_versus_mode" value="ppsp"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
@@ -359,10 +359,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid3" late_loading="true" minimum_width="150">
 						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-						<integer id="default_for_unemployed_managers" value="PPtp_mid3"/>
-						<integer id="default_for_international_managers_other_team" value="PPtp_mid3"/>
-						<integer id="default_for_everyone_else" value="PPtp_mid3"/>
-						<integer id="default_for_versus_mode" value="PPtp_mid3"/>
+						<integer id="default_for_unemployed_managers" value="PPtp"/>
+						<integer id="default_for_international_managers_other_team" value="PPtp"/>
+						<integer id="default_for_everyone_else" value="PPtp"/>
+						<integer id="default_for_versus_mode" value="PPtp"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
