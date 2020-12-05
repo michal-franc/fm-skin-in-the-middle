@@ -1,0 +1,39 @@
+﻿<panel>
+
+	<list id="properties_to_forward">
+		<record get_property="goal" target="gllv" set_property="text" />
+		<record get_property="totl" target="xglv" set_property="text" />
+	</list>
+	
+	<record id="goal_icon_props" class="container" file="generic/xg progress story goal icon" scale_picture="true" keep_aspect_ratio="true" height="30" width="50" image_alignment="centre" />
+	
+	<attachment_group class="vertical_arrange" vertical_layout="50, -1" />
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignement="left" horizontal_gap="16" />
+		<container file="widgets/vertical label pair with icon" id="gllv" icon="icons/26px/ball" red_replacement="normal_icon">
+			<translation id="title" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+		</container>
+		<widget class="vertical_divider" />
+		<container file="widgets/vertical label pair with icon" id="xglv" icon="icons/16px/xg" red_replacement="normal_icon">
+			<translation id="title" translation_id="515047" type="use" value="xG Total[COMMENT: AREA: Data Hub; SUB-AREA: Team Analysis; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: xG (expected goals) total for fixture]" />
+		</container>
+	</container>
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<widget class="inner_subtle_box" />
+		<widget class="graph" id="grph">
+			<record id="instant_hint" file="" />
+			<record id="default_series_properties" line_width="2" />
+			<record id="x_axis" format="[%fraction#1-2.0]" line_colour="fg alpha" only_labelled_marks="true" interval="15" round_min_max="false"> 
+				<translation id="title" translation_id="249451" type="use" value="Minutes" />
+			</record>
+			<record id="y_axis" interval="0.25" format="[%fraction#1-2.2]" line_colour="fg alpha" font="title" round_min_max="false">
+				<translation id="title" translation_id="515048" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None; NOTE: expected goals short string]" />
+			</record>
+			<list id="graph_series">
+				<record id="lin1" type="line" line_width="5" point_radius="2"/>
+				<record id="lin2" type="line" line_width="5" point_radius="2" line_colour="red"/>
+			</list>
+		</widget>
+	</container>
+</panel>
