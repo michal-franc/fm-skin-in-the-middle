@@ -367,10 +367,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="pbop1" late_loading="true" minimum_width="150">
 						<translation id="title" translation_id="450787" type="use" value="Injury History[COMMENT: FR20159; team injuries panel; panel title for player's historical injury list]"/>
-						<integer id="default_for_unemployed_managers" value="pbop1"/>
-						<integer id="default_for_international_managers_other_team" value="pbop1"/>
-						<integer id="default_for_everyone_else" value="pbop1"/>
-						<integer id="default_for_versus_mode" value="pbop1"/>
+						<integer id="default_for_unemployed_managers" value="phip"/>
+						<integer id="default_for_international_managers_other_team" value="phip"/>
+						<integer id="default_for_everyone_else" value="phip"/>
+						<integer id="default_for_versus_mode" value="phip"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
@@ -384,10 +384,10 @@
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp" late_loading="true" minimum_width="150">
 						<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
-						<integer id="default_for_unemployed_managers" value="PPtp"/>
-						<integer id="default_for_international_managers_other_team" value="PPtp"/>
-						<integer id="default_for_everyone_else" value="PPtp"/>
-						<integer id="default_for_versus_mode" value="PPtp"/>
+						<integer id="default_for_unemployed_managers" value="pac1"/>
+						<integer id="default_for_international_managers_other_team" value="pac1"/>
+						<integer id="default_for_everyone_else" value="pac1"/>
+						<integer id="default_for_versus_mode" value="pac1"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
