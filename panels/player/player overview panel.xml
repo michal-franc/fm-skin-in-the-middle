@@ -292,14 +292,14 @@
 				</container>
 			</container>
 			<!--Middle Bottom-->
-			<container minimum_height="100" default_height="100" priority="2">
-				<layout class="arrange_horizontal_attachment" layout="-3,-3" offset="0" gap="5"/>
+			<container minimum_height="75" default_height="75" priority="2">
+				<layout class="arrange_horizontal_attachment" layout="-30,-30,-30,-34" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="bordered_box" appearance="tangfu/paper">
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 					<!--右边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid1" late_loading="true" minimum_width="150">
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid1" late_loading="true" minimum_width="10">
 						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
 						<integer id="default_for_unemployed_managers" value="PPtp_mid1"/>
 						<integer id="default_for_international_managers_other_team" value="PPtp_mid1"/>
@@ -321,8 +321,34 @@
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 				</container>
+				<container class="bordered_box" appearance="tangfu/paper">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--右边-->
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid4" late_loading="true" minimum_width="150">
+						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+						<integer id="default_for_unemployed_managers" value="PPtp_mid4"/>
+						<integer id="default_for_international_managers_other_team" value="PPtp_mid4"/>
+						<integer id="default_for_everyone_else" value="PPtp_mid4"/>
+						<integer id="default_for_versus_mode" value="PPtp_mid4"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+				<container class="bordered_box" appearance="tangfu/paper">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--右边-->
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_mid3" late_loading="true" minimum_width="150">
+						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+						<integer id="default_for_unemployed_managers" value="PPtp_mid3"/>
+						<integer id="default_for_international_managers_other_team" value="PPtp_mid3"/>
+						<integer id="default_for_everyone_else" value="PPtp_mid3"/>
+						<integer id="default_for_versus_mode" value="PPtp_mid3"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
 			</container>
-			<container class="bordered_box" appearance="tangfu/paper" minimum_height="100" default_height="100" priority="2">
+			<container class="bordered_box" appearance="tangfu/paper" minimum_height="130" default_height="130" priority="2">
 				<layout class="arrange_vertical_attachment" layout="-2" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="-1" />
 				<container>
