@@ -38,21 +38,22 @@
 					</container>
 				</container>
 			</container>
-			<container default_height="240" minimum_height="240" >
+			<!-- games played in position-->
+			<container default_height="240" minimum_height="240">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="bordered_box" appearance="tangfu/paper">
-					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-					<!--左边-->
-					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="Phap" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
-						<integer id="default_for_unemployed_managers" value="Phap"/>
-						<integer id="default_for_international_managers_other_team" value="Phap"/>
-						<integer id="default_for_everyone_else" value="Phap"/>
-						<integer id="default_for_versus_mode" value="Phap"/>
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp_2" late_loading="true" minimum_width="150">
+						<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+						<integer id="default_for_unemployed_managers" value="pgpp"/>
+						<integer id="default_for_international_managers_other_team" value="pgpp"/>
+						<integer id="default_for_everyone_else" value="pgpp"/>
+						<integer id="default_for_versus_mode" value="pgpp"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
+
 				</container>
 				<container>
 					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
@@ -84,9 +85,29 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
-			<container default_height="200" minimum_height="200" >
-			</container>
-			<container default_height="200" minimum_height="200" >
+			<container default_height="240" minimum_height="240">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="5"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<container class="bordered_box" appearance="tangfu/paper">
+					</container>
+				</container>
+				<!-- Carrer Stats -->
+				<container class="bordered_box" appearance="tangfu/paper">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--左边-->
+					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="Phap" late_loading="true" minimum_width="150">
+						<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+						<integer id="default_for_unemployed_managers" value="Phap"/>
+						<integer id="default_for_international_managers_other_team" value="Phap"/>
+						<integer id="default_for_everyone_else" value="Phap"/>
+						<integer id="default_for_versus_mode" value="Phap"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
 			</container>
 		</container>
 		<!-- MIDDLE PANEL -->
@@ -104,7 +125,7 @@
 					<integer id="default_for_versus_mode" value="facepic1"/>
 				</container>
 			</container>
-			<container default_height="320" minimum_height="320"  >
+			<container default_height="320" minimum_height="320">
 				<layout class="arrange_horizontal_attachment" layout="-8,-3" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="tabbed_container" id="tac1" appearance="tangfu/paper" default_height="350" minimum_height="350" priority="1">
@@ -269,7 +290,7 @@
 						</container>
 					</container>
 				</container>
-				<container  priority="4">
+				<container priority="4">
 					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 					<container class="bordered_box" appearance="tangfu/paper">
