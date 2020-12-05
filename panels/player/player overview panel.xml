@@ -344,7 +344,7 @@
 			<layout class="arrange_vertical_attachment" layout="-2,-2,-2" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 			<!--球探报告-->
-			<container class="bordered_box" appearance="tangfu/paper" default_height="390" minimum_height="390" priority="0">
+			<container class="bordered_box" appearance="tangfu/paper" default_height="300" minimum_height="300" priority="0">
 				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 				<container class="horizontal_adaptive_container" offset="0" inset="5" gap="1" mode="distribute_equally">
@@ -358,7 +358,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="10" minimum_height="10">
+			<container default_height="90" minimum_height="90">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="bordered_box" appearance="tangfu/paper">
@@ -366,7 +366,7 @@
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="pbop1" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="247569" type="use" value="Bans"/>
+						<translation id="title" translation_id="450787" type="use" value="Injury History[COMMENT: FR20159; team injuries panel; panel title for player's historical injury list]"/>
 						<integer id="default_for_unemployed_managers" value="pbop1"/>
 						<integer id="default_for_international_managers_other_team" value="pbop1"/>
 						<integer id="default_for_everyone_else" value="pbop1"/>
@@ -375,7 +375,7 @@
 					</widget>
 				</container>
 			</container>
-			<container default_height="165" minimum_height="165">
+			<container default_height="155" minimum_height="155">
 				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5"/>
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 				<container class="bordered_box" appearance="tangfu/paper">
@@ -383,7 +383,7 @@
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 					<!--右边-->
 					<widget class="client_object_viewer_selector_panel" file="Tangfu/tangfu player middle3 selector panel" id="PPtp" late_loading="true" minimum_width="150">
-						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+						<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
 						<integer id="default_for_unemployed_managers" value="PPtp"/>
 						<integer id="default_for_international_managers_other_team" value="PPtp"/>
 						<integer id="default_for_everyone_else" value="PPtp"/>
