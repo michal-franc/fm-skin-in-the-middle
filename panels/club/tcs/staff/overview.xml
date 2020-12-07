@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container  id="manC">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+		<widget class="person_snapshot_club_overview_panel" id="mana" player="false" file="club/tcs/staff/manager snapshot">
+			<record id="object_property">
+				<integer id="get_property" value="TMnR" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+
+	<container id="nomC">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="object_action_button" id="oabt" action_id="TCpJ" colour="secondary" red_replacement="secondary">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+</panel>

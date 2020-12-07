@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="1" vertical_gap="3" horizontal_inset="0" />
+
+	<container>
+		<!--LAYOUT CLASS BELOW SETS PANELS UP TO ARRANGE VERTICALLY (GOING FROM TOP TO BOTTOM -->
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="1" vertical_gap="3" horizontal_inset="0" />
+
+		<container class="vertical_adaptive_container" inset="0" offset="0" gap="3">
+			<!-- MANAGER -->
+			<container default_height="80" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="manC">
+					<layout class="arrange_vertical_attachment" layout="15,-1" />
+					<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+
+					<!-- MANAGER LABEL -->
+					<widget class="label" alignment="centre_x,centre_y">
+						<translation id="text" translation_id="227981" type="use" value="Manager" />
+					</widget>
+
+					<!-- SNAPSHOT (WIDGET SETS UP APPEARANCE OF PANEL) -->
+					<widget class="person_snapshot_club_overview_panel" id="mana" file="club/tcs/tabbed/staff snapshot">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- NO MANAGER -->
+				<container id="nomC">
+					<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+					<widget class="object_action_button" id="oabt" action_id="TCpJ">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<!-- DIVIDER BETWEEN THE TWO WIDGETS -->
+			<widget class="horizontal_divider"  priority="1" />
+
+			<!--CAPTAIN -->
+			<container default_height="80" priority="1">
+				<layout class="arrange_vertical_attachment" layout="15,-1" />
+				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- CAPTAIN LABEL -->
+				<widget class="label" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="300013" type="use" value="Captain" />
+				</widget>
+
+				<!-- SNAPSHOT -->
+				<widget class="person_snapshot_club_overview_panel" id="capt" file="club/tcs/tabbed/staff snapshot">
+					<record id="object_property">
+						<integer id="get_property" value="TCap" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- DIVIDER BETWEEN THE TWO WIDGETS -->
+			<widget class="horizontal_divider"  priority="2" />
+
+			<!-- VICE CAPTAIN -->
+			<container default_height="80" priority="2">
+				<layout class="arrange_vertical_attachment" layout="15,-1" />
+				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- VICE CAPTAIN LABEL -->
+				<widget class="label" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="300014" type="use" value="Vice Captain" />
+				</widget>
+
+				<!-- SNAPSHOT -->
+				<widget class="person_snapshot_club_overview_panel" id="vice" file="club/tcs/tabbed/staff snapshot">
+					<record id="object_property">
+						<integer id="get_property" value="TVca" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- DIVIDER BETWEEN THE TWO WIDGETS-->
+			<widget class="horizontal_divider"  priority="3" />
+
+			<!-- KEY PLAYER -->
+			<container default_height="80" priority="3">
+				<layout class="arrange_vertical_attachment" layout="15,-1" />
+				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- KEY PLAYER LABEL -->
+				<widget class="label" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="227396" type="use" value="Key Player" />
+				</widget>
+
+				<!-- SNAPSHOT -->
+				<widget class="person_snapshot_club_overview_panel" id="KeyP" file="club/tcs/tabbed/staff snapshot">
+					<record id="object_property">
+						<integer id="get_property" value="TKpL" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- DIVIDER BETWEEN THE TWO WIDGETS-->
+			<widget class="horizontal_divider"  priority="4" />
+
+			<!--HOT PROSPECT -->
+			<container default_height="80" priority="3">
+				<layout class="arrange_vertical_attachment" layout="15,-1" />
+				<layout class="stick_to_sides_attachment" alignmnet="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- HOT PROSPECT LABEL -->
+				<widget class="label" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="227404" type="use" value="Hot Prospect" />
+				</widget>
+
+				<!-- SNAPSHOT -->
+				<widget class="person_snapshot_club_overview_panel" id="HotP" file="club/tcs/tabbed/staff snapshot">
+				</widget>
+			</container>
+		</container>
+	</container>
+	
+	<!--  BUTTONS AT BOTTOM  -->
+		<container height="30">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+			<widget class="button" id="vpla" auto_size="horizontal" appearance="buttons/link/button">
+				<translation id="text" translation_id="319449" type="use" value="View Players[COMMENT: club staff overview; button which when clicked takes you to the first team squad]" />
+			</widget>
+		</container>
+</panel>

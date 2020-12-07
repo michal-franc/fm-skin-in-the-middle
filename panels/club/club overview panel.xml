@@ -1,17 +1,381 @@
-<panel>
-    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
-    <container>
-        <layout class="show_medium_vertical" min_value="0" max_value="995"/>
-        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
-        <widget class="client_object_viewer_xml_panel" file="club/FME/FME_A">
-            <record id="object_property" get_property="objt" set_property="objt" />
-        </widget>
-    </container>
-    <container>
-        <layout class="show_medium_vertical" min_value="996"/>
-        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
-        <widget class="client_object_viewer_xml_panel" file="club/FME/FME_B">
-            <record id="object_property" get_property="objt" set_property="objt" />
-        </widget>
-    </container>
+<!-- THIS IS THE PANEL THAT SHOWS ON THE CLUB INFO SCREEN -->
+<panel draw_horizontal_dividers="true">
+	<!-- THE PANEL IS SPLIT INTO TWO SECTIONS STACKED ON TOP OF EACH OTHER -->
+	<layout class="vertical_arrange" vertical_layout="-1,210" vertical_gap="16"/>
+
+	<!-- TOP HALF -->
+	<container >
+		<layout class="horizontal_arrange" horizontal_layout="425,-1" horizontal_gap="8" />
+
+
+		<!-- CONTAINER HOLDING CLUB DETAILS AND STAFF -->
+		<container class="bordered_box" appearance="tcs/boxes/header/paper"  >
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<!-- CLUB DETAILS -->
+			<widget class="club_overview_details_panel" id="clod">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			<!-- MANAGER INFO -->
+			<widget class="club_overview_staff_panel" id="tStM" file="club/tcs/staff/overview" height="210">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>	
+		</container>
+
+
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="16"  />
+
+			<container width="920" draw_horizontal_dividers="true">
+				<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="16" />
+
+				<!-- 4 small panels -->
+				<container class="horizontal_adaptive_container" offset="0" inset="0" minimum_height="85" priority="3" draw_vertical_dividers="true">
+
+					<global id="gap" name="ui.main_box_gap"/>
+
+					<record id="default_properties" save_session_state="true" minimum_width="290" default_width="-1"  />
+
+					<container class="main_box" >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<widget class="club_overview_kits_panel" id="cloK">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>				
+					</container>
+					<container class="main_box" >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<widget class="club_overview_staff_panel" id="cloS" file="club/tcs/staff/staff small">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+					</container>
+				</container>
+
+				<container class="tabbed_container" save_session_state="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<!-- TEAM INFO -->
+					<container id="ttNf" draw_vertical_dividers="true" >
+						<translation id="title" type="use" translation_id="232994" value="Information" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true"/>
+
+						<container draw_vertical_dividers="true" >
+							<!-- <layout class="horizontal_arrange" horizontal_layout="400,-1" /> -->
+							<layout class="horizontal_arrange" horizontal_layout="350,-1" />
+
+							<widget class="pitch_with_tactics" id="pwtc" priority="1" icon_flags="show_name,show_extra_details,show_number,use_player_kits_back,dont_show_team_names,drop_initial_if_possible,show_preview_info_popup" player_icon_file="player icons/club overview" pitch_draw_markings="true" line_width="1.4" pitch_line_colour="fg tertiary" alignment="centre,can_scale">
+								<boolean id="vertical" value="true" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<integer id="pitch_perspective" value="0.020000" />
+								<integer id="pitch_touchline_width_percentage" value="10" />
+								<integer id="pitch_vertical_padding" value="5" />
+								<string id="pitch_draw_grass" value="true" />
+								<string id="pitch_base_appearance" value="" />
+								<string id="pitch_pattern" value="ui circles" />
+								<integer id="pitch_alignment" value="centre_x,centre_y" />									
+							</widget>
+							<!-- SMALL SELECTOR ON LEFT -->
+							<container>
+								<translation id="title" translation_id="229366" type="use" value="Stadium" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+								<widget class="club_overview_stadium_panel" id="clos">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="TsHA" />
+												<integer id="set_property" value="Shwn" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="objt" />
+												<integer id="set_property" value="Cclu" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="Tsre" />
+												<integer id="set_property" value="objt" />
+												<boolean id="dont_set_hint" value="true" />
+											</record>
+										</list>
+									</record>
+								</widget>
+
+								<!-- NO STADIUM INFO -->
+								<widget class="text" id="NoSt" alignment="centre">
+									<translation id="text" translation_id="436452" type="use" value="Stadium information not available.[COMMENT: line of text saying when we don't have any information on a team's stadium]" />
+									<record id="object_property">
+										<integer id="get_property" value="TsHA" />
+										<integer id="set_property" value="hidn" />
+									</record>
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!-- TEAM INFO ALT-->
+					<container id="ttIa" draw_vertical_dividers="true" >
+						<translation id="title" type="use" translation_id="319620" value="Information Alt" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true"/>
+						<widget class="team_container_information_overview_panel" file="club/tcs/info alt" id="csio">
+							<!-- <widget class="team_container_information_overview_panel" id="csio"> -->
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<!-- AFFILIATES -->
+					<container id="ttAf">
+						<translation id="title" translation_id="251345" type="use" value="Affiliated Clubs" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+
+						<widget class="club_affiliated_clubs_panel" id="ttaf" file="club/tcs/affiliates">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<!-- FACILTIES -->
+					<container id="tcFa">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<translation id="title" translation_id="292709" type="use" value="Facilities" />
+						<widget class="team_container_information_stadium_panel" id="tcfa" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<!-- COMPETITION HISTORY -->
+					<container id="ttHi">
+						<translation id="title" type="use" translation_id="319514" value="* History" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<widget class="team_container_records_overview_panel" id="tthr" file="club/tcs/tabbed/records">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>	
+
+					<!-- COMPETITION HISTORY 
+					<container id="tFin">
+						<translation id="title" type="use" value="* Finances" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<widget class="finances_summary_panel" id="ttFi" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>				 -->
+					
+					<!-- COMPETITION HISTORY -->
+					<container id="ttCo">
+						<translation id="title" type="use" translation_id="232146" value="Honours" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<widget class="team_container_records_competitions_panel" id="ttco">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<!-- MANAGERS -->
+					<container id="ttPm">
+						<translation id="title" type="use" translation_id="231459" value="* Managers" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<widget class="team_container_manager_history_panel" id="ttpm" file="club/tcs/tabbed/manager">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<!-- TRANSFER HISTORY -->
+					<container id="ttTr">
+						<translation id="title" type="use" translation_id="351069" value="Transfer History" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+						<widget class="transfer_panel_club" id="tttr" file="club/tcs/tabbed/transfers">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+				</container>
+
+			</container>
+
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,174" />
+				<container class="main_box_no_margin">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<translation id="title" translation_id="248082" type="use" value="League Table" />
+					<widget class="competition_news_panel" id="ttnf" file="club/tcs/league table">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+				<widget class="club_league_history_graph" id="tclh" file="club/club league history graph no buttons" default_item="true" section="cmps">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+
+	<!-- 4 small panels -->
+	<container class="horizontal_adaptive_container" offset="0" inset="0" minimum_height="85" priority="3" draw_vertical_dividers="true">
+
+		<global id="gap" name="ui.main_box_gap"/>
+
+		<record id="default_properties"  save_session_state="true" minimum_width="290" default_width="-1"  />
+
+		<container class="client_object_viewer_selector_panel" id="cos3" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+			<!-- HALL OF FAME -->
+			<widget class="club_overview_details_panel" file="club/tcs/legends" id="tsle" default_item="true">
+				<translation id="title" translation_id="319618" type="use" value="Hall of Fame" />
+			</widget>
+			<widget class="manager_competitions_panel"  id="comp" default_item="true">
+				<translation id="title" type="use" value="Team Competitions" />
+			</widget>
+
+			<!-- LEAGUE HISTORY -->
+			<widget class="club_league_history_graph" id="clhg" >
+				<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+			</widget>
+			<!-- CONTRACT EXPIRY DATES -->
+			<widget class="team_snapshot_contract_panel" id="tsco">
+				<translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
+			</widget>	     
+			<!-- FINANCE AND SALARY -->
+			<widget class="finances_short_wage_summary_panel" id="fina">
+				<translation id="title" translation_id="329952" type="use" value="Finance &amp; Salary[COMMENT: manager snapshot/home: wage &amp; finances summary panel heading]" />
+			</widget>
+			<!-- TEAMS -->
+			<widget class="team_container_overview_teams_panel" id="tcot" default_item="true">
+				<translation id="title" translation_id="229362" type="use" value="Teams" />
+			</widget>
+			<!-- NEWS  -->
+			<widget class="competition_news_panel" file="human/manager home news panel" id="mnew" section="Pnws" late_loading="true" >
+				<translation id="title" translation_id="308646" type="use" value="News[COMMENT: top level menu title for news screens]" />
+			</widget>
+			<!-- KITS -->
+			<widget class="club_overview_kits_panel" id="tcTK" default_item="true" >
+				<translation id="title" translation_id="319448" type="use" value="Kits" />
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			<!-- PENDING TRANSFERS -->
+			<widget class="team_transfer_snapshot_panel" id="Tran" >
+				<translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
+			</widget>
+			<!-- CLUB BACKGROUND -->
+			<widget class="team_container_information_background_panel" id="Cbac">
+				<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+			</widget>
+			<!-- TEAM INJURIES -->
+			<widget class="team_snapshot_injury_panel" id="tsin" >
+				<translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+			</widget>
+
+			<widget class="club_overview_team_results_panel" id="cotr">
+				<translation id="title" type="use" value="Results" />
+			</widget>
+		</container>
+
+		<container class="client_object_viewer_selector_panel" id="cos1" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+			<!-- HALL OF FAME -->
+			<widget class="club_overview_details_panel" file="club/tcs/legends" id="tsle" default_item="true">
+				<translation id="title" translation_id="319618" type="use" value="Hall of Fame" />
+			</widget>
+			<!-- LEAGUE HISTORY -->
+			<widget class="club_league_history_graph" id="clhg" >
+				<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+			</widget>
+			<!-- CONTRACT EXPIRY DATES -->
+			<widget class="team_snapshot_contract_panel" id="tsco">
+				<translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
+			</widget>	     
+			<!-- NEWS  -->
+			<widget class="competition_news_panel" file="human/manager home news panel" id="mnew" section="Pnws" late_loading="true" >
+				<translation id="title" translation_id="308646" type="use" value="News[COMMENT: top level menu title for news screens]" />
+			</widget>
+			<!-- FINANCE AND SALARY -->
+			<widget class="finances_short_wage_summary_panel" id="fina">
+				<translation id="title" translation_id="329952" type="use" value="Finance &amp; Salary[COMMENT: manager snapshot/home: wage &amp; finances summary panel heading]" />
+			</widget>
+			<!-- TEAMS -->
+			<widget class="team_container_overview_teams_panel" id="tcot" default_item="true">
+				<translation id="title" translation_id="229362" type="use" value="Teams" />
+			</widget>
+			<!-- KITS -->
+			<widget class="club_overview_kits_panel" id="tcTK" default_item="true" >
+				<translation id="title" translation_id="319448" type="use" value="Kits" />
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			<!-- PENDING TRANSFERS -->
+			<widget class="team_transfer_snapshot_panel" id="Tran" >
+				<translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
+			</widget>
+			<!-- CLUB BACKGROUND -->
+			<widget class="team_container_information_background_panel" id="Cbac">
+				<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+			</widget>
+			<!-- TEAM INJURIES -->
+			<widget class="team_snapshot_injury_panel" id="tsin" >
+				<translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+			</widget>
+			<widget class="club_overview_team_results_panel" id="cotr">
+				<translation id="title" type="use" value="Results" />
+			</widget>
+		</container>
+
+		<container class="client_object_viewer_selector_panel" id="cos2" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+			<!-- HALL OF FAME -->
+			<widget class="club_overview_details_panel" file="club/tcs/legends" id="tsle" default_item="true">
+				<translation id="title" translation_id="319618" type="use" value="Hall of Fame" />
+			</widget>
+			<!-- NEWS  -->
+			<widget class="competition_news_panel" file="human/manager home news panel" id="mnew" section="Pnws" late_loading="true" >
+				<translation id="title" translation_id="308646" type="use" value="News[COMMENT: top level menu title for news screens]" />
+			</widget>
+			<!-- LEAGUE HISTORY -->
+			<widget class="club_league_history_graph" id="clhg" >
+				<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+			</widget>
+			<!-- CONTRACT EXPIRY DATES -->
+			<widget class="team_snapshot_contract_panel" id="tsco">
+				<translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
+			</widget>	     
+			<!-- FINANCE AND SALARY -->
+			<widget class="finances_short_wage_summary_panel" id="fina">
+				<translation id="title" translation_id="329952" type="use" value="Finance &amp; Salary[COMMENT: manager snapshot/home: wage &amp; finances summary panel heading]" />
+			</widget>
+			<!-- TEAMS -->
+			<widget class="team_container_overview_teams_panel" id="tcot" default_item="true">
+				<translation id="title" translation_id="229362" type="use" value="Teams" />
+			</widget>
+			<!-- KITS -->
+			<widget class="club_overview_kits_panel" id="tcTK" default_item="true" >
+				<translation id="title" translation_id="319448" type="use" value="Kits" />
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			<!-- PENDING TRANSFERS -->
+			<widget class="team_transfer_snapshot_panel" id="Tran" >
+				<translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
+			</widget>
+			<!-- CLUB BACKGROUND -->
+			<widget class="team_container_information_background_panel" id="Cbac">
+				<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+			</widget>
+			<!-- TEAM INJURIES -->
+			<widget class="team_snapshot_injury_panel" id="tsin" >
+				<translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+			</widget>
+			<widget class="club_overview_team_results_panel" id="cotr">
+				<translation id="title" type="use" value="Results" />
+			</widget>
+		</container>
+	</container>
+
 </panel>

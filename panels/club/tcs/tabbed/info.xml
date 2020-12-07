@@ -1,0 +1,7 @@
+<panel>
+<layout class="horizontal_arrange" horizontal_layout="-1,220"  />
+<widget file="club/tcs/tabbed/league" id="tcsd" class="client_object_viewer_xml_panel" late_loading="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+<container background_colour="fm purple" />
+</panel>

@@ -1,0 +1,32 @@
+<!-- THIS IS THE PANEL THAT SHOWS ON THE CLUB OVERVIEW SCREEN -->
+<panel>
+<layout class="horizontal_arrange" horizontal_layout="-1,270"  />
+<container>
+		<!-- STICK TO SIDES ALL USED TO LAYER ELEMENTS ON TOP OF OTHERS -->
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+		<!-- STADIUM PICTURE -->
+		<container>
+			<!-- -20 INSET USED TO STRETCH CONTENT OUT TO FILL PANEL -->
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-5" apply_to_children="true"/> 
+			
+							<widget class="text" alignment="centre" style="bold">
+					<translation id="text" type="use" value="City Picture not available. Download the FLUT Skin Cities pack to see them." />
+								</widget>
+								
+			<widget class="background" file="backgrounds" id="bgnd">
+				<record id="object_property">
+					<integer id="get_property" value="bgnd" />
+					<integer id="set_property" value="file" />
+				</record>
+			</widget>		
+			
+	
+		</container>
+
+		<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+		<container class="bordered_box" appearance="tcs/stadium overlay1" red_replacement="tcs_box"/>
+		</container>
+		
+		<container />
+</panel>

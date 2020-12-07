@@ -1,0 +1,214 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container gap="2">
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="8" vertical_gap="2"/>
+		<!-- LOGOS -->
+		<container height="140">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			
+<!-- 	<widget class="stadium_picture"  id="STAp" image_alignment="top, centre_x" scale_picture="true" keep_aspect_ratio="true">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget> -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="4"/>
+
+				<!-- TEAM LOGO -->
+				<widget class="object_portrait_picture" id="pict" width="170" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<!-- COMP LOGO -->
+				<widget class="object_portrait_picture" id="lepi" width="170" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre">
+					<record id="object_property" get_property="Cdiv" set_property="objt" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- SMALL LINE. RECOLOURS BASED ON TEAMS PRIMARY COLOUR -->
+		<container height="2" background_colour="primary" />
+
+		<!-- TEAM NAME -->
+		<widget class="text" id="titl" auto_size="vertical" alignment="centre,can_scale" multiline="false" style="bold" size="14" >
+			<record id="object_property">
+				<integer id="get_property" value="titl" />
+			</record>
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+			<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" end_mode="hold_end" >
+				<list id="storyboard">
+					<record id="stop" interval="0" value="0.0"/>
+					<record id="stop" interval="1" value="1.0"/>
+				</list>
+			</animation>
+			<widget class="division_position_button" spec="text" id="Cmai" size="12" alignment="centre_x,bottom" auto_size="vertical" >
+				<boolean id="Cmai" value="0"/>
+				<record id="object_property">
+					<integer id="get_property" value="Cmai" />
+				</record>
+			</widget>
+		</container>
+
+		<container height="2" background_colour="secondary" />
+
+		<!-- NATION / REGION / REPUTATION -->
+		<container height="50" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<!-- NATION -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="CnaL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="Cnat" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="nation_button" id="CnaV" icon_enabled="false" alignment="centre_x,top">
+					<record id="object_property">
+						<integer id="get_property" value="Dnat" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- REGION -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="NrgL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="NrgR" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="region_label" id="NrgV" alignment="centre_x,top">
+					<record id="object_property">
+						<integer id="get_property" value="NrgR" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- REPUTATION -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="CstL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="Csta" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="stars_range_strip" id="CstV" alignment="centre_x,top">
+					<record id="object_property">
+						<integer id="get_property" value="Csta" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!-- FOUNDED/PRO STATUS -->
+		<container height="50" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<!-- YEAR FOUNDED -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="CyfL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="Cyfn" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="dashed_number_label" id="CyfV" alignment="centre_x,top">
+					<boolean id="NumF" value="0" />
+					<record id="object_property">
+						<integer id="get_property" value="Cyfn" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- PROFESSIONAL STATUS -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="CprL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="professional_status_label" id="CprV" alignment="centre_x,top">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+					</record>
+				</widget>
+			</container>
+		</container>		
+
+		<!-- FINANCES -->
+		<container height="45" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<!-- FINANCE STATUS -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" id="CfiL" alignment="centre_x,bottom" style="semi_bold">
+					<record id="object_property">
+						<integer id="get_property" value="CfiD" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="club_finances_description_text" id="CfiV" alignment="centre_x,top," >
+					<record id="object_property">
+						<integer id="get_property" value="CfiD" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- AVERAGE WAGE -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<widget class="label" alignment="centre_x,bottom" style="semi_bold">
+					<translation id="text" translation_id="284318" type="use" value="Average Wage[COMMENT: heading; team_information_panel; average wage]" />
+				</widget>
+
+				<widget class="cash_cell" id="Tawa" alignment="centre_x,top" format="2">
+					<boolean id="NumF" value="1" />
+					<record id="object_property">
+						<integer id="get_property" value="avwg" />
+					</record>
+				</widget>
+			</container>
+
+			
+		</container>		
+					
+			
+			<container class="main_box_no_margin" height="-1" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			<translation id="title" translation_id="395516" type="use" value="Upcoming Fixtures" />
+				<widget class="club_overview_team_results_panel" id="rafp" file="club/fme/results and fixtures" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+			
+			</container>
+			
+	</container>		
+
+</panel>

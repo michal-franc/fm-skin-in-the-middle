@@ -1,0 +1,175 @@
+<!-- THIS PANEL SHOWS ON THE AFFILIATED CLUBS WIDGET ON THE CLUB OVERVIEW SELECTOR -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/> 
+
+	<!-- AFFILIATED CLUBS. HAVE TO USE ANOTHER CONTAINER SO THE "NO AFFILIATES" TEXT WORKS. -->
+	<container draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container id="affc" draw_vertical_dividers="true">
+			<layout class="arrange_horizontal_attachment" layout="300,-1" offset="0" gap="16"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="inner_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="5,0,0,0" apply_to_children="true" />
+
+				<widget class="table" id="tfed" fixed_size_rows="true" auto_size_rows="true" select_event="slrw" save_session_state="true"  row_spacing="2">
+					<string id="layout" value="-1" />
+					<flags id="mode" value="select_rows,fill_rows,dont_allow_empty_selection" />
+
+					<record id="shown_event">
+						<flags id="event_id" value="REQF" />
+						<flags id="event_target" value="self" />
+					</record>
+
+					<list id="column_table_properties">
+						<record id="0">
+							<flags id="sort_disabled" value="true" />
+							<flags id="alignment" value="centre" />
+							<record id="column_widget_properties">
+								<flags id="auto_size" value="vertical" />
+							</record>
+						</record>
+					</list>
+
+				</widget>
+
+			</container>
+
+			<container >
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container  class="main_box" appearance="tcs/boxes/bordered/top/paper" red_replacement="tcs_light_box">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<!--parent club-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+							<translation id="text" translation_id="377286" type="use" value="Senior Affiliate[COMMENT: interaction manager; type of interaction, this is formerly Parent Club, legal request to change to something less divisive than Parent/Feeder]" />
+						</widget>
+						<widget class="club_button" spec="text" style="bold" id="pare" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed" icon_enabled="false" />
+					</container>
+
+					<!--feeder club-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+							<translation id="text" translation_id="376841" type="use" value="Affiliate Club[COMMENT: interaction manager; type of interaction, this is formerly Feeder Club, legal request to change to something less divisive than Parent/Feeder]" />
+						</widget>
+						<widget class="club_button" spec="text" style="bold" id="feed" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed" icon_enabled="false" />
+					</container>
+
+				</container>
+				
+
+				<!--link type-->
+				<container  class="main_box" appearance="tcs/boxes/bordered/middle/paper" red_replacement="tcs_light_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+						<translation id="text" translation_id="344137" type="use" value="Link Type[COMMENT: label for some text saying what kind of affiliate club link is being shown]" />
+					</widget>
+					<widget class="text" spec="text" style="bold" id="type" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed" multiline="true" />
+				</container>
+
+				<!--start date/annual fee-->
+				<container  class="main_box" appearance="tcs/boxes/bordered/bottom/paper" red_replacement="tcs_light_box" height="62">
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--start date-->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical">
+							<translation id="text" translation_id="293013" type="use" value="Start Date" />
+						</widget>
+						<widget class="date_cell" id="star" spec="text" style="bold" size="12" alignment="centre_x,bottom" auto_size="vertical" multiline="true" />
+					</container>
+
+					<!--annual fee-->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical">
+							<translation id="text" translation_id="343228" type="use" value="Annual Fee[COMMENT: label for some text showing how much is paid per year to have this club affiliation]" />
+						</widget>
+						<widget class="cash_cell" id="annf" spec="text" style="bold" size="12" alignment="centre_x,bottom" auto_size="vertical" />
+					</container>
+
+				</container>
+				
+				<container height="8" />
+				
+			<widget class="horizontal_subtle_divider" height="2"/>
+				
+				<container height="6" />
+				
+
+				<!--description of link-->
+				<widget class="table" id="tafi" fixed_size_rows="false">
+
+					<flags id="layout" value="-1" />
+
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="all_content_same_height" value="false" />
+
+					<record id="default_properties">
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+
+					<list id="column_table_properties">
+						<record index="0" sort_disabled="true" left="4" top="3" bottom="3" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" spec="text" font="fonts/inbox_body" size="10" />
+					</list>
+				</widget>
+			</container>
+			</container>
+		
+		
+		<!-- REQUESTS -->
+	<widget class="subsection_box" height="72" id="reqb">
+		
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+		<record id="default_properties" auto_size="all" />
+		
+		<widget class="button" id="neae" click_event="neac">
+			<translation id="text" translation_id="420571" type="use" value="Negotiate Existing Affiliation[COMMENT: FR 6794; interaction type, header text]" />
+		</widget>
+
+		<widget class="button" id="lofe" click_event="lofc">
+			<translation id="text" translation_id="377098" type="use" value="Look for Affiliate Club[COMMENT: team feeder club info - button to search for new one, use top 10 matches, this is formerly Feeder Club, legal request to change to something less divisive than Parent/Feeder]" />
+		</widget>
+
+		<widget class="button" id="asfe" click_event="asfc">
+			<translation id="text" translation_id="377099" type="use" value="Look for Senior Affiliate[COMMENT: affiliate club info - button to search for new one, use top 10 matches, this is formerly Parent Club, legal request to change to something less divisive than Parent/Feeder]" />
+		</widget>
+
+		<widget class="button" id="canw" click_event="canc">
+			<translation id="text" translation_id="255095" type="use" value="Cancel Link[COMMENT: team feeder club info - button to cancel a feeder team link]" />
+		</widget>
+
+	</widget> 
+	</container>
+
+
+	
+	<!--	 panel for no data available -->	
+	<container class="empty_state" id="noaf" header_widget="BShe" appearance="">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="301277" type="use" value="No affiliated clubs.[COMMENT: label shown when a non-human team doesn't have any affiliated clubs (e.g. feeder clubs or parent clubs)]" />
+		</widget>
+	</container>
+</panel>
