@@ -1,4 +1,4 @@
-version 0.0.1
+version 0.0.1 - alpha
 - there is still plenty of bugs in there so use it with caution
 - At the moment works correctly with ultrawide resolution
 
