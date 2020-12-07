@@ -21,3 +21,4 @@ A lot of graphics and code is based on skins from:
   - Tactics screen
   - Match Tactics screen
   - XG panel
+  - inbox changes
