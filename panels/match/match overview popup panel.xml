@@ -1,0 +1,61 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+  <container class="main_contrast_box" red_replacement="bg">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="30,20,20,20"/>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+      <layout class="arrange_vertical_attachment" layout="70,-1,30" gap="20"/>
+      <animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="1" end_mode="stop" coord_mode="relative_to_screen"/>
+
+      <widget class="match_info_panel" id="bmin" file="match/match info overview popup" small_version="true">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+
+      <container class="main_contrast_box" red_replacement="bg">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10,0,10,0"/>
+
+        <container class="horizontal_arrange_container" alignment="middle" gap="10" draw_vertical_dividers="true">
+
+          <container width="342">
+            <attachment class="horizontal_arrange" vertical_inset="-10"/>
+
+            <widget width="2000" class="match_info_panel" file="match/match full time review panel">
+              <record id="object_property" get_property="objt" set_property="objt" />
+            </widget>
+
+          </container>
+
+          <container width="342">
+
+            <attachment class="horizontal_arrange" vertical_inset="-243" vertical_offset="20"/>
+
+            <widget width="2000" class="match_info_panel" file="match/match full time review panel">
+              <record id="object_property" get_property="objt" set_property="objt" />
+            </widget>
+
+          </container>
+        </container>
+      </container>
+
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+        <layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+        <widget class="link_appearance_button" appearance="buttons/primary/normal/button" id="cnfL">
+          <translation id="text" translation_id="260384" type="use" value="Match Confidence[COMMENT: MATCH_SUMMARY_NEWS; button to direct user to this matches confidence]" />
+        </widget>
+
+        <widget class="link_button" appearance="buttons/primary/normal/button" id="vhig" section="hilp" auto_size="all" hidden="true">
+          <translation id="text" translation_id="227629" type="use" value="View Highlights" />
+        </widget>
+
+      </container>
+    </container>
+  </container>
+</panel>

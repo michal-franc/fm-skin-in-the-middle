@@ -1,0 +1,150 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Styles -->
+	<flags id="frap" value="tables/custom/fixtures/friendly/row" />
+	<flags id="cncp" value="tables/custom/fixtures/continental/row" />
+	<flags id="cpap" value="tables/custom/fixtures/cup/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="fpc1" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,320" horizontal_gap="12">
+			<global id="gap" name="ui.inner_box_gap"/>
+		</attachment_group>
+
+		<!-- main area -->
+		<container class="inner_subtle_box" id="plti" >
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="24" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!-- buttons area -->
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left" vertical_inset="4" horizontal_offset="2"/>
+
+				<widget class="view_menu_label" id="TitL">
+					<translation id="text" translation_id="242258" type="use" value="Fixtures" />
+				</widget>
+				<!-- view button -->
+				<widget class="view_menu_popup" id="plvi" sele="hofi" />
+			</container>
+
+			<!-- buttons area -->
+			<container id="btna" embed_in_frame="true">
+
+				<attachment_group class="title_embedded_panel_right" vertical_inset="4" horizontal_offset="2"/>
+				<!-- seasons popup -->
+				<widget class="embedded_season_selection_list" id="fxyr" auto_size="horizontal" sele="fxcy" height="30" embed_in_frame="true" save_immediate_state="true"/>
+
+				<!-- filter menu -->
+				<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="horizontal" embed_in_frame="true"/>
+
+			</container>
+
+			<widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="true" auto_size_rows="false" mode="fill_rows, stripe_rows, printable, store_sort_state, show_bullets, select_rows, select_multiple, dont_allow_empty_selection, keyboard" column_mode="resize_columns, move_columns, custom_views" row_height="27">
+				<boolean id="save_session_state" value="true" />
+				<boolean id="dont_restore_selection" value="true" />
+				<list id="save_default_state">
+					<integer value="crvi" />
+				</list>
+
+				<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							 (this can help when for example supplying a selected object to another panel to display further info)-->
+				<!--these can be omitted, they're just a time saver-->
+				<list id="Spid">
+					<integer value="home" />
+					<integer value="away" />
+					<integer value="FxTy" />
+					<integer value="FxCt" />
+				</list>
+
+				<!-- default sort -->
+				<list id="default_sort_column">
+					<integer value="fxdt" />
+				</list>
+
+				<!--default view from the view list-->
+				<flags id="default_view" value="TCS" />
+
+				<!--list of all available views-->
+				<list id="viws">
+					<record id="TCS">
+						<translation id="text" type="use" value="TCS Schedule View" />
+						<record id="view">
+							<flags id="fxdt" />
+							<flags id="fxMn" />
+							<flags id="FXTm" width="-1" />
+							<flags id="fopt" />
+							<flags id="FxTV" />
+							<flags id="FxVn" />
+							<flags id="FxRT" />
+							<record id="FxRs"/>
+							<record id="FxCG" multiline="false" />
+							<flags id="FxNm"/>
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="fxdt" />
+						</record>
+					</record>
+
+					<record id="gene">
+						<translation id="text" translation_id="242258" type="use" value="Fixtures" />
+						<record id="view">
+							<flags id="fxdt" />
+							<flags id="fxMn" />
+							<flags id="FXTm" />
+							<flags id="fopt" />
+							<flags id="FxTV" />
+							<flags id="FxVn" />
+							<flags id="FxRT" />
+							<record id="FxRs"/>
+							<flags id="FxNm"/>
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="fxdt" />
+						</record>
+					</record>
+
+					<record id="goal">
+						<translation id="text" translation_id="247377" type="use" value="Goalscorers" />
+						<record id="view">
+							<flags id="fxdt" />
+							<flags id="fxMn" />
+							<flags id="FXTm" />
+							<flags id="fopt" />
+							<flags id="FxTV" />
+							<flags id="FxVn" />
+							<record id="FxRs" />
+							<record id="FxCG" multiline="false" />
+							<flags id="FxNm"/>
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="fxdt" />
+						</record>
+					</record>
+
+				</list>
+
+			</widget>
+
+			<container>
+				<attachment_group class="button_arrangement_right" />
+
+				<!--arrange friendly button-->
+				<widget class="icon_button" id="arrf" click_event="arrf" auto_size="all">
+					<translation id="hint" translation_id="247249" type="use" value="Click to arrange a friendly match" />
+					<translation id="text" translation_id="242435" type="use" value="Arrange Friendly" />
+				</widget>
+			</container>
+
+		</container>
+
+
+		<widget class="fixture_details_panel" id="Deta" />
+
+
+	</container>
+
+	<widget class="arrange_friendly_panel" id="arfp" hidden="true" />
+
+</panel>
