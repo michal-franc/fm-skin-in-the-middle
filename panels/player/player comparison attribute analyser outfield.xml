@@ -1,18 +1,20 @@
 <panel>
   <real id="segment_count" value="10" />
   <boolean id="show_inaccurate_category" value="true" />
-  
+  <boolean id="should_round_values" value="true" />
+  <boolean id="show_segment_values" value="true" />
+  <real id ="label_width_offset" value="5.0" />
   <!-- Scale the polygon to fit the widget and draw it in code -->
   <boolean id="scale_picture" value="true" />
   <!-- First layer colour-->
   <record id="line_style">
-    <colour id="colour" name="fg" />
-    <real id="width" value="3" />
+    <colour id="colour" name="comp person bar 1" />
+    <real id="width" value="2.0" />
   </record>
   <!-- Second layer colour-->
   <record id="second_colour">
-    <colour id="colour" name="fg accent" />
-    <real id="width" value="2" />
+    <colour id="colour" name="comp person bar 2" />
+    <real id="width" value="2.0" />
   </record>
   <!-- Radial lines dividing each segment -->
   <record id="segment_divider_line_props">
@@ -21,31 +23,31 @@
   </record>
   <!-- Style of the line around the edge of the polygon -->
   <record id="polygon_edge_props">
-    <colour id="colour" name="text" />
+    <colour id="colour" red="40" green="160" blue="200" alpha="160" />
     <real id="width" value="0.8" />
   </record>
   <!-- Colours (and number) of the concentric polygon rings -->
   <list id="ring_colours">
-    <colour name="bg range1"/>
-    <colour name="bg range8"/>
-    <colour name="bg range10"/>
-    <colour name="bg range15"/>
-    <colour name="bg range20"/>
+    <colour red="100" green="100" blue="120" alpha="100"/>
+    <colour red="100" green="100" blue="120" alpha="85"/>
+    <colour red="100" green="100" blue="120" alpha="70"/>
+    <colour red="100" green="100" blue="120" alpha="55"/>
+    <colour red="100" green="100" blue="120" alpha="40"/>
   </list>
+
   <list id="items">
     <!-- layer 1 (there is only one) -->
     <list>
 
       <record id="item">
-        <string id="name" value="IQ"/>
+        <string id="name" value="Intelligence"/>
         <!--Overall Intelligence-->
         <!--<translation id="name" translation_id="285378" type="use" value="Attacking[COMMENT: player profile, overview panel polygon category title]" />-->
-        <real id="max_value" value="20"/>
-        <real id="point_colour" value="gold"/>
-        <integer id="angle" value="0"/>
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title"/>
-        <flags id="size" value="small" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="0" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes Overall Creativity x7-->
@@ -148,14 +150,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="W/BALL"/>
+        <string id="name" value="With Ball"/>
         <!--Quality with the ball Control + Passing + Dribbling-->
         <!--<translation id="name" translation_id="285376" type="use" value="Speed[Mobility - COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="36" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes x6-->
@@ -304,14 +306,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="FIN"/>
+        <string id="name" value="Finishing"/>
         <!--Shooting and Heading-->
         <!--<translation id="name" translation_id="285376" type="use" value="Speed[Mobility - COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="72" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes x6-->
@@ -447,13 +449,13 @@
       </record>
 
       <record id="item">
-        <string id="name" value="MOB"/>
+        <string id="name" value="Mobility"/>
         <!--<translation id="name" translation_id="285381" type="use" value="Mental[COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="108" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes x7-->
@@ -538,14 +540,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="PHY"/>
+        <string id="name" value="Physical"/>
         <!--Physical Presence-->
         <!--<translation id="name" translation_id="285375" type="use" value="Physical[Physical Presence -COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="144" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key attributes x6-->
@@ -626,14 +628,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="AER"/>
+        <string id="name" value="Aerial"/>
         <!-- Aerial Presence-->
         <!--<translation id="name" translation_id="285380" type="use" value="Aerial[Aerial Presence - COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="180" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key attributes x6-->
@@ -730,14 +732,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="DEF"/>
+        <string id="name" value="Defending"/>
         <!-- Defensive Ability Overal-->
         <!--<translation id="name" translation_id="285374" type="use" value="Defending [Def Capabilites Overall - COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="216" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes x6-->
@@ -865,14 +867,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="FOC"/>
+        <string id="name" value="Focus"/>
         <!--Focus-->
         <!--<translation id="name" translation_id="285381" type="use" value="Mental[COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="252" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <integer value="Pcmp"/>
@@ -888,14 +890,14 @@
 
 
       <record id="item">
-        <string id="name" value="INF"/>
+        <string id="name" value="Involvement"/>
         <!--Endeavour-->
         <!--<translation id="name" translation_id="230023" type="use" value="Vision" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="288" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <integer value="Pagg"/>
@@ -913,14 +915,14 @@
       </record>
 
       <record id="item">
-        <string id="name" value="O/BALL"/>
+        <string id="name" value="Off The Ball"/>
         <!--Ability to find space-->
         <!--<translation id="name" translation_id="285378" type="use" value="Attacking[COMMENT: player profile, overview panel polygon category title]" />-->
         <real id="max_value" value="20" />
         <integer id="angle" value="330" />
-        <colour id="colour" name="grey" />
-        <flags id="standard_spec" value="title" />
-        <flags id="size" value="small" />
+        <colour id="colour" name="text" />
+        <colour id="second_colour" name="faded text" />
+        <flags id="standard_spec" value="text" />
 
         <list id="attributes">
           <!--Key Attributes x6-->
@@ -1019,6 +1021,6 @@
 
 
     </list>
-  </list>
+  </list>>
   <!-- outfield analyser panel -->
 </panel>

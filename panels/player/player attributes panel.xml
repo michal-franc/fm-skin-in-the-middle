@@ -5,16 +5,16 @@
 	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
 	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
 	<!-- 用于所有属性表的表属性-->
-	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 50, 33" row_height="21" row_spacing="1" default_sort_column="name">
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 50, 33" row_height="20" row_spacing="2" default_sort_column="name">
 		<list id="column_table_properties">
 			<!-- 属性名称的样式 -->
 			<record index="0" id="name" left="8" top="0">
-				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" size="12" colour="baise"/></record>
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" size="11" colour="baise"/></record>
 			<!--属性训练变化的样式 -->
 			<record index="1" id="offs" sort_disabled="true">
 				<record id="widget_info" class="training_improvement" /></record>
 			<!-- 属性值的样式 -->
-			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="1">
 				<record id="widget_info" class="attribute_label" alignment="right,centre_y" size="11" style="semi_bold" multiline="false" /></record>
 			<!-- 应该是核武编辑时候的样式-->
 			<record index="3" id="edit" sort_disabled="true">

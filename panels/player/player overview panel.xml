@@ -156,7 +156,7 @@
 					</widget>
 					<!-- TRANSFER STATUS-->
 					<widget class="player_transfer_information_panel" file="player/player transfer information1" id="Rute" late_loading="true">
-						<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
+						<translation id="title" translation_id="227953" type="use" value="Transfer" />
 						<record id="object_property">
 							<integer id="get_property" value="objt" />
 							<integer id="set_property" value="objt" />
@@ -172,7 +172,7 @@
 					</widget>
 					<!-- PLAYING TIME-->
 					<container id="pltp" late_loading="true">
-						<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+						<translation id="title" translation_id="491902" type="use" value="Playing[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
 						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
 						<container class="scrolling_box">
 							<container id="plaC" class="inner_box" appearance="" dont_set_embedded_title="true">
