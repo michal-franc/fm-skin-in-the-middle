@@ -888,7 +888,7 @@
 
 
       <record id="item">
-        <string id="name" value="INF"/>
+        <string id="name" value="INV"/>
         <!--Endeavour-->
         <!--<translation id="name" translation_id="230023" type="use" value="Vision" />-->
         <real id="max_value" value="20" />

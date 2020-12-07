@@ -14,6 +14,7 @@ A lot of graphics and code is based on skins from:
 
 - DD2021ST
   - team depth
+  - attribute analysers
 
 - Tangfu Skin 2020
   - Middle based player overview
