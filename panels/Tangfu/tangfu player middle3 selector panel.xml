@@ -56,5 +56,5 @@
 	<widget class="player_games_in_position_panel" id="pgpp" file="mfranc/player games in position" late_loading="true">
 		<translation id="title" translation_id="257322" type="use" value="Games Played In Position" />
 	</widget>
-	
+
 </panel>

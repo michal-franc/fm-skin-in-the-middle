@@ -24,4 +24,9 @@
 	  <widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small" late_loading="true">
 		<translation id="title" translation_id="248428" type="use" value="Comparison" />
 	</widget>
+
+	<!-- XG -->
+	<widget class="player_scout_reports_panel" id="toxG" file="mfranc/xg panel" late_loading="true" >
+		<translation id="title" translation_id="515048" type="use" value="xG" />
+	</widget> 
 </panel>

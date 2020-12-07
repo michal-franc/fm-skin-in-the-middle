@@ -1,0 +1,16 @@
+<panel>
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<widget class="text" auto_size="vertical" font="title" colour="accent">
+			<translation id="text" translation_id="515048" type="use" value="xG" />
+		</widget>
+
+<container>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="3" data_type="2"  category="5" file="mfranc/xg graph">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+</container>
+
+</panel>
