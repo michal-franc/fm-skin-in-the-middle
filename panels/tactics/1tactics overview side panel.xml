@@ -28,6 +28,7 @@
 		<record entity_layout_id="it24"/>
 		<record entity_layout_id="it10"/>
 		<record entity_layout_id="at06"/>
+		<record entity_layout_id="at05"/>
 		<record entity_layout_id="at0:"/>
 		<record entity_layout_id="it11"/>
 		<record entity_layout_id="at0;"/>
@@ -65,7 +66,7 @@
 		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 	</widget>
-	<container class="main_contrast_box_no_margin" entity_layout_id="it15" id="bakC" wants_mouse_events="true" inset="0" red_replacement="pitch_box_background" width="890" name="green background" navigation_container="true">
+	<container class="main_box" entity_layout_id="it15" id="bakC" wants_mouse_events="true" inset="0" appearance="boxes/contrast/no margin/left/paper" red_replacement="pitch_box_background" width="890" name="green background" navigation_container="true">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
@@ -77,9 +78,9 @@
 			<boolean id="exclude_from_find" value="true"/>
 			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 		</widget>
-    	<container class="main_contrast_box_no_margin" red_replacement="green 500" entity_layout_id="at01" id="at01" sub_group_id="NULL_ID" name="top bar" height="38">
+		<container class="inner_box" appearance="boxes/contrast/no margin/top left/paper" entity_layout_id="at01" id="at01" height="38" name="top bar" red_replacement="green 500" >
 			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
-			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="6" get_side="left" set_side="left" target="main"/>
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 			<widget class="spacer" id="main">
 				<boolean id="exclude_from_find" value="true"/>
@@ -89,7 +90,7 @@
 				<boolean id="exclude_from_find" value="true"/>
 				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 			</widget>
-			<widget class="picture" entity_layout_id="at09" file="icons/16px/tactics" id="at09" width="20" height="30" name="tactics icon">
+			<widget class="picture" entity_layout_id="at09" file="icons/16px/tactics" id="at09" width="16" height="30" name="tactics icon">
 				<string id="red_replacement" value="teal 900"/>
 				<string id="image_alignment" value="centre"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main"/>
@@ -180,15 +181,13 @@
 				<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
 			</widget>
-		
-					<container class="team_next_match_opponent_panel" entity_layout_id="it22" id="anLy" name="analysis" file="tactics/team next match opponent">
+			<container class="team_next_match_opponent_panel" entity_layout_id="it22" id="anLy" name="analysis" file="tactics/team next match opponent">
         <attachment class="show_medium_vertical" min_value="900" />
 				<layout class="stick_to_object_attachment" id="align_top" offset="620" get_side="top" set_side="top" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_bottom" offset="-2" get_side="bottom" set_side="bottom" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 			</container>
-		
 		</container>
 		<container class="subs_bench_panel" entity_layout_id="it03" id="Subs" name="subs">
 			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at01"/>
@@ -197,15 +196,17 @@
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 		</container>
 	</container>
-  <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="white" font="title" colour="white">
-    <string id="red_replacement" value="teal 900"/>
-    <string id="click_event" value="tsdP"/>
+	<widget class="icon_button" entity_layout_id="it01" icon_enabled="false" id="MaMi" appearance="buttons/custom/tactics/pitch show/normal/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="57" height="38" name="expand button" controller_button="left_trigger" navigation_focus_target="false" gamepad_icon_alignment="centre_right">
+		<string id="red_replacement" value="style_background"/>
+		<string id="click_event" value="tsdP"/>
+    <string id="font" value="title" />
+    <string id="icon" value="icons/16px/tactics" />
     <string id="secondary_icon" value="icons/16px/expand"/>
-    <string id="secondary_icon_alignment" value="centre_right"/>
+    <string id="secondary_icon_alignment" value="centre"/>
     <string id="secondary_icon_enabled" value="true"/>
-    <layout class="stick_to_object_attachment" id="align_top" get_side="top" offset="3" set_side="top" move_side="true" target="main"/>
-    <layout class="stick_to_object_attachment" id="align_left" get_side="left" offset="3" set_side="left" move_side="true" target="main"/>
-  </widget>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+	</widget>
 	<widget class="button" entity_layout_id="it18" id="quPb" appearance="buttons/custom/tactics/pitch switch/normal/button" hidden="true" width="0" height="0" name="Quick Pick">
 		<translation id="text" value="Quick Pick" translation_id="462560" type="use"/>
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
@@ -243,10 +244,11 @@
 		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_left" offset="670" get_side="left" set_side="left" move_side="true" target="main"/>
 	</container>
-	<container class="container" entity_layout_id="at06" id="conG" width="753" name="instruction dialog bg">
+	<container class="main_contrast_box" entity_layout_id="at06" id="conG" hidden="true" appearance="boxes/main/contrast/right/paper" width="753" name="instruction dialog bg">
+		<string id="red_replacement" value="style_background"/>
 		<layout class="stick_to_object_attachment" id="align_top" offset="44" get_side="top" set_side="top" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_bottom" offset="-6" get_side="bottom" set_side="bottom" target="main"/>
-		<layout class="stick_to_object_attachment" id="align_left" offset="179" get_side="left" set_side="left" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="173" get_side="left" set_side="left" move_side="true" target="main"/>
 		<widget class="spacer" id="main">
 			<boolean id="exclude_from_find" value="true"/>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
@@ -255,6 +257,12 @@
 			<boolean id="exclude_from_find" value="true"/>
 			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 		</widget>
+		<container class="tactics_team_strategies_container" entity_layout_id="at05" id="tMop" name="team instruction dialog">
+			<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="right" set_side="right" target="main"/>
+		</container>
 	</container>
 	<container class="player_attributes_comparison_panel" entity_layout_id="it11" file="player/player attributes comparison panel tactics" id="comP" hidden="true" width="205" name="comparison">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
