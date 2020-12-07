@@ -1,0 +1,11 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0,0" apply_to_children="true" />
+	<widget class="text" id="nofr" size="1" alignment="centre">
+		<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+	</widget>
+<widget class="form_graph_panel" id="FrmG" show_labels="true">
+			<record id="object_property">
+				<integer id="get_property" value="Pfrm" />
+			</record>
+		</widget>
+</panel>

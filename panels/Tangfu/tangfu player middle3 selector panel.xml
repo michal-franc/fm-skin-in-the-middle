@@ -57,4 +57,10 @@
 		<translation id="title" translation_id="257322" type="use" value="Games Played In Position" />
 	</widget>
 
+	<!-- LAST 5 GAMES -->
+	<widget class="player_form_overview_panel" id="tL5g" file="mfranc/last 5" late_loading="true">
+		<translation id="title" translation_id="276271" type="use" value="Last 5 Games" />
+	</widget>
+
+
 </panel>
