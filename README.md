@@ -12,6 +12,9 @@ A lot of graphics and code is based on skins from:
 - Flut Skin 2020
 - FM Enchanced
 
+- DD2021ST
+  - team depth
+
 - Tangfu Skin 2020
   - Middle based player overview
   - various graphics
