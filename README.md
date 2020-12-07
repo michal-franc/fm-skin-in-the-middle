@@ -17,7 +17,7 @@ A lot of graphics and code is based on skins from:
   - various graphics
 
 - TCS skin
- - Club info panel
- - Tactics screen
- - Match Tactics screen
- - XG panel
+  - Club info panel
+  - Tactics screen
+  - Match Tactics screen
+  - XG panel
