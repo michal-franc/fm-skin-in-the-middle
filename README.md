@@ -1,4 +1,4 @@
-version 0.0.1
+version 0.0.1 - alpha
 - there is still plenty of bugs in there so use it with caution
 - At the moment works correctly with ultrawide resolution
 
@@ -21,7 +21,8 @@ A lot of graphics and code is based on skins from:
   - various graphics
 
 - TCS skin
- - Club info panel
- - Tactics screen
- - Match Tactics screen
- - XG panel
+  - Club info panel
+  - Tactics screen
+  - Match Tactics screen
+  - XG panel
+  - inbox changes
