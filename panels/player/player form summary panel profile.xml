@@ -11,7 +11,7 @@
 
 			<!-- Linked header -->
 			<widget class="link_button" section="Pfrm" auto_size="all">
-				<translation id="text" translation_id="227813" type="use" value="Form - 15 matches" />
+				<translation id="text" type="use" value="Form (Last 15 Matches)[COMMENT: player overview; sub panel title for player form graph]" />
 			</widget>
 		</container>
 
