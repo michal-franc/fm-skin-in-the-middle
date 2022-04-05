@@ -104,7 +104,7 @@
 				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="right" set_side="left" move_side="true" target="at09"/>
 			</widget>
 			<container class="tactic_slot_tab_container" entity_layout_id="it08" file="tactics/tactic slot tab container picker" id="tacw" auto_size="horizontal" needs_width="true" height="30" name="active tactic">
-				<integer id="slot_popup_maximum_width" value="200"/>
+				<integer id="slot_popup_maximum_width" value="400"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="top" set_side="top" move_side="true" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="right" set_side="left" move_side="true" target="at03"/>
 			</container>
