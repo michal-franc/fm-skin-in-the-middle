@@ -136,7 +136,7 @@
 				<layout class="stick_to_object_attachment" id="align_right" offset="-6" get_side="right" set_side="right" target="main"/>
 			</container>
 		</container>
-		<container entity_layout_id="lt00" id="lt00" width="470" name="pitch container">
+		<container entity_layout_id="lt00" id="lt00" width="600" name="pitch container">
 			<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" target="at01"/>
 			<layout class="stick_to_object_attachment" id="align_bottom" offset="-2" get_side="bottom" set_side="bottom" target="main"/>
 			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="right" set_side="left" move_side="true" target="at02"/>
@@ -152,19 +152,19 @@
 				<integer id="tactics_slot" value="0"/>
 				<string id="menu_mode" value="0x00000081"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="15" get_side="top" set_side="top" move_side="true" target="main"/>
-				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="110" get_side="left" set_side="left" move_side="true" target="main"/>
 			</container>
 			<container class="tactic_slot_button" entity_layout_id="it28" id="frm1" file="tactics/tactic slot button formation" alignment="centre_x,centre_y" width="350" height="22" name="formation">
 				<integer id="tactics_slot" value="1"/>
 				<string id="menu_mode" value="0x00000081"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="15" get_side="top" set_side="top" move_side="true" target="main"/>
-				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="110" get_side="left" set_side="left" move_side="true" target="main"/>
 			</container>
 			<container class="tactic_slot_button" entity_layout_id="it29" id="frm2" file="tactics/tactic slot button formation" alignment="centre_x,centre_y" width="350" height="22" name="formation">
 				<integer id="tactics_slot" value="2"/>
 				<string id="menu_mode" value="0x00000081"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="15" get_side="top" set_side="top" move_side="true" target="main"/>
-				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="110" get_side="left" set_side="left" move_side="true" target="main"/>
 			</container>
 			<container entity_layout_id="it02" file="tactics/pitch with tactics container" id="it02" name="pitch">
 				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
@@ -178,23 +178,16 @@
 				<string id="size" value="large"/>
 				<translation id="text" value="Formation" translation_id="298104" type="use"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
-				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="110" get_side="left" set_side="left" move_side="true" target="main"/>
 			</widget>
 		
-					<container class="team_next_match_opponent_panel" entity_layout_id="it22" id="anLy" name="analysis" file="tactics/team next match opponent">
+			<container class="team_next_match_opponent_panel" entity_layout_id="it22" id="anLy" name="analysis" file="tactics/team next match opponent">
         <attachment class="show_medium_vertical" min_value="900" />
 				<layout class="stick_to_object_attachment" id="align_top" offset="620" get_side="top" set_side="top" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_bottom" offset="-2" get_side="bottom" set_side="bottom" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 			</container>
-		
-		</container>
-		<container class="subs_bench_panel" entity_layout_id="it03" id="Subs" name="subs">
-			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at01"/>
-			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main"/>
-			<layout class="stick_to_object_attachment" id="align_left" get_side="right" set_side="left" target="lt00"/>
-			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 		</container>
 	</container>
   <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="white" font="title" colour="white">
