@@ -29,7 +29,7 @@
 					<integer id="set_property" value="objt" />
 				</record>
 			</container>
-<!-- 			<container id="Mpsr">
+			<container id="Mpsr">
 				<translation id="title" translation_id="338086" type="use" value="Report[COMMENT: Text on match preparation fixture tab]" />
 
 				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
@@ -46,7 +46,7 @@
 						<translation id="text" translation_id="334198" type="use" value="View Reports[COMMENT: heading; scouting assignments; button to view reports]" />
 					</widget>
 				</container>
-			</container> -->
+			</container>
 		</container>
 	</container>
 
