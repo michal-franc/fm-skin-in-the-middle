@@ -1,10 +1,12 @@
 <panel>
+
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-	<!-- these are defaults tablet sizes-->
-	<integer id="TbWs" value="300"/>
-	<integer id="TbWm" value="650"/>
-	<integer id="TbWl" value="1550"/>
+	<!-- these are defaults tablet sizes, TbWs also sets min width and TbWl sets max. width -->
+	<integer id="TbWs" value="650"/>	<!-- 0 - 1350 -->
+	<integer id="TbWm" value="1010"/>	<!-- 1350 - 1910 -->
+	<integer id="TbWl" value="2210"/>	<!-- 1910 up -->
+
 
 	<list id="properties_to_forward">
 		<record get_property="HNEp" target="NEvp" set_property="hidn" />
@@ -13,131 +15,87 @@
 		<record get_property="OTfi" target="TTab" set_property="OTfi" />
 		<record get_property="HTsi" target="TTab" set_property="HTsi" />
 		<record get_property="OTsi" target="TTab" set_property="OTsi" />
+		<!-- Added by patch -->
+		<record get_property="HSMt" target="TTab" set_property="HSMt" />
+		<record get_property="ASMt" target="TTab" set_property="ASMt" />
+		
+		<record get_property="HSMt" target="Tnep" set_property="HSMt" />
+		<record get_property="ASMt" target="Tnep" set_property="ASMt" />
 	</list>
  
-	<container>
+	<container>	<!-- opens left middle panel -->
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="8" />
 		
-		<container>
+		<container>	<!-- open left panel -->
  
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="8"/>
  
-			<container width="360">
+			<!-- Notable Events, Match stats -->
+			<container width="342">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-				
 				<container id="NEvp">
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
  
 					<container class="main_transparent_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
-					<layout class="vertical_arrange" vertical_layout="-8,-8" />
 						<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
 						<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						
+						<attachment class="match_ball_fade_attachment"/>
  
-						<widget class="match_notable_events_panel">
-							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.6" end_mode="hold_end" />
-							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />						
+						<container class="client_object_viewer_xml_panel" file="match/match touchline tablet panel nep" id="Tnep" >
 							<record id="object_property">
 								<integer id="get_property" value="objt" />
 								<integer id="set_property" value="objt" />
 							</record>
-						</widget>
-						
-						
- 
-				<container class="client_object_viewer_xml_panel" id="qqqq" file="match/match touchline tablet slot container" priority="1" default_height="-1" dit1="prmC">
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</container> 
-					</container>
+						</container>
+
+ 					</container>	<!-- close transparent -->
  
 					<widget class="spacer" height="47" />
-				</container>
+				</container> <!-- close NEvp -->
  
-			</container>
+			</container>	<!-- close notable events -->
 
-			<container>
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-
-				<container id="FEEP">
-					<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" vertical_offset="0" vertical_gap="0" />
-					
-					<container>
-						<attachment class="test_screen_size_attachment" skip_if_false="true">
-							<list id="properties">
-								<record>
-									<flags id="alignment" value="vertical" />
-									<integer id="min_value" value="0" />
-									<integer id="max_value" value="720" />
-									<symbol id="set_property" value="height" />
-									<integer id="true_value" value="8" />
-									<integer id="false_value" value="8" />
-								</record>
-								<record>
-									<flags id="alignment" value="vertical" />
-									<integer id="min_value" value="720" />
-									<integer id="max_value" value="900" />
-									<symbol id="set_property" value="height" />
-									<integer id="true_value" value="10" />
-									<integer id="false_value" value="10" />
-								</record>
-								<record>
-									<flags id="alignment" value="vertical" />
-									<integer id="min_value" value="900" />
-									<integer id="max_value" value="10000" />
-									<symbol id="set_property" value="height" />
-									<integer id="true_value" value="20" />
-									<integer id="false_value" value="20" />
-								</record>
-							</list>
-						</attachment>
-					</container>
-
-					
-					<container height="52" />
-				</container>
-				
-			</container>
  
-			
+		</container> <!-- close left panel -->
  
-		</container>
- 
-		<!--match information-->
-		<container>
+		<!-- Touchline Tablet -->
+		<container>	<!-- open tablet -->
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-			
+						
+			<!-- these control max. width of panel remove 350 for nme panel -->
+			<!-- 1024, 1280, 1360/6, 1440, 1600, 1680, 1920, 2560, 3440, 3840 -->
 			<attachment class="test_screen_size_attachment" skip_if_false="true">
 				<list id="properties">
 					<record>
 						<flags id="alignment" value="horizontal" />
 						<integer id="min_value" value="0" />
-						<integer id="max_value" value="1366" />
+						<integer id="max_value" value="1350" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="335" />
-						<integer id="false_value" value="335" />
+						<integer id="true_value" value="650" />
+						<integer id="false_value" value="650" />
 					</record>
 					<record>
 						<flags id="alignment" value="horizontal" />
-						<integer id="min_value" value="1366" />
-						<integer id="max_value" value="1920" />
+						<integer id="min_value" value="1350" />
+						<integer id="max_value" value="1910" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="680" />
-						<integer id="false_value" value="680" />
+						<integer id="true_value" value="1010" />
+						<integer id="false_value" value="1010" />
 					</record>
 					<record>
 						<flags id="alignment" value="horizontal" />
-						<integer id="min_value" value="1920" />
+						<integer id="min_value" value="1910" />
 						<integer id="max_value" value="10000" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="1550" />
-						<integer id="false_value" value="1550" />
+						<integer id="true_value" value="2210" />
+						<integer id="false_value" value="2210" />
 					</record>
 				</list>
 			</attachment>
 	
- 
+			<!-- tablet content -->
 			<container class="client_object_viewer_xml_panel" file="match/match touchline tablet panel" id="TTab" >
  
 				<record id="object_property">
@@ -146,9 +104,9 @@
 				</record>
  
 			</container>
-		</container>
+		</container>	<!-- close tablet panel -->
  
  
-	</container>
+	</container>	<!-- close all panels -->
  
 </panel>

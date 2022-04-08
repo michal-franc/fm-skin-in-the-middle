@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- v1.1 switched each container to use it's own file and changed defaults to hopefully solve issues -->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container class="main_transparent_box" >
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- OVERALL CONTAINER AS CAN ONLY HAVE TWO PANELS IN EACH SPLIT, FIRST FOR LL/LR SEC FOR RL/RR -->
+	<container class="vertical_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_width_left="1" min_width_right="1" >
+	    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+ 
+	<!-- container for LEFT PANELS LL & LR -->
+	<container class="vertical_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_width_left="1" min_width_right="1">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+		<!--LL Panel- This is the Left panel -->
+		<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+
+			<!-- LLT TOP  ftr1 -->
+			<container class="client_object_viewer_xml_panel" id="ftr1" file="match/match touchline tablet slot ftr1" default_item="bmin" minimum_width="1" default_width="-1" >
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+
+		
+			<!-- LLB - BOTTOM CONTENT ftr2 -->
+			<container class="client_object_viewer_xml_panel" id="ftr2" file="match/match touchline tablet slot ftr2" default_item="mtst" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+
+		</container><!-- END LL -->	
+	
+		<!-- LR PANEL - This is the Second Panel From the Left -->
+		<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+
+			<!-- LRT TOP CONTAINER ftr3 -->
+			<container class="client_object_viewer_xml_panel" id="ftr3" file="match/match touchline tablet slot ftr3" default_item="bmts" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+			
+			<!-- LRB - BOTTOM CONTAINER ftr4 -->
+			<container class="client_object_viewer_xml_panel" id="ftr4" file="match/match touchline tablet slot ftr4" default_item="bmfs" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+   
+		</container> <!-- END LR CONTAINER -->
+		  
+	</container> <!-- END LEFT CONTAINER -->
+	
+	<!-- container for RIGHT PANELS RL & RR -->
+	<container class="vertical_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_width_left="1" min_width_right="1">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+		<!--RL Panel This is the third panel from the left. Left Panel on the Right-->
+		<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+
+			<!-- RLT ftr5 -->
+			<container class="client_object_viewer_xml_panel" id="ftr5" file="match/match touchline tablet slot ftr5" default_item="hfSM" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+		
+			<!-- RLB - BOTTOM CONTENT  ftr6 -->
+			<container class="client_object_viewer_xml_panel" id="ftr6" file="match/match touchline tablet slot ftr6" default_item="afSM" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+    
+	</container><!-- END RL -->	
+	
+		<!-- RR PANEL - This is the Right most panel -->
+		<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+
+			<!-- RRT TOP CONTAINER ftr7 -->
+			<container class="client_object_viewer_xml_panel" id="ftr7" file="match/match touchline tablet slot ftr7" default_item="pstL" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+		
+			<!-- RRB - BOTTOM CONTAINER ftr8 -->
+			<container class="client_object_viewer_xml_panel" id="ftr8" file="match/match touchline tablet slot ftr8" default_item="Anal" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+   
+		</container> <!-- END RR CONTAINER -->
+	</container> <!-- END RIGHT CONTAINER -->
+    </container> <!-- CLOSE ALL -->
+	</container>
+	
+</panel>
