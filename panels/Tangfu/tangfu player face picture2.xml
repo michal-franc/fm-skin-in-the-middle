@@ -105,11 +105,6 @@
 				<layout class="arrange_horizontal_attachment" layout="-5,-48,-5" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 				<layout class="stick_to_sides_attachment" alignment="centre" inset="0" apply_to_children="true" />
-				<!--左键-->
-				<widget class="quick_flick_button" id="flkl" auto_size="all" appearance="tangfu/facezuo1" image_alignment="centre_y" scale_picture="true" icon_enabled="true" cached="true" step="-1">
-					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
-					<attachment class="get_global_attachment" get_property="stPQ" set_property="click_event" />
-				</widget>
 				<!--中间头像-->
 				<container>
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
@@ -129,11 +124,6 @@
 						</record>
 					</widget>
 				</container>
-				<!--右键-->
-				<widget class="quick_flick_button" id="flkr" auto_size="all" appearance="tangfu/faceyou1" image_alignment="centre_y" scale_picture="true" cached="true" step="1">
-					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
-					<attachment class="get_global_attachment" get_property="stNQ" set_property="click_event" />
-				</widget>
 			</container>
 			<!--右边信息-->
 			<container>
