@@ -3,7 +3,7 @@
 	<layout class="stick_to_sides_attachment" alignment="all" inset="5" />
 	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="5" mode="distribute_equally">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-		<!-- 左边 -->
+		<!-- LEFT PANEL  -->
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" default_width="-4" priority="0" mode="distribute_equally">
 			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
