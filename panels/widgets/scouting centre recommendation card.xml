@@ -17,14 +17,23 @@
 			<container navigation_container="true">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4" vertical_offset="0" vertical_gap="4" />
 
-				<!-- player face nationality club-->
 				<container class="client_object_viewer_xml_panel" height="90">
 					<record id="object_property" get_property="Pers" set_property="objt" />
-					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="0" />
-
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-5,-3" vertical_inset="0" />
+					<!-- Tiny position indicatior -->
 					<container>
 						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="2" />
-
+							<widget class="client_object_viewer_xml_panel" file="player/player positions indicator tiny" alignment="right" >
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+							<record id="object_property">
+								<integer id="get_property" value="PpsP" />
+							</record>
+						</widget>
+					</container>
+					<!-- player face nationality club-->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="2" />
 						<widget class="object_portrait_picture" id="ppic" width="88">
 							<boolean id="scale_picture" value="true" />
 							<boolean id="keep_aspect_ratio" value="true" />
@@ -39,7 +48,6 @@
 								<integer id="get_property" value="PnaS"/>
 							</record>
 						</widget>
-
 						<container>
 							<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="-2" />
 							<!-- Player Name -->
@@ -106,20 +114,20 @@
 						</container>
 					</container>
 
+					<!-- club logo - contract deatils -->
 					<container>
 						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="4"/>
 
 						<container>
 							<attachment_group class="horizontal_arrange_autosize_vertical_centre"/>
 
-							<widget class="object_portrait_picture" width="32" height="32" navigation_focus_target="true">
+							<widget class="object_portrait_picture" width="48" height="48" navigation_focus_target="true">
 								<boolean id="scale_picture" value="true" />
 								<boolean id="keep_aspect_ratio" value="true" />
 								<flags id="image_alignment" value="centre" />
 								<record id="object_property" get_property="Pclb" set_property="objt" />
 							</widget>
 						</container>
-
 						<container>
 							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="-2" />
 
