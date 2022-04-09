@@ -26,7 +26,11 @@
 		<attachment_group class="horizontal_arrange" horizontal_layout="-1,240">
 			<global id="horizontal_gap" name="ui.main_box_gap" />
 		</attachment_group>
+
+		<!-- Main container with scout report player face etc-->
         <container>
+			<!-- here with layout you can control how this box is displayed 
+			There are 2 emtpy contaienrs just to position the main middle one in themiddle of bigger screen-->
 			<layout class="arrange_horizontal_attachment" layout="-1,-4,-1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
             <container></container>
@@ -34,21 +38,23 @@
 
                 <layout class="stick_to_sides_attachment" alignment="all" inset="2,0,0,0" apply_to_children="true" />
 
+				<!-- this is section with card/list button-->
                 <container embed_in_frame="true" navigation_container="true">
                     <attachment_group class="title_embedded_panel_left">
                         <global id="horizontal_gap" name="ui.split_button_row_gap" />
                     </attachment_group>
 
+					<!-- this is the button to swtich card-->
                     <widget class="radio_toggle_switch_left" id="crdb" auto_size="all" embed_in_frame="true" selected="true" select_event="crdE">
                         <translation id="text" translation_id="466474" type="use" value="Cards[COMMENT: FR 22655, scouting centre button, takes the user to the scouting report cards]" />
                     </widget>
-
+					<!-- this is the button to swtich List-->
                     <widget class="radio_toggle_switch_right" id="lstb" auto_size="all" embed_in_frame="true" select_event="lstE">
                         <translation id="text" translation_id="293613" type="use" value="List" />
                     </widget>
 
                 </container>
-
+				<!-- this is the section with sorts preferences and request gm suggestion -->
                 <container embed_in_frame="true" navigation_container="true">
                     <attachment_group class="title_embedded_panel_right">
                         <global id="horizontal_gap" name="ui.button_row_gap" />
@@ -79,22 +85,11 @@
                 </container>
 
 
+				<!-- this is the main widget to display actual scout report-->
                 <widget class="scouting_centre_inbox_panel" id="scic" />
 
                 <container id="lisC">
                     <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-
-                    <container id="lvni" hidden="true">
-                        <attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
-
-                        <widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
-                            <translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
-                        </widget>
-                        <widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
-                            <translation id="text" translation_id="450793" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations of this type soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
-                        </widget>
-
-                    </container>
 
                     <container id="lvip">
                         <attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_offset="4" vertical_gap="0" />
@@ -195,6 +190,7 @@
             </container>
             <container></container>
         </container>
+		<!-- this is right side panel with transfers regional nkowledge and player search-->
 		<container>
 			<layout class="show_medium_horizontal" />
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
