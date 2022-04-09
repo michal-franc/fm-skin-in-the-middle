@@ -1,4 +1,6 @@
-﻿<panel>
+﻿<!-- widget for scouting center -->
+
+<panel>
 	<list id="properties_to_forward">
 		<record get_property="PsCT" set_property="PsCT" target="Ppos"/>
 		<record get_property="PPlS" set_property="PPlS" target="Ppos"/>
@@ -15,6 +17,7 @@
 			<container navigation_container="true">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4" vertical_offset="0" vertical_gap="4" />
 
+				<!-- player face nationality club-->
 				<container class="client_object_viewer_xml_panel" height="90">
 					<record id="object_property" get_property="Pers" set_property="objt" />
 					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="0" />
@@ -31,7 +34,7 @@
 
 						<container>
 							<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="-2" />
-
+							<!-- Player Name -->
 							<widget class="client_object_property_panel" property="Pnms" auto_size="vertical" size="12" colour="yellow1" >
 								<record id="object_property">
 									<list id="get_properties">
@@ -47,6 +50,7 @@
 							<container>
 								<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 
+								<!-- Player Nationality -->
 								<widget class="client_object_property_panel" property="PNat" auto_size="vertical">
 									<record id="object_property">
 										<list id="get_properties">
@@ -72,6 +76,25 @@
 									<widget class="text" id="mtxt" alignment="left,centre_y">
 										<translation id="text" translation_id="347559" type="use" value="[%number#1] year-old [%player_description#1][COMMENT: inbox person information panel; person description]" />
 									</widget>
+								</widget>
+
+								<!-- Player Int apps -->
+								<widget class="client_object_property_panel" property="Pist" auto_size="vertical">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="objt" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+									<record id="widget_info" auto_size="vertical" size="small" colour="scout card text"/>
+								</widget>
+								<!--Reputation-->
+								<widget class="global_reputation_stars_label" id="Prsa" size="small" auto_size="vertical" alignment="left,centre_y">
+									<record id="object_property">
+										<integer id="get_property" value="Prsa" />
+									</record>
 								</widget>
 							</container>
 						</container>
@@ -326,20 +349,12 @@
 							</widget>
 						</container>
 						
-						<container id="yinc">
-							<translation id="title" translation_id="348857" type="use" value="Hidden" />
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
-							<widget class="player_personal_details_panel" id="attT" file="Tangfu/tangfu player yincang">
-								<record id="object_property" get_property="Pers" set_property="objt"/>
-							</widget>
-						</container>
-						
-						
 					</container>
 				</container>
 			</container>
 		</container>
 
+		<!-- bottom panel with alle the buttons like discard or ack-->
 		<widget class="player_scouting_centre_actions_panel" id="toto" colour="scout card text" disabled_colour="faded black" navigation_container="true">
 			<boolean id="save_immediate_state" value="true" />
 			<record id="object_property">
