@@ -378,7 +378,7 @@
 		<container class="vertical_adaptive_container" offset="0" inset="0" gap="5" minimum_width="100" default_width="-4" priority="2" mode="distribute_equally">
 			<layout class="arrange_vertical_attachment" layout="-2,-2,-2" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-			<!--球探报告-->
+			<!--Report panel-->
 			<container class="bordered_box" appearance="tangfu/paper" default_height="300" minimum_height="300" priority="0">
 				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
