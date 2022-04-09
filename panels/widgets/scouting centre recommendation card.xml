@@ -31,6 +31,14 @@
 							<flags id="image_alignment" value="centre" />
 							<record id="object_property" get_property="objt" />
 						</widget>
+						<!-- Player Status  -->
+						<widget class="player_status_all_button" appearance="buttons/custom/status" id="Pnfa" alignment="bottom" gap="1" maximised="true">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="80" />
+							<record id="object_property">
+								<integer id="get_property" value="PnaS"/>
+							</record>
+						</widget>
 
 						<container>
 							<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="-2" />
@@ -46,7 +54,6 @@
 								</record>
 								<record id="widget_info" auto_size="all" alignment="left,bottom" colour="scout card text" info_popup_enabled="false" style="bold" enforce_style="true" />
 							</widget>
-
 							<container>
 								<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 
